@@ -4,22 +4,17 @@ import { motion, useInView } from "framer-motion";
 
 const VideoSection = () => {
   const videoRef = useRef(null);
-  const isInView = useInView(videoRef, { once: true, amount: 0.6 });
+  const sectionRef = useRef(null); // Ref for the whole section to trigger animations
+  const isInView = useInView(sectionRef, { once: true, amount: 0.5 });
 
   useEffect(() => {
+    // Play video when the section is in view
     if (isInView && videoRef.current) {
       videoRef.current.play();
     }
   }, [isInView]);
 
-  const sectionVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
+  // Animation variant for the video container (fade in + scale)
   const videoVariants = {
     hidden: { scale: 0.9, opacity: 0 },
     visible: {
@@ -27,52 +22,83 @@ const VideoSection = () => {
       opacity: 1,
       transition: {
         duration: 1.2,
-        ease: [0.25, 1, 0.5, 1], // A nice ease-out curve
+        ease: [0.25, 1, 0.5, 1], // A smooth ease-out curve
       },
     },
   };
 
+  // Animation variant for the text container (staggered children)
+  const textContainerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        delayChildren: 0.3, // Start text animation after video starts appearing
+        staggerChildren: 0.2, // Animate each line of text one after the other
+      },
+    },
+  };
+
+  // Animation variant for each individual text element (fade up)
+  const textItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="relative flex items-center justify-center w-full h-screen bg-brown">
-      {/* Container for the video to manage positioning and animation */}
+    // Section is full-width and 80% of viewport height. `overflow-hidden` is important.
+    <section
+      ref={sectionRef}
+      className="relative flex items-center justify-center w-full h-[80vh] bg-black overflow-hidden"
+    >
+      {/* Video with animation */}
       <motion.div
-        className="w-full h-full"
+        className="absolute inset-0 z-0"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }} // Trigger animation when 60% is visible
-        variants={sectionVariants}
+        viewport={{ once: true, amount: 0.5 }}
+        variants={videoVariants}
       >
-        <motion.div
-          className="relative w-full h-full overflow-hidden"
-          variants={videoVariants}
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover"
+          loop
+          muted
+          playsInline
+          preload="auto"
         >
-          <video
-            ref={videoRef}
-            className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
-            loop
-            muted // Autoplay on most browsers requires the video to be muted
-            playsInline // Important for iOS devices
-            preload="auto"
-          >
-            {/* Replace with your video file */}
-            <source src="/wildlife.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </motion.div>
+          <source src="/wildlife.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </motion.div>
 
-      {/* Optional: Add a subtle overlay for text readability */}
-      {/* <div className="absolute inset-0 bg-black/30"></div> */}
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute inset-0 z-10 bg-black/40"></div>
 
-      {/* Optional: Add text or other content over the video */}
-      <div className="relative z-10 text-center text-white">
-        <h2 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
+      {/* Centered text container with its own animation */}
+      <motion.div
+        className="relative z-20 text-center text-white px-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={textContainerVariants}
+      >
+        <motion.h2
+          className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl drop-shadow-lg"
+          variants={textItemVariants}
+        >
           Discover a New World
-        </h2>
-        <p className="mt-4 text-lg md:text-xl max-w-2xl">
+        </motion.h2>
+        <motion.p
+          className="mt-4 text-lg leading-8 text-gray-200 max-w-2xl mx-auto drop-shadow-md"
+          variants={textItemVariants}
+        >
           Journeys that Inspire, Moments that Last.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
     </section>
   );
 };
