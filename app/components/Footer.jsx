@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer
       // style={{ backgroundImage: `url('/wave4.svg')` }}
-      className=" relative bg-brown  bg-no-repeat   text-white  py-8"
+      className=" relative bg-light  bg-no-repeat   text-white  py-8"
     >
       {/* <div className="absolute inset-0 bg-dark/60 z-0"></div> */}
       <div className="max-w-[76rem] mx-auto px-4">
@@ -32,10 +32,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-20 mb-4">
           {/* Information Section */}
           <div>
-            <h3 className="text-light font-bold text-lg  boucher mb-4 tracking-wide">
+            <h3 className="text-dark font-bold text-lg  boucher mb-4 tracking-wide">
               INFORMATION
             </h3>
-            <div className="space-y-2 sofia text-light">
+            <div className="space-y-2 sofia text-dark">
               <a
                 href="https://maps.app.goo.gl/m51GHehDATiUa4p57"
                 target="_blank"
@@ -64,67 +64,67 @@ const Footer = () => {
 
           {/* Navigation Section */}
           <div>
-            <h3 className="text-light font-bold text-lg  mb-4 boucher tracking-wide">
+            <h3 className="text-dark font-bold text-lg mb-4 boucher tracking-wide">
               NAVIGATION
             </h3>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-4 sofia text-light">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-4 sofia text-dark">
               <Link
-                href="/retail"
-                className="hover:text-light font-bold transition-colors duration-300"
+                href="/destinations"
+                className="hover:text-dark font-bold transition-colors duration-300"
               >
-                Retail
+                Destinations
               </Link>
               <Link
-                href="/amenities"
-                className="hover:text-light font-bold transition-colors duration-300"
+                href="/tours"
+                className="hover:text-dark font-bold transition-colors duration-300"
               >
-                Amenities
+                Tours & Packages
               </Link>
               <Link
-                href="/restaurants"
-                className="hover:text-light font-bold transition-colors duration-300"
+                href="/flights"
+                className="hover:text-dark font-bold transition-colors duration-300"
               >
-                Restaurants
-              </Link>
-              <Link
-                href="/location"
-                className="hover:text-light font-bold transition-colors duration-300"
-              >
-                Location
-              </Link>
-              <Link
-                href="/residencies"
-                className="hover:text-light font-bold transition-colors duration-300"
-              >
-                Residences
-              </Link>
-              <Link
-                href="/news-events"
-                className="hover:text-light font-bold transition-colors duration-300"
-              >
-                News & Events
+                Flights
               </Link>
               <Link
                 href="/hotels"
-                className="hover:text-light font-bold transition-colors duration-300"
+                className="hover:text-dark font-bold transition-colors duration-300"
               >
                 Hotels
               </Link>
               <Link
-                href="/faqs"
-                className="hover:text-light font-bold transition-colors duration-300"
+                href="/experiences"
+                className="hover:text-dark font-bold transition-colors duration-300"
               >
-                FAQ's
+                Experiences
               </Link>
               <Link
-                href="/office"
-                className="hover:text-light font-bold transition-colors duration-300"
+                href="/travel-guides"
+                className="hover:text-dark font-bold transition-colors duration-300"
               >
-                Office
+                Travel Guides
+              </Link>
+              <Link
+                href="/deals"
+                className="hover:text-dark font-bold transition-colors duration-300"
+              >
+                Deals
+              </Link>
+              <Link
+                href="/about"
+                className="hover:text-dark font-bold transition-colors duration-300"
+              >
+                About Us
+              </Link>
+              <Link
+                href="/blog"
+                className="hover:text-dark font-bold transition-colors duration-300"
+              >
+                Blog
               </Link>
               <Link
                 href="/contact"
-                className="hover:text-light font-bold transition-colors duration-300"
+                className="hover:text-dark font-bold transition-colors duration-300"
               >
                 Contact
               </Link>
@@ -133,7 +133,7 @@ const Footer = () => {
 
           {/* Get in Touch Section */}
           <div>
-            <h3 className="text-light font-bold text-lg boucher mb-4 tracking-wide">
+            <h3 className="text-dark font-bold text-lg boucher mb-4 tracking-wide">
               GET IN TOUCH
             </h3>
             <div className="space-y-2">
@@ -181,7 +181,7 @@ const Footer = () => {
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  className="bg-orange-500 hover:bg-orange-600 text-white  py-2 px-8 rounded-full mt-2 transition-colors duration-300"
+                  className="bg-dark hover:bg-light text-white hover:text-dark cursor-pointer  py-2 px-8 rounded-full mt-2 transition-colors duration-300"
                 >
                   SUBMIT
                 </button>
@@ -191,10 +191,10 @@ const Footer = () => {
 
           {/* Stay Up to Date Section */}
           <div>
-            <h3 className="text-light font-bold text-lg boucher mb-6 tracking-wide">
+            <h3 className="text-dark font-bold text-lg boucher mb-6 tracking-wide">
               STAY UP TO DATE
             </h3>
-            <button className="bg-orange-500  hover:bg-orange-600 text-sm text-white  py-2 px-6 rounded-full transition-colors duration-300">
+            <button className="bg-dark hover:bg-light text-white hover:text-dark text-sm   py-2 px-6 rounded-full transition-colors duration-300">
               IN THE NEWS
             </button>
           </div>
@@ -207,7 +207,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <a
               href="#"
-              className="text-gray-400 hover:text-light font-bold transition-colors duration-300"
+              className="text-gray-400 hover:text-dark font-bold transition-colors duration-300"
             >
               Privacy Policy
             </a>
