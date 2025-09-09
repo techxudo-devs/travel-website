@@ -10,11 +10,7 @@ import Image from "next/image";
 import TourCard from "../ui/TourCard";
 import { ChevronDown } from "lucide-react";
 
-const backgroundImages = [
-  "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
-  "https://images.unsplash.com/photo-1473625247510-8ceb1760943f",
-  "https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5",
-];
+const backgroundImages = ["/hero1.webp", "/hero2.webp"];
 
 const destinations = [
   {

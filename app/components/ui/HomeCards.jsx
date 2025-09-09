@@ -12,6 +12,7 @@ const HomeCards = ({
   bgColor,
   image,
   imgWidth,
+  alt = "Card Image",
   imgHeight,
   contentColor = "text-white",
   cardBgColor = "bg-light",
@@ -155,6 +156,7 @@ const HomeCards = ({
         src={image}
         width={imgWidth}
         height={imgHeight}
+        alt={image}
         className="lg:max-w-[580px] md:max-w-[480px] max-w-sm"
       />
     </motion.div>

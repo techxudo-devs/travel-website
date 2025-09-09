@@ -23,8 +23,8 @@ const Footer = () => {
 
   return (
     <footer
-      style={{ backgroundImage: `url('/wave4.svg')` }}
-      className=" relative bg-dark bg-no-repeat   text-white  py-8"
+      // style={{ backgroundImage: `url('/wave4.svg')` }}
+      className=" relative bg-brown  bg-no-repeat   text-white  py-8"
     >
       {/* <div className="absolute inset-0 bg-dark/60 z-0"></div> */}
       <div className="max-w-[76rem] mx-auto px-4">
