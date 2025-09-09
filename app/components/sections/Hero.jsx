@@ -217,7 +217,7 @@ const HeroSection = () => {
             Travel from anywhere in India or worldwide. Pick a tour that fits
             you — starting right from your city.
           </p>
-          <div className="grid grid-cols-4 gap-4 mt-12">
+          <div className="grid md:grid-cols-3 grid-cols-1 px-4 lg:grid-cols-4 gap-4 mt-12">
             {tourPackages.map((tour, index) => (
               <TourCard key={index} tour={tour} />
             ))}

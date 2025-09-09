@@ -9,11 +9,11 @@ export default function AboutSection() {
       className="min-h-screen py-30 bg-white flex flex-col bg-no-repeat bg-contain items-center gap-20"
       style={{ backgroundImage: 'url("/wave-2.svg")' }}
     >
-      <div className="flex flex-col items-center gap-4 justify-center">
-        <h1 className="text-5xl font-medium text-light">
+      <div className="flex flex-col items-center text-center  gap-4 justify-center">
+        <h1 className="md:text-5xl text-3xl  font-medium text-dark md:text-light">
           Come on a trip with us
         </h1>
-        <p className="text-xl max-w-3xl text-center font-medium text-light">
+        <p className="text-xl md:max-w-3xl max-w-2xl text-center font-medium text-dark md:text-light">
           Whether you’re seeking the companionship of a group tour, the solitude
           of a private adventure or something totally different – we make sure
           to help create memories on Socotra that last a lifetime.

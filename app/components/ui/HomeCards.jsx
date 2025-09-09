@@ -90,12 +90,12 @@ const HomeCards = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
       viewport={{ once: true, amount: 0.3 }}
-      className={`md:max-w-md lg:max-w-xl max-w-sm ${
+      className={`w-full max-w-sm md:max-w-md lg:max-w-xl ${
         imageFirst ? "md:-translate-x-14" : "md:translate-x-14"
       } translate-x-0`}
     >
       <div
-        className={`relative ${cardBgColor} ${bgColor} group z-20 px-4 transition-colors cursor-pointer duration-500 ease-in-out overflow-hidden  py-22`}
+        className={`relative ${cardBgColor} ${bgColor} group z-20 px-4 transition-colors cursor-pointer duration-500 ease-in-out overflow-hidden py-12 md:py-22`}
       >
         {/* Decorative corner elements */}
         <div className={corners.first}>
@@ -115,19 +115,19 @@ const HomeCards = ({
         <div className="relative p-4 pb-10">
           {/* Category label */}
           <div className="mb-6">
-            <span className="text-primary transition-colors text-dark font-medium duration-300  boucher text-lg uppercase">
+            <span className="text-primary transition-colors text-dark font-medium duration-300 boucher text-lg uppercase">
               {category}
             </span>
           </div>
           {/* Title */}
           <h2
-            className={`boucher md:text-3xl text-dark text-2xl lg:text-5xl  mb-6 leading-tight`}
+            className={`boucher text-2xl md:text-3xl lg:text-5xl text-dark mb-6 leading-tight`}
           >
             {title}
           </h2>
           {/* Description */}
           <p
-            className={`text-dark tracking-wide sofia lg:text-lg md:text-md text-sm    mb-6`}
+            className={`text-sm md:text-md lg:text-lg text-dark tracking-wide sofia mb-6`}
           >
             {desc}
           </p>
@@ -135,7 +135,7 @@ const HomeCards = ({
           <a
             href={btnLink}
             target="_blank"
-            className="bg-dark text-white group border hover:bg-primary  cursor-pointer  font-bold py-2 md:px-8 px-4 rounded-full transition-colors duration-200 uppercase tracking-wide lg:text-sm"
+            className="bg-dark text-white group border hover:bg-primary cursor-pointer font-bold py-2 px-4 md:px-8 rounded-full transition-colors duration-200 uppercase tracking-wide text-sm lg:text-base"
           >
             LEARN MORE
           </a>
@@ -151,20 +151,21 @@ const HomeCards = ({
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true, amount: 0.3 }}
+      className="w-full max-w-sm md:max-w-[480px] lg:max-w-[580px]"
     >
       <Image
         src={image}
         width={imgWidth}
         height={imgHeight}
-        alt={image}
-        className="lg:max-w-[580px] md:max-w-[480px] max-w-sm"
+        alt={alt}
+        className="w-full h-auto"
       />
     </motion.div>
   );
 
   return (
     <div
-      className={`flex md:flex-row flex-col gap-2 items-center justify-center ${
+      className={`flex flex-col md:flex-row gap-8 md:gap-2 items-center justify-center ${
         imageFirst ? "md:flex-row-reverse" : ""
       }`}
     >

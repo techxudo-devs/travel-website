@@ -100,7 +100,7 @@ const TripWithUs = () => {
             </Swiper>
 
             {/* Custom Navigation Buttons */}
-            <div className="absolute flex flex-col gap-2 -translate-4 -right-10 top-1/2 transform -translate-y-1/2 z-10">
+            <div className="absolute flex flex-col gap-2 top-1/2 transform -translate-y-1/2 z-10 right-4 lg:-right-10">
               <button
                 onClick={() => swiperRef.current?.slideNext()}
                 className="bg-light text-dark hover:bg-slate-700 cursor-pointer p-3  hover:text-white rounded-full shadow-lg"
