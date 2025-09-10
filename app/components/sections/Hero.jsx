@@ -7,33 +7,8 @@ import {
   useTransform,
 } from "framer-motion";
 import Image from "next/image";
-import TourCard from "../ui/TourCard";
-import { ChevronDown } from "lucide-react";
-
-const backgroundImages = ["/hero1.webp", "/hero2.webp"];
-
-const destinations = [
-  {
-    src: "https://images.unsplash.com/photo-1519046904884-53103b34b206",
-    alt: "Man relaxing in a hammock",
-    size: "w-80 h-96",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1501555088652-021faa106b9b",
-    alt: "Hiker with a backpack",
-    size: "w-72 h-80",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1",
-    alt: "Person on a boat",
-    size: "w-96 h-96",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1440778303588-435521a205bc",
-    alt: "Person kayaking",
-    size: "w-72 h-80",
-  },
-];
+import TourCard from "../ui/TourCard"; // Assuming TourCard component is in this path
+import { ChevronRight } from "lucide-react";
 
 const tourPackages = [
   {
@@ -52,8 +27,7 @@ const tourPackages = [
     rating: 4.8,
     reviews: "4.2k reviews",
     price: 8996,
-    image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+    image: "/2.jpg",
   },
   {
     country: "Turkey",
@@ -62,7 +36,7 @@ const tourPackages = [
     rating: 4.6,
     reviews: "563 reviews",
     price: 4996,
-    image: "/2.jpg",
+    image: "/3.jpg",
   },
   {
     country: "Maldives",
@@ -71,23 +45,12 @@ const tourPackages = [
     rating: 4.9,
     reviews: "6.9k reviews",
     price: 9587,
-    image: "/3.jpg",
+    image: "/7.jpg",
   },
 ];
 
 // --- MAIN COMPONENT ---
 const HeroSection = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 7000);
-    return () => clearInterval(interval);
-  }, []);
-
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -95,31 +58,83 @@ const HeroSection = () => {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
-  const cardsY = useTransform(scrollYProgress, [0.4, 1], ["0%", "-150%"]);
-  const cardsOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
 
+  // Variants for the main container to orchestrate animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  // Variants for the title words
+  const titleVariants = {
+    hidden: { y: 40, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  // Variants for other text elements like subtitle and links
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut", staggerChildren: 0.2 },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
-  const tourSectionVariants = {
-    hidden: { opacity: 0 },
+  // Variants for icon
+  const iconVariants = {
+    hidden: { scale: 0, opacity: 0 },
     visible: {
+      scale: 1,
       opacity: 1,
-      transition: { duration: 0.8, staggerChildren: 0.15 },
+      transition: {
+        duration: 0.4,
+        ease: "easeIn",
+      },
     },
   };
+
+  // Variants for Tour Section animations
+  const tourSectionVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2, // Animate children one by one
+        delayChildren: 0.1, // A small delay before the first child starts
+      },
+    },
+  };
+
+  // Variants for individual items (title, p, cards) in the tour section
+  const tourItemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const title = "Your Journey, Redefined";
+  const titleWords = title.split(" ");
 
   return (
     // The main container uses the dark background color
     <div className="bg-[#0c0c0c]">
       {/* SECTION 1: HERO. Its height determines the scroll length for the animation. */}
-      <div ref={heroRef} className="relative h-[150vh]">
+      <div ref={heroRef} className="relative h-screen">
         {/* This div sticks to the top and contains all hero content. */}
         <div className="sticky top-0 h-screen overflow-hidden">
           {/* Animated Background */}
@@ -127,102 +142,164 @@ const HeroSection = () => {
             style={{ y: backgroundY }}
             className="absolute inset-0 z-0"
           >
-            <AnimatePresence>
-              <motion.div
-                key={currentImageIndex}
-                initial={{ opacity: 0, scale: 1.2 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={backgroundImages[currentImageIndex]}
-                  alt="Travel Background"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </motion.div>
-            </AnimatePresence>
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source
+                src="https://adamsandbutler.b-cdn.net/app/uploads/2020/08/Web-Hero-Vid-V2-No-Sound-copy.mp4"
+                type="video/mp4"
+              />
+            </video>
           </motion.div>
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 to-transparent" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
 
           {/* Hero Text Content */}
-          <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
+          <div className="relative z-20 flex flex-col items-start translate-x-40 justify-center w-full h-full text-white">
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={textVariants}
-              className="text-center"
+              variants={containerVariants}
+              className="text-left" // Changed to text-left for better alignment
             >
-              <motion.h1
-                variants={textVariants}
-                className="text-3xl font-semibold text-white drop-shadow-md md:text-5xl"
-              >
-                Make Your{" "}
-                <span className="text-orange-400">Summer Vacation</span>
+              <motion.h1 className="text-7xl" aria-label={title}>
+                {titleWords.map((word, index) => (
+                  <motion.span
+                    key={index}
+                    variants={titleVariants}
+                    className="inline-block mr-4" // Add margin for spacing between words
+                  >
+                    {word}
+                  </motion.span>
+                ))}
               </motion.h1>
+
               <motion.h2
                 variants={textVariants}
-                className="mt-2 text-3xl font-semibold text-white drop-shadow-md md:text-5xl"
+                className="mt-4 text-2xl" // Added more margin-top
               >
-                Unforgettable!
+                Extraordinary travel, crafted with precision and passion.
               </motion.h2>
-              <motion.p
+
+              <motion.div
                 variants={textVariants}
-                className="max-w-xl mx-auto mt-4 text-lg text-gray-200"
+                className="flex items-center space-x-8 mt-12 text-sm" // Added more margin-top
               >
-                Get your dream trip planned with expert-guided destinations,
-                booking, transport & more — all in one
-              </motion.p>
-              <motion.button
-                variants={textVariants}
-                className="px-8 py-2 mt-8 font-medium  text-black bg-white rounded-full cursor-pointer hover:bg-dark hover:text-white transition-colors ease-in-out duration-300"
-              >
-                Start Planning
-              </motion.button>
+                <a href="#" className="flex items-center space-x-3">
+                  <span>EXPLORE OUR WORLDS</span>
+                  <motion.div variants={iconVariants}>
+                    <ChevronRight
+                      size={16}
+                      className="h-6 w-6 border rounded-full p-1" // Added padding
+                    />
+                  </motion.div>
+                </a>
+                <a href="#" className="flex items-center space-x-3">
+                  <span>CRAFT YOUR ESCAPE</span>
+                  <motion.div variants={iconVariants}>
+                    <ChevronRight
+                      size={16}
+                      className="h-6 w-6 border rounded-full p-1"
+                    />
+                  </motion.div>
+                </a>
+                <a href="#" className="flex items-center space-x-3">
+                  <span>INSPIRATION HUB</span>
+                  <motion.div variants={iconVariants}>
+                    <ChevronRight
+                      size={16}
+                      className="h-6 w-6 border rounded-full p-1"
+                    />
+                  </motion.div>
+                </a>
+              </motion.div>
             </motion.div>
-            <motion.div
-              className="absolute bottom-10"
-              animate={{ y: [0, 10, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <ChevronDown size={32} className="text-white/50" />
-            </motion.div>
+          </div>
+
+          {/* Logos Section */}
+          <div className="absolute bottom-4 left-4 z-30">
+            <Image
+              src="/virtuoso.png"
+              alt="Virtuoso"
+              width={120}
+              height={50}
+              objectFit="contain"
+            />
           </div>
         </div>
       </div>
 
-      <div
-        className="relative z-40 w-full min-h-screen py-24 -mt-[50vh] bg-dark"
-        style={{ backgroundImage: `url(/wave.svg)` }}
-      >
+      <div className="relative z-40 w-full min-h-screen py-24 bg-[var(--color-light)] overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[var(--color-brown)] blur-3xl"></div>
+          <div className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-[var(--color-semilight)] blur-3xl"></div>
+        </div>
+
         <motion.div
-          className="container  mx-auto text-center"
+          className="container mx-auto text-center px-4 relative z-10"
+          variants={tourSectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={tourSectionVariants}
+          viewport={{ once: true, amount: 0.1 }}
         >
-          <h2 className="text-5xl font-medium text-dark">
-            All Inclusive tour packages.
-          </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-md text-gray-600">
-            Travel from anywhere in India or worldwide. Pick a tour that fits
-            you — starting right from your city.
-          </p>
-          <div className="grid md:grid-cols-3 grid-cols-1 px-4 lg:grid-cols-4 gap-4 mt-12">
+          {/* Section Header */}
+          <motion.div variants={tourItemVariants} className="mb-16">
+            <motion.h2
+              variants={tourItemVariants}
+              className="text-5xl md:text-6xl font-light text-[var(--color-dark)] mb-6 tracking-wide"
+            >
+              All Inclusive
+              <span className="block font-medium text-[var(--color-brown)] mt-2">
+                Tour Packages
+              </span>
+            </motion.h2>
+
+            <motion.div
+              variants={tourItemVariants}
+              className="w-24 h-1 bg-[var(--color-brown)] mx-auto mb-8 rounded-full"
+            ></motion.div>
+
+            <motion.p
+              variants={tourItemVariants}
+              className="max-w-3xl mx-auto text-lg leading-relaxed text-[var(--color-dark)] opacity-80"
+            >
+              Travel from anywhere in India or worldwide. Pick a tour that fits
+              you — starting right from your city. Experience curated journeys
+              designed for every traveler.
+            </motion.p>
+          </motion.div>
+
+          {/* Tour Cards Grid */}
+          <motion.div
+            variants={tourItemVariants}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6"
+          >
             {tourPackages.map((tour, index) => (
-              <TourCard key={index} tour={tour} />
+              <motion.div
+                key={index}
+                variants={tourItemVariants}
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="group"
+              >
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[var(--color-semilight)]/30 overflow-hidden">
+                  <TourCard tour={tour} />
+                </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
+
+          {/* Call to Action */}
         </motion.div>
+
+        {/* Decorative Elements */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[var(--color-semilight)]/20 to-transparent pointer-events-none"></div>
       </div>
     </div>
   );

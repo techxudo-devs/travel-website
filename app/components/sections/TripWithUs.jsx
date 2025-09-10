@@ -12,7 +12,6 @@ const TripWithUs = () => {
   const swiperRef = useRef(null);
   const [currentImage, setCurrentImage] = useState(0);
 
-  // Placeholder images - you can replace these with your actual images
   const smallImages = ["/4.jpg", "/6.jpg", "/3.jpg", "/4.jpg"];
 
   const nextImage = () => {
@@ -33,7 +32,7 @@ const TripWithUs = () => {
   ];
 
   return (
-    <div className="bg-white" style={{ backgroundImage: `url("/brown.svg")` }}>
+    <div className="bg-brown">
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left Content */}
