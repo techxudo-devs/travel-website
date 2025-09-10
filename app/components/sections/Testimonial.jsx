@@ -70,75 +70,119 @@ const testimonials = [
   },
 ];
 
-// --- ENHANCED CARD COMPONENT ---
 const TestimonialCard = ({ review }) => {
   return (
     <motion.div
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      className="bg-white/95 backdrop-blur-sm rounded-3xl p-6 flex flex-col h-full shadow-xl hover:shadow-2xl border border-[var(--color-semilight)]/30 relative overflow-hidden group"
+      whileHover={{ y: -12, scale: 1.02 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="bg-gradient-to-br from-white/98 to-white/95 backdrop-blur-xl rounded-[2rem] p-8 flex flex-col h-full shadow-2xl hover:shadow-3xl border border-[var(--color-semilight)]/20 relative overflow-hidden group"
     >
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brown)]/5 via-transparent to-[var(--color-semilight)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      {/* Enhanced gradient overlay with animation */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brown)]/8 via-[var(--color-semilight)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 
-      <div className="relative z-10">
-        {/* Image Section */}
-        <div className="relative mb-6 overflow-hidden rounded-2xl">
-          <img
-            src={review.image}
-            alt={review.trip}
-            className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
-          />
-          {/* Gradient overlay for better contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+      {/* Animated glow effect */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-[var(--color-brown)]/20 via-[var(--color-semilight)]/10 to-[var(--color-brown)]/20 rounded-[2rem] opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500"></div>
 
-          {/* Rating badge */}
-          <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-[var(--color-dark)] text-sm font-bold px-3 py-2 rounded-xl flex items-center gap-2 shadow-lg">
-            <span>{review.rating}</span>
-            <Star size={14} fill="#fbbf24" className="text-yellow-400" />
+      <div className="relative z-10 h-full flex flex-col">
+        {/* Enhanced Image Section */}
+        <div className="relative mb-8 overflow-hidden rounded-3xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+          <div className="relative overflow-hidden">
+            <img
+              src={review.image}
+              alt={review.trip}
+              className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+            />
+            {/* Multi-layered gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-brown)]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
 
-          {/* Trip info badge */}
-          <div className="absolute top-4 right-4 bg-dark/90 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+          {/* Enhanced Rating badge */}
+          <div className="absolute bottom-5 left-5 bg-white/98 backdrop-blur-md text-[var(--color-dark)] text-sm font-bold px-4 py-3 rounded-2xl flex items-center gap-3 shadow-xl border border-white/50">
+            <div className="flex items-center gap-1">
+              <Star
+                size={16}
+                fill="#fbbf24"
+                className="text-yellow-400 drop-shadow-sm"
+              />
+              <span className="font-black">{review.rating}</span>
+            </div>
+            <div className="w-px h-4 bg-[var(--color-semilight)]/40"></div>
+            <span className="text-xs font-semibold text-[var(--color-dark)]/70 uppercase tracking-wide">
+              Excellent
+            </span>
+          </div>
+
+          {/* Enhanced Trip info badge */}
+          <div className="absolute top-5 right-5 bg-[var(--color-dark)]/95 backdrop-blur-md text-[var(--color-light)] text-xs font-bold px-4 py-2 rounded-2xl shadow-xl">
             {review.duration}
           </div>
         </div>
 
-        {/* Trip destination */}
-        <div className="mb-4">
-          <span className="inline-block bg-[var(--color-semilight)]/30 text-[var(--color-dark)] text-sm font-medium px-3 py-1 rounded-full">
+        {/* Modern Trip destination chip */}
+        <div className="mb-6">
+          <span className="inline-flex items-center bg-gradient-to-r from-[var(--color-semilight)]/40 to-[var(--color-semilight)]/20 text-[var(--color-dark)] text-sm font-semibold px-5 py-2.5 rounded-2xl border border-[var(--color-semilight)]/30 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="w-2 h-2 bg-[var(--color-brown)] rounded-full mr-3 animate-pulse"></div>
             {review.trip}
           </span>
         </div>
 
-        {/* Quote section */}
-        <div className="flex-grow mb-6 relative">
-          <Quote size={24} className="text-light/30 mb-3" />
-          <p className="text-[var(--color-dark)] text-lg leading-relaxed font-medium italic">
-            {review.quote}
-          </p>
+        {/* Enhanced Quote section */}
+        <div className="flex-grow mb-8 relative">
+          <div className="relative">
+            <Quote
+              size={32}
+              className="text-[var(--color-brown)]/20 mb-4 transform rotate-12"
+            />
+            <div className="relative">
+              <p className="text-[var(--color-dark)] text-xl leading-relaxed font-medium italic pl-4 border-l-4 border-[var(--color-brown)]/30 hover:border-[var(--color-brown)]/50 transition-colors duration-300">
+                "{review.quote}"
+              </p>
+              {/* Decorative quote marks */}
+              <div className="absolute -top-2 -left-2 text-[var(--color-brown)]/10 text-6xl font-serif leading-none select-none">
+                "
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Profile section */}
-        <div className="flex items-center">
+        {/* Enhanced Profile section */}
+        <div className="flex items-center p-4 bg-gradient-to-r from-[var(--color-semilight)]/10 to-transparent rounded-2xl border border-[var(--color-semilight)]/20">
           <div className="relative">
-            <img
-              src={review.avatar}
-              alt={review.name}
-              className="w-12 h-12 rounded-full object-cover border-2 border-[var(--color-brown)]/20"
-            />
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src={review.avatar}
+                alt={review.name}
+                className="w-16 h-16 object-cover border-3 border-white shadow-lg"
+              />
+            </div>
+            {/* Enhanced online indicator */}
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r from-green-400 to-green-500 rounded-full border-3 border-white shadow-lg flex items-center justify-center">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
           </div>
-          <div className="ml-4">
-            <h4 className="text-[var(--color-dark)] font-bold text-base">
+
+          <div className="ml-5 flex-grow">
+            <h4 className="text-[var(--color-dark)] font-bold text-lg mb-1 tracking-tight">
               {review.name}
             </h4>
-            <p className="text-[var(--color-dark)]/70 text-sm">
+            <div className="flex items-center text-[var(--color-dark)]/60 text-sm">
+              <div className="w-1.5 h-1.5 bg-[var(--color-brown)]/60 rounded-full mr-2"></div>
               {review.location}
-            </p>
+            </div>
+          </div>
+
+          {/* Verified badge */}
+          <div className="ml-3">
+            <div className="bg-[var(--color-brown)]/10 text-[var(--color-brown)] px-3 py-1 rounded-full text-xs font-bold border border-[var(--color-brown)]/20">
+              ✓ Verified
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Corner decoration */}
+      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-[var(--color-brown)]/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     </motion.div>
   );
 };
@@ -193,7 +237,7 @@ const Testimonials = () => {
       </motion.div>
 
       {/* --- Enhanced Swiper Carousel --- */}
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-8xl mx-auto relative z-10">
         <Swiper
           modules={[Pagination, Autoplay]}
           loop={true}
@@ -233,33 +277,9 @@ const Testimonials = () => {
         </Swiper>
 
         {/* Enhanced Custom Pagination */}
-        <div className="swiper-pagination-custom text-center mt-8 [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3 [&_.swiper-pagination-bullet]:bg-[var(--color-semilight)] [&_.swiper-pagination-bullet]:opacity-60 [&_.swiper-pagination-bullet-active]:bg-dark [&_.swiper-pagination-bullet-active]:opacity-100 [&_.swiper-pagination-bullet-active]:w-8 [&_.swiper-pagination-bullet-active]:rounded-full [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300"></div>
       </div>
 
       {/* Statistics Section */}
-      <motion.div
-        variants={itemVariants}
-        className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto relative z-10"
-      >
-        <div className="text-center">
-          <div className="text-4xl font-bold text-light mb-2">2000+</div>
-          <div className="text-[var(--color-dark)]/70 text-sm uppercase tracking-wider">
-            Happy Travelers
-          </div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl font-bold text-light mb-2">4.8/5</div>
-          <div className="text-[var(--color-dark)]/70 text-sm uppercase tracking-wider">
-            Average Rating
-          </div>
-        </div>
-        <div className="text-center">
-          <div className="text-4xl font-bold text-light mb-2">50+</div>
-          <div className="text-[var(--color-dark)]/70 text-sm uppercase tracking-wider">
-            Destinations
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 };

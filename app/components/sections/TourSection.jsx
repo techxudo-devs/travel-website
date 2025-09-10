@@ -84,6 +84,15 @@ const TourCarousel = () => {
 
   return (
     <div className="relative w-full py-10 pb-40 flex bg-gradient-to-br from-[var(--color-light)] via-[var(--color-semilight)]/30 to-light items-center justify-center overflow-hidden">
+      <div className="absolute -top-32 -right-32 w-80 h-80">
+        <svg viewBox="0 0 400 400" className="w-full h-full">
+          <path
+            d="M200,0 Q350,50 400,200 Q350,350 200,400 Q50,350 0,200 Q50,50 200,0"
+            fill="#c4a484"
+            opacity="0.6"
+          />
+        </svg>
+      </div>
       {/* Subtle animated background patterns */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-16 w-40 h-40 rounded-full bg-[var(--color-brown)] blur-3xl animate-pulse"></div>
@@ -235,6 +244,15 @@ const TourCarousel = () => {
 
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[var(--color-semilight)]/20 to-transparent pointer-events-none"></div>
+      <div className="absolute -bottom-32 -left-32 w-96 h-96">
+        <svg viewBox="0 0 400 400" className="w-full h-full">
+          <path
+            d="M0,200 Q100,50 200,100 Q300,150 400,100 L400,400 L0,400 Z"
+            fill="#d2b48c"
+            opacity="0.8"
+          />
+        </svg>
+      </div>
     </div>
   );
 };
