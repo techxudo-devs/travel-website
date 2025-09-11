@@ -75,7 +75,7 @@ const Navbar = () => {
       <div
         className={`bg-fourth  ${
           isScrolled ? "hidden" : ""
-        } text-center py-6 px-4`}
+        } text-center py-4 px-4`}
       >
         <p className="text-sm font-semibold text-first">
           Summer specials offer - The season's best deals | Up to 60% off
@@ -93,12 +93,12 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <a href="#" className="flex  items-center">
-                <Image
+                {/* <Image
                   src="/logo.png"
                   alt="Travito Logo"
                   width={120}
                   height={40}
-                />
+                /> */}
               </a>
             </div>
 
