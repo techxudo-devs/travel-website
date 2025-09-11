@@ -139,7 +139,7 @@ const Footer = () => {
                   placeholder="Full Name"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors duration-300"
+                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-light  focus:border-orange-500 focus:outline-none transition-colors duration-300"
                 />
               </div>
               <div className="relative">
@@ -149,7 +149,7 @@ const Footer = () => {
                   placeholder="E-mail"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors duration-300"
+                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-light  focus:border-orange-500 focus:outline-none transition-colors duration-300"
                 />
               </div>
               <div className="relative">
@@ -159,7 +159,7 @@ const Footer = () => {
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-colors duration-300"
+                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-light  focus:border-orange-500 focus:outline-none transition-colors duration-300"
                 />
               </div>
               <div className="relative">
@@ -169,7 +169,7 @@ const Footer = () => {
                   rows="1"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none resize-none transition-colors duration-300"
+                  className="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-light  focus:border-orange-500 focus:outline-none resize-none transition-colors duration-300"
                 />
               </div>
               <div className="flex items-center justify-end">
@@ -202,12 +202,12 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <a
               href="#"
-              className="text-gray-400 hover:text-light font-bold transition-colors duration-300"
+              className="text-light  hover:text-light font-bold transition-colors duration-300"
             >
               Privacy Policy
             </a>
           </div>
-          <div className="text-gray-400 text-sm">
+          <div className="text-light  text-sm">
             Designed by{" "}
             <span className="text-white font-semibold">Techxudo</span>
           </div>
