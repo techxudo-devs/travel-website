@@ -244,8 +244,6 @@ const TripSection = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 mb-10 w-full h-32 bg-gradient-to-t from-[var(--color-semilight)]/20 to-transparent pointer-events-none"></div>
-      <div className="absolute -bottom-32 -left-32 w-96 h-96"></div>
     </div>
   );
 };
