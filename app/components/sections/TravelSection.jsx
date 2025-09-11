@@ -10,26 +10,6 @@ const TravelInfoSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-stone-100 via-amber-50 to-orange-100"></div>
 
         {/* Organic shape - bottom left */}
-        <div className="absolute -bottom-32 -left-32 w-96 h-96">
-          <svg viewBox="0 0 400 400" className="w-full h-full">
-            <path
-              d="M0,200 Q100,50 200,100 Q300,150 400,100 L400,400 L0,400 Z"
-              fill="#d2b48c"
-              opacity="0.8"
-            />
-          </svg>
-        </div>
-
-        {/* Organic shape - top right */}
-        <div className="absolute -top-32 -right-32 w-80 h-80">
-          <svg viewBox="0 0 400 400" className="w-full h-full">
-            <path
-              d="M200,0 Q350,50 400,200 Q350,350 200,400 Q50,350 0,200 Q50,50 200,0"
-              fill="#c4a484"
-              opacity="0.6"
-            />
-          </svg>
-        </div>
 
         {/* Decorative dotted pattern */}
         {/* <div className="absolute top-20 left-1/4 w-64 h-32 opacity-20">
@@ -118,15 +98,7 @@ const TravelInfoSection = () => {
       </div>
 
       {/* Bottom organic wave */}
-      <div className="absolute bottom-0 left-0 w-full h-32">
-        <svg viewBox="0 0 1200 120" className="w-full h-full">
-          <path
-            d="M0,60 Q300,20 600,60 Q900,100 1200,60 L1200,120 L0,120 Z"
-            fill="#d2b48c"
-            opacity="0.7"
-          />
-        </svg>
-      </div>
+      <div className="absolute bottom-0 left-0 w-full h-32"></div>
     </section>
   );
 };

@@ -68,10 +68,7 @@ const tourPackages = [
 
 const TourPackages = () => {
   return (
-    // --- FIX 2: Ensure 'bg-fourth' is defined in your tailwind.config.js ---
-    // and that CSS variables like --color-brown are in your global CSS file.
-    <div className="relative z-40 w-full min-h-screen py-24 bg-fourth overflow-hidden">
-      {/* Subtle background pattern */}
+    <div className="relative z-40 w-full min-h-screen py-24 bg-gradient-to-b from-white to-fourth overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[var(--color-brown)] blur-3xl"></div>
         <div className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-[var(--color-semilight)] blur-3xl"></div>
@@ -122,7 +119,6 @@ const TourPackages = () => {
           </motion.p>
         </motion.div>
 
-        {/* Tour Cards Grid */}
         <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {tourPackages.map((tour, index) => (
             <motion.div

@@ -1,5 +1,4 @@
 import React from "react";
-import HeroToGridTransition from "./components/sections/Hero";
 
 import TripSection from "./components/sections/TripSection";
 import BlogSection from "./components/sections/BlogSection";
@@ -9,16 +8,17 @@ import PictureSwiper from "./components/sections/PictueSwiper";
 import DestinationsSection from "./components/sections/DestinationSection";
 import ContactForm from "./components/sections/ContactForm";
 import TourPackages from "./components/sections/TourPackages";
+import HeroAndTripSection from "./components/sections/Hero";
 const LandingPage = () => {
   return (
     <div>
-      <HeroToGridTransition />
-      <TripSection />
+      {/* <Hero /> */}
+      {/* <TripSection /> */}
+      <HeroAndTripSection backgroundImageUrl={"/hero.webp"} />
       <TourPackages />
       <DestinationsSection />
       <TravelInfoSection />
       <BlogSection />
-      {/* <Testimonials /> */}
       <ContactForm />
       <PictureSwiper />
     </div>

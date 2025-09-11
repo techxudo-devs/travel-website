@@ -70,14 +70,14 @@ const Navbar = () => {
   const headerTextColor = isScrolled ? "text-gray-700" : "text-white";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-[999]">
       {/* Top Announcement Bar */}
       <div
-        className={`bg-third  ${
+        className={`bg-fourth  ${
           isScrolled ? "hidden" : ""
         } text-center py-6 px-4`}
       >
-        <p className="text-sm font-semibold text-white">
+        <p className="text-sm font-semibold text-first">
           Summer specials offer - The season's best deals | Up to 60% off
         </p>
       </div>
