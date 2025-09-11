@@ -34,10 +34,10 @@ const TourCard = ({ tour }) => {
 
         {/* Country & Duration Badge */}
         <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
-          <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm text-[var(--color-dark)] text-sm font-medium rounded-full shadow-sm">
+          <span className="px-3 py-1.5 bg-fourth backdrop-blur-sm text-second text-sm font-medium rounded-full shadow-sm">
             {tour.country}
           </span>
-          <span className="px-3 py-1.5 bg-[var(--color-brown)]/90 backdrop-blur-sm text-white text-sm font-medium rounded-full shadow-sm">
+          <span className="px-3 py-1.5 bg-brown backdrop-blur-sm text-white text-sm font-medium rounded-full shadow-sm">
             {tour.duration}
           </span>
         </div>
@@ -90,7 +90,7 @@ const TourCard = ({ tour }) => {
         {/* Price */}
         <div className="flex items-baseline justify-between">
           <div>
-            <span className="text-3xl font-bold text-[var(--color-brown)]">
+            <span className="text-3xl font-bold text-five">
               ${tour.price.toLocaleString()}
             </span>
             <span className="text-sm text-[var(--color-dark)]/60 ml-1">
@@ -103,7 +103,7 @@ const TourCard = ({ tour }) => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full py-3.5 bg-gradient-to-r from-[var(--color-brown)] to-[var(--color-dark)] hover:from-[var(--color-dark)] hover:to-[var(--color-brown)] text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
+          className="w-full py-3.5 bg-gradient-to-r from-third to-second hover:from-second hover:to-third text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
         >
           <span className="relative z-10">Book Now</span>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

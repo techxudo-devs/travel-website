@@ -1,26 +1,25 @@
 import React from "react";
 import HeroToGridTransition from "./components/sections/Hero";
-import AboutSection from "./components/sections/AboutSection";
-import TripWithUs from "./components/sections/TripWithUs";
-import Testimonials from "./components/sections/Testimonial";
-import VideoSection from "./components/sections/VideoSection";
-import TourSection from "./components/sections/TourSection";
+
+import TripSection from "./components/sections/TripSection";
 import BlogSection from "./components/sections/BlogSection";
 import TravelInfoSection from "./components/sections/TravelSection";
 import WhatToExpectSection from "./components/sections/WhatToExpect";
 import PictureSwiper from "./components/sections/PictueSwiper";
+import DestinationsSection from "./components/sections/DestinationSection";
+import ContactForm from "./components/sections/ContactForm";
+import TourPackages from "./components/sections/TourPackages";
 const LandingPage = () => {
   return (
     <div>
       <HeroToGridTransition />
-      <TourSection />
-      {/* <AboutSection /> */}
-      {/* <VideoSection /> */}
-      <TripWithUs />
+      <TripSection />
+      <TourPackages />
+      <DestinationsSection />
       <TravelInfoSection />
-      {/* <WhatToExpectSection /> */}
       <BlogSection />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <ContactForm />
       <PictureSwiper />
     </div>
   );

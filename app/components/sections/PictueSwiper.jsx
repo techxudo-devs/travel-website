@@ -88,13 +88,13 @@ export default function PictureSwiper() {
       <div className="absolute flex flex-col gap-4 right-10 md:right-40 top-1/2 transform -translate-y-1/2 z-20">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className="bg-dark hover:bg-dark transition-colors cursor-pointer text-white p-3 rounded-full shadow-lg"
+          className="bg-five hover:bg-dark transition-colors cursor-pointer text-white p-3 rounded-full shadow-lg"
         >
           <ArrowLeft strokeWidth={3} size={24} />
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className="bg-dark hover:bg-dark  transition-colors cursor-pointer text-white p-3 rounded-full shadow-lg"
+          className="bg-five hover:bg-dark  transition-colors cursor-pointer text-white p-3 rounded-full shadow-lg"
         >
           <ArrowRight strokeWidth={3} size={24} />
         </button>

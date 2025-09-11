@@ -20,7 +20,8 @@ const tourTypes = [
   {
     tagline: "ANYTHING BUT USUAL",
     title: "Specialized Tours",
-    imgSrc: "/8.jpg",
+    imgSrc:
+      "https://travelgirls.club/tanzania-zanzibar/_assets/media/66203a39a68aff4541128f5f60b50987.jpg",
     alt: "An aerial view of blue tents in a lush green mountain valley.",
   },
   {
@@ -31,7 +32,7 @@ const tourTypes = [
   },
 ];
 
-const TourCarousel = () => {
+const TripSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const transitionDuration = 500; // Corresponds to duration-500 in Tailwind CSS
@@ -115,15 +116,15 @@ const TourCarousel = () => {
               <span className="text-sm font-semibold tracking-[0.3em] text-[var(--color-brown)] uppercase mb-4 block">
                 EXPLORE THE WORLD
               </span>
-              <div className="w-16 h-1 bg-[var(--color-brown)] mx-auto mb-6 rounded-full"></div>
+              <div className="w-16 h-1 bg-five mx-auto mb-6 rounded-full"></div>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-light text-[var(--color-dark)] leading-tight">
+            <h2 className="text-5xl md:text-6xl font-light text-second leading-tight">
               Come on a Trip With Us!
               <span className="font-medium text-[var(--color-brown)] block mt-2"></span>
             </h2>
 
-            <p className="max-w-4xl text-center text-lg leading-relaxed mx-auto text-[var(--color-dark)]/80">
+            <p className="max-w-4xl text-center text-lg leading-relaxed mx-auto text-first">
               Whether you're seeking the companionship of a group tour, the
               solitude of a private adventure or something totally different –
               we make sure to help create memories on Socotra that last a
@@ -174,19 +175,19 @@ const TourCarousel = () => {
                   {/* Card Content */}
                   <div className="p-8 text-center flex-1 flex flex-col justify-between bg-gradient-to-b from-white/95 to-white">
                     <div className="space-y-4">
-                      <div className="inline-block px-4 py-2 bg-[var(--color-brown)]/10 rounded-full">
+                      <div className="inline-block px-4 py-2 bg-fourth rounded-full">
                         <p className="text-xs font-semibold tracking-[0.2em] text-[var(--color-brown)] uppercase">
                           {tagline}
                         </p>
                       </div>
 
-                      <h3 className="text-4xl font-bold text-[var(--color-dark)] leading-tight">
+                      <h3 className="text-4xl font-bold text-second leading-tight">
                         {title}
                       </h3>
                     </div>
 
                     <div className="mt-8">
-                      <button className="group bg-gradient-to-r from-[var(--color-brown)] to-[var(--color-dark)] hover:from-[var(--color-dark)] hover:to-[var(--color-brown)] text-white py-4 px-8 rounded-2xl flex items-center justify-center transition-all duration-300 text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden">
+                      <button className="group bg-gradient-to-r from-second to-third hover:from-[var(--color-dark)] hover:to-[var(--color-brown)] text-white py-4 px-8 rounded-2xl flex items-center justify-center transition-all duration-300 text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden">
                         <span className="relative z-10">
                           Book a {title.split(" ")[0].toLowerCase()} tour
                         </span>
@@ -209,7 +210,7 @@ const TourCarousel = () => {
         <button
           onClick={handlePrev}
           aria-label="Previous slide"
-          className="absolute left-0 md:left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center text-[var(--color-dark)] hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
+          className="absolute left-0 md:left-6 top-150  -translate-y-1/2 w-14 h-14 bg-white/90 cursor-pointer backdrop-blur-sm rounded-full flex items-center justify-center text-[var(--color-dark)] hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
         >
           <ArrowLeft size={20} />
         </button>
@@ -217,7 +218,7 @@ const TourCarousel = () => {
         <button
           onClick={handleNext}
           aria-label="Next slide"
-          className="absolute right-0 md:right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center text-[var(--color-dark)] hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
+          className="absolute right-0 md:right-6 top-150  -translate-y-1/2 w-14 h-14 bg-white/90 cursor-pointer backdrop-blur-sm rounded-full flex items-center justify-center text-[var(--color-dark)] hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
         >
           <ArrowRight size={20} />
         </button>
@@ -243,18 +244,10 @@ const TourCarousel = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[var(--color-semilight)]/20 to-transparent pointer-events-none"></div>
-      <div className="absolute -bottom-32 -left-32 w-96 h-96">
-        <svg viewBox="0 0 400 400" className="w-full h-full">
-          <path
-            d="M0,200 Q100,50 200,100 Q300,150 400,100 L400,400 L0,400 Z"
-            fill="#d2b48c"
-            opacity="0.8"
-          />
-        </svg>
-      </div>
+      <div className="absolute bottom-0 left-0 mb-10 w-full h-32 bg-gradient-to-t from-[var(--color-semilight)]/20 to-transparent pointer-events-none"></div>
+      <div className="absolute -bottom-32 -left-32 w-96 h-96"></div>
     </div>
   );
 };
 
-export default TourCarousel;
+export default TripSection;

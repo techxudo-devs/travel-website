@@ -1,169 +1,165 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { ChevronDown, ChevronDownIcon } from "lucide-react";
 
+// --- SVG Icon Components ---
+const PhoneIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={`h-5 w-5 ${className}`}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    />
+  </svg>
+);
+
+const MenuIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-7 w-7"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2.5}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4 6h16M4 12h16m-7 6h7"
+    />
+  </svg>
+);
+
+// --- Main Navbar Component ---
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Effect to handle scroll detection
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Set scrolled state if user scrolls down more than 10px
+      setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  // Navigation links data
   const navItems = [
-    { name: "Tours", href: "#tours" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "#" },
+    { name: "Packages", href: "#" },
+    { name: "About us", href: "#" },
+    { name: "Destinations", href: "#" },
+    { name: "Review", href: "#" },
+    { name: "FAQs", href: "#" },
+    { name: "Contact Us", href: "#" },
   ];
 
-  const handleSmoothScroll = (e, href) => {
-    e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-    setIsMobileMenuOpen(false);
-  };
+  const headerTextColor = isScrolled ? "text-gray-700" : "text-white";
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all  duration-300 ease-in-out ${
-        isScrolled ? "bg-light/95 backdrop-blur-lg shadow-md" : "bg-white/90"
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="#" className="flex items-center space-x-2">
-              {/* Using a placeholder for the logo to ensure visibility */}
-              <Image
-                src="/logo.png" // Ensure you have a logo that works with the new theme
-                alt="Travel"
-                width={120}
-                height={50}
-                className="border"
-              />
-            </a>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center space-x-2">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => handleSmoothScroll(e, item.href)}
-                  className={`relative px-4 py-2 text-lg font-medium transition-colors duration-300 group ${
-                    isScrolled
-                      ? "text-dark hover:text-brown"
-                      : "text-dark hover:text-brown"
-                  }`}
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brown transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ))}
-            </div>
-
-            <button
-              className={`
-                relative overflow-hidden group
-                bg-dark text-light font-semibold
-                px-6 py-2.5 rounded-full
-                transition-all duration-300
-                transform hover:scale-105 active:scale-95
-                hover:bg-brown
-              `}
-            >
-              <span className="relative z-10">Book Now</span>
-              <div className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-[100%] transition-all duration-700"></div>
-            </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-md transition-colors duration-300 ${
-                isScrolled
-                  ? "text-dark hover:bg-semilight/50"
-                  : "text-dark hover:bg-dark/10"
-              }`}
-              aria-label="Toggle mobile menu"
-            >
-              <div className="w-6 h-6 relative">
-                <span
-                  className={`absolute block w-full h-0.5 bg-current transform transition-all duration-300 ${
-                    isMobileMenuOpen ? "rotate-45 top-2.5" : ""
-                  }`}
-                ></span>
-                <span
-                  className={`absolute block w-full h-0.5 bg-current transition-all duration-300 ${
-                    isMobileMenuOpen ? "opacity-0" : "top-1/2 -translate-y-1/2"
-                  }`}
-                ></span>
-                <span
-                  className={`absolute block w-full h-0.5 bg-current transform transition-all duration-300 ${
-                    isMobileMenuOpen ? "-rotate-45 top-2.5" : "bottom-0"
-                  }`}
-                ></span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Top Announcement Bar */}
       <div
-        className={`
-          md:hidden absolute top-full left-0 right-0
-          transition-all duration-300 ease-in-out
-          ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}
-        `}
+        className={`bg-third  ${
+          isScrolled ? "hidden" : ""
+        } text-center py-6 px-4`}
       >
-        <div className="bg-light/95 backdrop-blur-lg shadow-xl mx-4 mt-2 rounded-lg overflow-hidden border border-semilight/20">
-          <div className="py-4">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="
-                  block px-6 py-3 text-dark font-medium
-                  hover:bg-semilight/50
-                  transition-colors duration-300
-                "
-              >
-                {item.name}
-              </a>
-            ))}
+        <p className="text-sm font-semibold text-white">
+          Summer specials offer - The season's best deals | Up to 60% off
+        </p>
+      </div>
 
-            <div className="px-6 pt-4 pb-2">
-              <button
-                className="
-                  w-full bg-dark text-light font-semibold py-3 px-6 rounded-full
-                  hover:bg-brown
-                  transition-colors duration-300 transform hover:scale-105
-                  shadow-lg
-                "
-                onClick={() => setIsMobileMenuOpen(false)}
+      {/* Main Navigation */}
+      <nav
+        className={`transition-all duration-300 ease-in-out ${
+          isScrolled ? "bg-fourth backdrop-blur-lg shadow-md" : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4 py-2 sm:px-6 lg:px-8">
+          <div className="flex items-center  justify-between h-20">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <a href="#" className="flex  items-center">
+                <Image
+                  src="/logo.png"
+                  alt="Travito Logo"
+                  width={120}
+                  height={40}
+                />
+              </a>
+            </div>
+
+            {/* Right Side Items */}
+            <div className="flex items-center space-x-4 md:space-x-6">
+              {/* Desktop Contact Info */}
+              <div
+                className={`hidden md:flex items-center space-x-2 ${headerTextColor}`}
               >
-                Book Now
-              </button>
+                <PhoneIcon className="h-5 w-5" />
+                <span className="font-semibold text-sm">(028) 858-494-999</span>
+                <ChevronDownIcon />
+              </div>
+
+              {/* Menu Button */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className={`p-1 rounded-md cursor-pointer transition-colors duration-300 ${headerTextColor} hover:bg-gray-500/20`}
+                  aria-label="Toggle mobile menu"
+                >
+                  <MenuIcon />
+                </button>
+
+                {/* Dropdown Menu */}
+                <div
+                  className={`
+    absolute top-full right-0 mt-3 w-64
+    origin-top-right transition-all duration-300 ease-in-out
+    ${
+      isMobileMenuOpen
+        ? "opacity-100 scale-100 visible"
+        : "opacity-0 scale-95 invisible"
+    }
+  `}
+                >
+                  <div className="bg-white rounded-3xl shadow-2xl ring-1 ring-black ring-opacity-10 overflow-hidden">
+                    <div className="py-2 px-2">
+                      {navItems.map((item, index) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={`
+            block px-6 py-4 text-3xl font-semibold text-dark 
+            transition-colors duration-200 hover:bg-gray-50
+            ${index !== navItems.length - 1 ? "border-b border-gray-100" : ""}
+          `}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

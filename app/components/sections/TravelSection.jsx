@@ -10,6 +10,15 @@ const TravelInfoSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-stone-100 via-amber-50 to-orange-100"></div>
 
         {/* Organic shape - bottom left */}
+        <div className="absolute -bottom-32 -left-32 w-96 h-96">
+          <svg viewBox="0 0 400 400" className="w-full h-full">
+            <path
+              d="M0,200 Q100,50 200,100 Q300,150 400,100 L400,400 L0,400 Z"
+              fill="#d2b48c"
+              opacity="0.8"
+            />
+          </svg>
+        </div>
 
         {/* Organic shape - top right */}
         <div className="absolute -top-32 -right-32 w-80 h-80">
@@ -23,7 +32,7 @@ const TravelInfoSection = () => {
         </div>
 
         {/* Decorative dotted pattern */}
-        <div className="absolute top-20 left-1/4 w-64 h-32 opacity-20">
+        {/* <div className="absolute top-20 left-1/4 w-64 h-32 opacity-20">
           <svg className="w-full h-full" viewBox="0 0 200 100">
             <defs>
               <pattern
@@ -37,7 +46,7 @@ const TravelInfoSection = () => {
             </defs>
             <rect width="200" height="100" fill="url(#dots)" />
           </svg>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative z-10 container mx-auto px-8 py-20">
@@ -48,10 +57,10 @@ const TravelInfoSection = () => {
               <p className="text-sm font-semibold tracking-[0.3em] text-stone-600 uppercase mb-4">
                 GETTING HERE
               </p>
-              <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+              <h2 className="text-5xl lg:text-6xl font-bold text-second leading-tight mb-8">
                 How to travel
                 <br />
-                <span className="text-amber-700">to Socotra</span>
+                <span className="text-five">to Socotra</span>
               </h2>
             </div>
 
@@ -70,7 +79,7 @@ const TravelInfoSection = () => {
               </p>
             </div>
 
-            <button className="group inline-flex items-center bg-gray-900 text-white font-semibold py-4 px-8 rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+            <button className="group inline-flex items-center bg-third cursor-pointer text-white font-semibold py-4 px-8 rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
               Read more
               <ArrowRight
                 size={20}
@@ -84,7 +93,7 @@ const TravelInfoSection = () => {
             {/* Main large image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2574&auto=format&fit=crop"
+                src="https://manyarassecret.com/wp-content/uploads/2020/11/ManyarasSecret_2020_1101.jpg" // Replace with your actual image URL"
                 alt="Aerial view of Socotra landscape with winding river and dragon blood trees"
                 className="w-full h-[500px] object-cover"
               />
@@ -94,7 +103,7 @@ const TravelInfoSection = () => {
             {/* Floating passport image */}
             <div className="absolute -bottom-8 -right-8 w-48 h-32 rounded-2xl overflow-hidden shadow-xl rotate-12 hover:rotate-6 transition-transform duration-300">
               <img
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop"
+                src="https://travelgirls.club/tanzania-zanzibar/_assets/media/9ac3043abf04b0f415721b24dc9daa4b.jpg"
                 alt="Passport with travel stamps"
                 className="w-full h-full object-cover"
               />
@@ -109,6 +118,15 @@ const TravelInfoSection = () => {
       </div>
 
       {/* Bottom organic wave */}
+      <div className="absolute bottom-0 left-0 w-full h-32">
+        <svg viewBox="0 0 1200 120" className="w-full h-full">
+          <path
+            d="M0,60 Q300,20 600,60 Q900,100 1200,60 L1200,120 L0,120 Z"
+            fill="#d2b48c"
+            opacity="0.7"
+          />
+        </svg>
+      </div>
     </section>
   );
 };
