@@ -84,29 +84,7 @@ const TripSection = () => {
   const visibleCards = getVisibleCards();
 
   return (
-    <div className="relative w-full py-10 pb-40 flex bg-gradient-to-br from-[var(--color-light)] via-[var(--color-semilight)]/30 to-light items-center justify-center overflow-hidden">
-      <div className="absolute -top-32 -right-32 w-80 h-80">
-        <svg viewBox="0 0 400 400" className="w-full h-full">
-          <path
-            d="M200,0 Q350,50 400,200 Q350,350 200,400 Q50,350 0,200 Q50,50 200,0"
-            fill="#c4a484"
-            opacity="0.6"
-          />
-        </svg>
-      </div>
-      {/* Subtle animated background patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-16 w-40 h-40 rounded-full bg-[var(--color-brown)] blur-3xl animate-pulse"></div>
-        <div
-          className="absolute bottom-32 right-20 w-56 h-56 rounded-full bg-[var(--color-semilight)] blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/4 w-32 h-32 rounded-full bg-[var(--color-brown)]/50 blur-2xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
-      </div>
-
+    <div className="relative w-full py-10 pb-40 flex bg-white items-center justify-center overflow-hidden">
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
         {/* Header Section */}

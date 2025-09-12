@@ -6,6 +6,7 @@ import { Mail, ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Marquee from "react-fast-marquee";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,18 +67,18 @@ const Hero = () => {
       <div className="relative z-20 flex flex-row items-center justify-between px-10 pt-8">
         <img
           className="w-40"
-          src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/6774ca28bbe75cb8eb00366a_Brand%20logo.png"
+          // src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/6774ca28bbe75cb8eb00366a_Brand%20logo.png"
           alt="Logo"
         />
 
-        <div className="flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-xl">
-          <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+        <div className="flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-lg">
+          <Link href={"/"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
             Home
-          </p>
+          </Link>
           <p>•</p>
-          <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+          <Link href={"/about"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
             About
-          </p>
+          </Link>
           <p>•</p>
           <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
             Packages
@@ -88,7 +89,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="bg-white px-6 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-xl hover:bg-[#DAFF97] flex items-center gap-2">
+        <div className="bg-white px-6 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#DAFF97] flex items-center gap-2">
           <p>Contact Us</p>
           <p><ArrowRight /></p>
         </div>
@@ -103,7 +104,7 @@ const Hero = () => {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-4xl md:text-6xl font-bold leading-tight -mt-16"
+          className="text-4xl md:text-6xl font-bold leading-tight -mt-20"
         >
           Adventure Awaits – Book <br /> Your Journey Today
         </motion.h1>
@@ -145,7 +146,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Girl + Bottom Section */}
-      <div className="relative z-30 flex flex-col items-center justify-end min-h-screen">
+      <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-28">
         <Image
           src="/hero-girl.png"
           alt="Travel girl"
