@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, MailCheck } from "lucide-react";
 
 const HeroSection = () => {
   const heroRef = useRef(null);
@@ -36,7 +36,10 @@ const HeroSection = () => {
   const titleWords = title.split(" ");
 
   return (
-    <div ref={heroRef} className="relative min-h-screen w-full text-white">
+    <div
+      ref={heroRef}
+      className="relative md:min-h-screen h-[80vh] w-full text-white"
+    >
       <Image
         src="/hero-main.jpg" // Your background image path
         alt="Panoramic view of a stunning travel destination"
@@ -49,14 +52,26 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/20 z-10" />
 
       {/* 2. Main Content */}
-
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        className="relative z-20 flex flex-col items-center  justify-end translate-y-55 -translate-x-75 px-4 flex-grow"
+      >
+        <motion.h1
+          variants={itemVariants}
+          className="text-4xl md:text-5xl max-w-[250px] text-center leading-none font-bold "
+        >
+          We Are Travel Girls Club
+        </motion.h1>
+      </motion.div>
       {/* Hero Girl Image */}
-      <div className="absolute  md:bottom-0 left-0 right-0 z-30 flex justify-center p-4">
+      <div className="absolute bottom-0 md:bottom-0 left-0 right-0 z-30 flex justify-center p-4">
         <Image
           src="/hero-girl.png"
           alt="Your image description"
           width={400}
-          height={50}
+          height={150}
           className="object-contain"
         />
       </div>
