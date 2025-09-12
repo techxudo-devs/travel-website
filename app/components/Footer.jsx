@@ -4,12 +4,20 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 py-12 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+    <footer className="relative bg-gradient-to-b from-gray-900 to-black text-gray-300 py-12 px-6">
+
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url('https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/6774e3e00617c7701b4eb3c0_Footer%20BG.jpg')` }}
+      ></div>
+
+      <div className="absolute inset-0 bg-black/70"></div>
+
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
         {/* Logo and Address */}
         <div className="flex flex-col items-start">
           <div className="flex items-center mb-4">
-              <img className='w-40' 
+            <img className='w-40'
               // src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/6774ca28bbe75cb8eb00366a_Brand%20logo.png" 
               alt="Logo" />
           </div>
@@ -90,7 +98,7 @@ const Footer = () => {
       </div>
 
       {/* Social Media and Copyright */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm">
+      <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-white">
         <p className="mb-4 md:mb-0 text-center md:text-left">
           Copyright &copy; Website | Designed by Techxudo - Powered by Techxudo
         </p>

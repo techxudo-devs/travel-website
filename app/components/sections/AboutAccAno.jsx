@@ -118,7 +118,7 @@ const AboutAccAno = () => {
 
                 </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 z-30">
+            {/* <div className="absolute bottom-0 left-0 right-0 z-30">
                 <Image
                     src="/about-bottom.png"
                     alt="Bottom decoration"
@@ -126,7 +126,7 @@ const AboutAccAno = () => {
                     height={500} // give it more height for better proportion
                     className="w-full object-contain" // use contain instead of cover
                 />
-            </div>
+            </div> */}
         </section>
     );
 };
