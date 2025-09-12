@@ -51,11 +51,11 @@ const HeroSection = () => {
       {/* 2. Main Content */}
 
       {/* Hero Girl Image */}
-      <div className="absolute bottom-0 left-0 right-0 z-30 flex justify-center p-4">
+      <div className="absolute  md:bottom-0 left-0 right-0 z-30 flex justify-center p-4">
         <Image
           src="/hero-girl.png"
           alt="Your image description"
-          width={440}
+          width={400}
           height={50}
           className="object-contain"
         />
@@ -70,7 +70,7 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="absolute bottom-4 left-4 z-30">
+      <div className="absolute hidden bottom-4 left-4 z-30">
         <Image
           src="/virtuoso.png"
           alt="Virtuoso"
