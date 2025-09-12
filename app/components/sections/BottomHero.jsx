@@ -173,7 +173,7 @@ const Hero = () => {
           alt="Bottom decoration"
           width={2000}
           height={200}
-          className="object-cover relative z-40 -mt-20"
+          className="w-full object-cover relative z-40 -mt-20"
         />
       </div>
     </div>
