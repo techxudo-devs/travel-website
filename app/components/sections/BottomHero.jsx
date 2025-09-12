@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Mail, ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Marquee from "react-fast-marquee";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +22,7 @@ const Hero = () => {
           trigger: heroRef.current,
           start: "top top",
           end: "bottom top", // scale until bottom of hero
-          scrub: true, // smooth on scroll
+          scrub: true,
         },
       });
     }
@@ -49,7 +50,7 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-[200vh] w-full text-white overflow-hidden"
     >
-      {/* Single Background (scales on scroll) */}
+      {/* Background with scaling */}
       <Image
         ref={bgRef}
         src="/hero-main.jpg"
@@ -87,8 +88,9 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="bg-white px-6 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-xl hover:bg-[#DAFF97]">
+        <div className="bg-white px-6 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-xl hover:bg-[#DAFF97] flex items-center gap-2">
           <p>Contact Us</p>
+          <p><ArrowRight /></p>
         </div>
       </div>
 
@@ -152,12 +154,25 @@ const Hero = () => {
           className="object-contain relative z-30"
         />
 
+        {/* Marquee Background Behind Last Image */}
+        <div className="absolute bottom-20 w-full z-20">
+          <Marquee
+            speed={80}
+            gradient={false}
+            direction="right"
+            className="uppercase font-extrabold text-[60px] md:text-[100px]  tracking-wider"
+          >
+            Your Gateway To{" "}
+            <span className="text-[#DAFF97]">Amazing Journeys &nbsp;</span>
+          </Marquee>
+        </div>
+
         <Image
           src="/hero-bottom.png"
           alt="Bottom decoration"
           width={2000}
           height={200}
-          className="object-cover relative z-20 -mt-16"
+          className="object-cover relative z-40 -mt-20"
         />
       </div>
     </div>
