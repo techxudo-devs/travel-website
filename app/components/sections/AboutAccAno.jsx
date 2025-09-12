@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { Plus, Minus, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 // FAQ data array - easy to add, remove, or edit questions
 const faqData = [
@@ -72,7 +72,7 @@ const AboutAccAno = () => {
     };
 
     return (
-        <section className="bg-[#F6EFE6] py-20 px-4">
+        <section className="relative bg-[#F6EFE6] pt-20 pb-40 px-4">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
@@ -117,6 +117,15 @@ const AboutAccAno = () => {
                     </div>
 
                 </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 z-30">
+                <Image
+                    src="/about-bottom.png"
+                    alt="Bottom decoration"
+                    width={2000}
+                    height={500} // give it more height for better proportion
+                    className="w-full object-contain" // use contain instead of cover
+                />
             </div>
         </section>
     );
