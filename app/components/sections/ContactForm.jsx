@@ -84,7 +84,7 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-          <div className="text-light text-sm mt-8 md:mt-0 max-w-sm mx-auto">
+          {/* <div className="text-light text-sm mt-8 md:mt-0 max-w-sm mx-auto">
             <p className="mb-6">© 2025. All rights reserved.</p>
             <div className="flex space-x-6 mb-6">
               <a href="#" className="hover:text-white">
@@ -99,7 +99,7 @@ const ContactForm = () => {
             </div>
             <p>Designed by Flowcub Design</p>
             <p>Powered by Webflow</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Side */}

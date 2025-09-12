@@ -9,12 +9,15 @@ import DestinationsSection from "./components/sections/DestinationSection";
 import ContactForm from "./components/sections/ContactForm";
 import TourPackages from "./components/sections/TourPackages";
 import HeroAndTripSection from "./components/sections/Hero";
+import BottomHero from "./components/sections/BottomHero";
 const LandingPage = () => {
   return (
     <div>
       {/* <Hero /> */}
       {/* <TripSection /> */}
       <HeroAndTripSection backgroundImageUrl={"/hero.webp"} />
+      <BottomHero />
+      <TripSection />
       <TourPackages />
       <DestinationsSection />
       <TravelInfoSection />
