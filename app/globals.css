@@ -11,3 +11,17 @@
   --color-fourth: #ece7dc;
   --color-five: #ea9940;
 }
+.backforth {
+  
+  animation: moveX 2s ease-in-out infinite alternate;
+}
+
+@keyframes moveX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(80px);
+  }
+}
+

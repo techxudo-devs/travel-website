@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, ChevronRight, MailCheck } from "lucide-react";
 
-const HeroSection = () => {
+const Hero = () => {
   const heroRef = useRef(null);
 
   // Animation variants for the text content
@@ -98,4 +98,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -127,6 +128,16 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 z-[999]">
+        <div className="relative">
+          <div className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform duration-300">
+            <FaWhatsapp className="text-white text-4xl" />
+          </div>
+          <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-white">
+            1
+          </span>
+        </div>
+      </a>
     </footer>
   );
 };

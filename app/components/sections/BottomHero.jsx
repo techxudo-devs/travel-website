@@ -82,9 +82,9 @@ const Hero = () => {
             About
           </Link>
           <p>•</p>
-          <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+          <Link href={"/packages"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             Packages
-          </p>
+          </Link>
           <p>•</p>
           <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             Pages
