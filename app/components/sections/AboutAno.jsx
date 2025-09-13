@@ -19,42 +19,44 @@ const AboutAno = () => {
 
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <img
-                    className="w-40"
-                    // src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/6774ca28bbe75cb8eb00366a_Brand%20logo.png"
+                <Image
+                    src="/logoo.jpeg"
                     alt="Logo"
+                    width={120}
+                    height={120}
+                    className="object-contain"
                 />
 
                 <div className="flex flex-row items-center gap-6 bg-[#494C4F] px-5 py-3 rounded-full text-lg">
                     <Link
                         href={"/"}
-                        className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300"
+                        className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
                     >
                         Home
                     </Link>
                     <p>•</p>
                     <Link
                         href={"/about"}
-                        className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300"
+                        className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
                     >
                         About
                     </Link>
                     <p>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Packages
                     </p>
                     <p>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Pages
                     </p>
                 </div>
 
-                <div className="bg-white px-6 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#DAFF97] flex items-center gap-2">
+                <Link href={"/contact"} className="bg-white px-8 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] flex items-center gap-2">
                     <p>Contact Us</p>
                     <p>
                         <ArrowRight />
                     </p>
-                </div>
+                </Link>
             </div>
 
             {/* About Content */}

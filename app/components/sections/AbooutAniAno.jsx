@@ -87,7 +87,7 @@ const AbooutAniAno = () => {
                                 <span
                                     // Assign a ref to each number span
                                     ref={el => statsRef.current[index] = el}
-                                    className="text-5xl font-bold text-[#DAFF97]"
+                                    className="text-5xl font-bold text-[#D0B4B3]"
                                 >
                                     0{stat.suffix}
                                 </span>

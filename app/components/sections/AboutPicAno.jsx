@@ -68,7 +68,7 @@ const AboutPicAno = () => {
 
                 {/* Section Header */}
                 <div className="text-center md:text-left mb-12">
-                    <p className="font-semibold text-gray-500 uppercase tracking-wide">
+                    <p className="font-semibold text-[#D0B4B3] uppercase tracking-wide">
                         Our Team
                     </p>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2">

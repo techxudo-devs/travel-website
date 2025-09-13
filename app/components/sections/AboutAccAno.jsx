@@ -36,7 +36,7 @@ const faqData = [
 // Reusable Accordion Item Component
 const AccordionItem = ({ question, answer, isOpen, onClick }) => {
     return (
-        <div className="border-b border-gray-300">
+        <div className="border-b border-[#ddc0bf]">
             <button
                 onClick={onClick}
                 className="w-full flex justify-between items-center text-left py-5 cursor-pointer"
@@ -72,7 +72,7 @@ const AboutAccAno = () => {
     };
 
     return (
-        <section className="relative bg-[#F6EFE6] pt-20 pb-40 px-4">
+        <section className="relative bg-[#D0B4B3] pt-20 pb-40 px-4">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
@@ -109,7 +109,7 @@ const AboutAccAno = () => {
                             </h3>
                             <a
                                 href="#"
-                                className="inline-flex items-center justify-center gap-2 bg-[#D1E993] text-black font-semibold py-3 px-6 rounded-full self-start transition-all duration-300 hover:scale-95"
+                                className="inline-flex items-center justify-center gap-2 bg-[#D0B4B3] text-black font-semibold py-3 px-6 rounded-full self-start transition-all duration-300 hover:scale-95"
                             >
                                 Contact Us <ArrowRight size={16} />
                             </a>

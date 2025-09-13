@@ -65,34 +65,36 @@ const Hero = () => {
 
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-10 pt-8">
-        <img
-          className="w-40"
-          // src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/6774ca28bbe75cb8eb00366a_Brand%20logo.png"
+        <Image
+          src="/logoo.jpeg"
           alt="Logo"
+          width={120}
+          height={120}
+          className="object-contain"
         />
 
         <div className="flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-lg">
-          <Link href={"/"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+          <Link href={"/"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             Home
           </Link>
           <p>•</p>
-          <Link href={"/about"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+          <Link href={"/about"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             About
           </Link>
           <p>•</p>
-          <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+          <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             Packages
           </p>
           <p>•</p>
-          <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#DAFF97] hover:text-black transition-all duration-300">
+          <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             Pages
           </p>
         </div>
 
-        <div className="bg-white px-6 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#DAFF97] flex items-center gap-2">
+        <Link href={"/contact"} className="bg-white px-8 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] flex items-center gap-2">
           <p>Contact Us</p>
           <p><ArrowRight /></p>
-        </div>
+        </Link>
       </div>
 
       {/* Hero Content */}
@@ -124,18 +126,18 @@ const Hero = () => {
         >
           <a
             href="mailto:info@travio.com"
-            className="group flex items-center gap-4 rounded-full bg-[#57809A]/90 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-green-800"
+            className="group flex items-center gap-4 rounded-full bg-[#57809A]/90 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-[#D0B4B3] text-black"
           >
-            <div className="bg-blue-700 rounded-full p-2">
-              <Mail size={16} className="text-white" />
+            <div className="bg-blue-700 hover:bg-white transition-all duration-300 rounded-full p-2">
+              <Mail size={16} className="text-black" />
             </div>
             <div>
-              <p className="text-lg leading-4 text-white/80">Send your query</p>
-              <p className="text-sm text-light">user@example.com</p>
+              <p className="text-lg leading-4 text-black transition-all duration-300">Send your query</p>
+              <p className="text-sm text-black transition-all duration-300">user@example.com</p>
             </div>
           </a>
 
-          <button className="group flex items-center gap-2 text-white bg-black font-semibold py-4 px-6 rounded-full hover:bg-green-800 transition-all duration-300 shadow-lg hover:scale-95 text-lg cursor-pointer">
+          <button className="group flex items-center gap-2 text-black bg-[#D0B4B3] font-semibold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:scale-95 text-lg cursor-pointer">
             <span>Book A Trip</span>
             <ArrowRight
               size={20}
@@ -164,7 +166,7 @@ const Hero = () => {
             className="uppercase font-extrabold text-[60px] md:text-[100px]  tracking-wider"
           >
             Your Gateway To{" "}
-            <span className="text-[#DAFF97]">Amazing Journeys &nbsp;</span>
+            <span className="text-[#D0B4B3]">Amazing Journeys &nbsp;</span>
           </Marquee>
         </div>
 

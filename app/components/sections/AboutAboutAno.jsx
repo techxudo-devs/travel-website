@@ -6,9 +6,9 @@ const AboutAboutAno = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:items-start gap-12">
                 {/* Left Content and Features */}
                 <div className="lg:w-1/2 text-center lg:text-left">
-                    <p className="text-gray-600 text-lg font-semibold mb-2">Our Promise</p>
+                    <p className="text-[#D0B4B3] text-lg font-semibold mb-2">Our Promise</p>
                     <h2 className="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                        Why Choose Travlo?
+                        Why Choose Travel Girls
                     </h2>
                     <p className="text-gray-700 text-lg mb-12 max-w-lg mx-auto lg:mx-0">
                         We don't just plan trips—we craft unforgettable experiences. With personalized itineraries, local expertise, and dedicated support, we make every journey seamless, safe, and truly memorable.
