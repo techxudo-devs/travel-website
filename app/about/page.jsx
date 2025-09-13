@@ -5,11 +5,13 @@ import AboutAboutAno from '../components/sections/AboutAboutAno'
 import AbooutAniAno from '../components/sections/AbooutAniAno'
 import AboutPicAno from '../components/sections/AboutPicAno'
 import AboutAccAno from '../components/sections/AboutAccAno'
+import AboutNewAno from '../components/sections/AboutNewAno'
 
 const About = () => {
   return (
     <div>
       <AboutAno />
+      <AboutNewAno />
       <AboutHeroAno />
       <AboutAboutAno />
       <AbooutAniAno />
