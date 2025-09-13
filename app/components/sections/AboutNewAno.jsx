@@ -1,0 +1,115 @@
+import React from 'react';
+import Image from 'next/image';
+import { GiWorld } from 'react-icons/gi';
+import { FaRoute, FaMapMarkerAlt, FaCaretUp } from 'react-icons/fa';
+
+const AboutNewAno = () => {
+    return (
+        <section className="relative bg-white py-16 lg:py-20 overflow-hidden">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    {/* Left Column */}
+                    <div className="flex flex-col space-y-8">
+                        <div>
+                            <span className="text-sm font-bold text-[#D0B4B3] uppercase tracking-widest">
+                                Travel Agency
+                            </span>
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">
+                                Explore Nearby
+                            </h2>
+                        </div>
+
+                        <div className="text-gray-600 space-y-4">
+                            <p>
+                                No one shall be subjected to arbitrary arrest, detention or exile.
+                                Everyone is entitled in full equality to a fair and public hearing
+                                by an independent and impartial tribunal.
+                            </p>
+                            <p>
+                                No one shall be subjected to arbitrary arrest, detention or exile.
+                                Everyone is entitled our latest world tour package.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg">
+                                {/* --- Replace with your image path --- */}
+                                <img
+                                    src="https://themexriver.com/wp/travlia/wp-content/uploads/2025/07/ab1.webp"
+                                    alt="Couple taking a selfie while hiking"
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                            </div>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0">
+                                        <GiWorld className="text-4xl text-gray-800" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-2xl text-gray-900">Trusted Travel Guide</h3>
+                                        <p className="text-gray-600 mt-1">
+                                            One shall be subjected to arbitrary arrest, detention or exile.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0">
+                                        <FaRoute className="text-4xl text-gray-800" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-2xl text-gray-900">Personalized Trips</h3>
+                                        <p className="text-gray-600 mt-1">
+                                            One shall be subjected to arbitrary arrest, detention or exile.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button className="bg-[#D0B4B3] text-black font-bold py-3 px-8 rounded-md hover:scale-95 transition-all duration-300 shadow-md cursor-pointer">
+                                MORE ABOUT US
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Right Column (Video and Suitcase) */}
+                    {/* This section is hidden on screens smaller than lg (1024px) for better mobile experience */}
+                    <div className="relative w-full h-[600px] hidden lg:flex items-center justify-center">
+                        <div className="absolute w-[400px] h-[550px] rounded-2xl overflow-hidden shadow-2xl right-0">
+                            {/* --- Replace with your video path --- */}
+                            <video
+                                className="w-full h-full object-cover"
+                                src="https://themexriver.com/wp/travlia/3.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                            >
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <div className="absolute top-1/2 left-[0%] transform -translate-y-1/2 -rotate-[5deg] w-[300px] h-auto z-10">
+                            {/* --- Replace with your image path --- */}
+                            <img
+                                src="https://themexriver.com/wp/travlia/wp-content/uploads/2025/07/ab3.webp"
+                                alt="Open suitcase for travel"
+                                width={600}
+                                height={450}
+                                className="drop-shadow-2xl"
+                            />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default AboutNewAno;
