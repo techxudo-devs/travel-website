@@ -2,6 +2,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import ImageCard from '../ui/ImageCard';
+import { BASE_URL } from '@/app/utils/ApiBaseUrl';
 
 export default function PackageSection() {
     // State variables to store tours data, loading state, and error state
@@ -14,7 +15,7 @@ export default function PackageSection() {
         const fetchTours = async () => {
             try {
                 // Fetch data from the specified endpoint
-                const response = await fetch("http://localhost:5050/api/tours/preplanned");
+                const response = await fetch(`${BASE_URL}/api/tours/preplanned`);
 
                 // Check if the network response was ok
                 if (!response.ok) {

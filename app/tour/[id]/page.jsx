@@ -6,11 +6,12 @@ import HeroSection from '@/app/components/sections/HeroSection'; // Apne compone
 import ImageCard from '@/app/components/ui/ImageCard';         // Apne component ka path check kar lein
 import { CheckCircle2 } from 'lucide-react'; // Modern icons ke liye
 import Inclusions from '@/app/components/sections/Inclusions';
+import { BASE_URL } from '@/app/utils/ApiBaseUrl';
 
 // Data fetch karne ke liye ek alag function (best practice)
 async function getTourData(id) {
     try {
-        const response = await axios.get(`http://localhost:5050/api/tours/preplanned/${id}`);
+        const response = await axios.get(`${BASE_URL}/api/tours/preplanned/${id}`);
         return response.data;
     } catch (error) {
         // Agar tour nahi milta (e.g., 404 error) to null return karein

@@ -5,6 +5,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import { BASE_URL } from '@/app/utils/ApiBaseUrl';
 
 // Stepper Component - Top par 1-2-3 dikhane ke liye
 const Stepper = ({ currentStep }) => {
@@ -58,8 +59,8 @@ export default function BookingForm() {
             try {
                 // Dono requests ek saath bhejein
                 const [activitiesRes, extrasRes] = await Promise.all([
-                    axios.get('http://localhost:5050/api/activities'),
-                    axios.get('http://localhost:5050/api/extras')
+                    axios.get(`${BASE_URL}/api/activities`),
+                    axios.get(`${BASE_URL}/api/extras`)
                 ]);
                 setActivities(activitiesRes.data);
                 setExtras(extrasRes.data);
@@ -111,7 +112,7 @@ export default function BookingForm() {
         };
 
         try {
-            await axios.post('http://localhost:5050/api/tours/requests', requestData);
+            await axios.post(`${BASE_URL}/api/tours/requests`, requestData);
             setSuccess(true);
         } catch (err) {
             setError('Submission failed. Please check your details and try again.');
