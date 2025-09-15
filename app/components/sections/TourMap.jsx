@@ -165,7 +165,6 @@ const TourMap = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
                 {/* Right Section - Map */}
                 <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center">
                     <div className="absolute inset-0 bg-white opacity-30"></div>
@@ -192,27 +191,6 @@ const TourMap = () => {
                         </div>
                     ))}
                 </div>
-=======
-              {/* Dropdown absolutely positioned so it won't push layout */}
-              <div
-                className={`absolute left-5 top-full overflow-hidden transition-all duration-500 z-20 ease-in-out ${
-                  openDropdown === loc.id
-                    ? "max-h-60 opacity-100"
-                    : "max-h-0 opacity-0"
-                } w-[200px]`}
-              >
-                <ul className="mt-2 bg-[#D0B4B3] rounded-lg shadow-md text-sm p-2">
-                  {loc.dropdown.map((item, i) => (
-                    <li
-                      key={i}
-                      className="px-3 py-1 hover:bg-[#ad9696] rounded cursor-pointer"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
->>>>>>> bfba1a0fa610157d356fc33613ed7c76bd4d53a3
             </div>
           ))}
         </div>
