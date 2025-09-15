@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const leftLocations = [
   {
@@ -113,9 +115,17 @@ const TourMap = () => {
       <div className="flex">
         {/* Left Section with dropdowns */}
         <div className="w-[220px] flex-shrink-0 relative">
-          {leftLocations.map((loc) => (
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            className="bg-[#D0B4B3] px-3 py-1 w-fit mx-auto mb-10 flex items-center gap-2 rounded-md shadow-md cursor-pointer"
+          >
+            <span className="font-medium">Click To Choose</span>
+            <ChevronDown className="w-5 h-5" />
+          </motion.div>          {leftLocations.map((loc) => (
             <div key={loc.id} className="mb-8 relative">
               {/* Image and title clickable */}
+
               <div
                 onClick={() => toggleDropdown(loc.id)}
                 className="cursor-pointer flex flex-col items-center hover:scale-95 transition-all duration-300"

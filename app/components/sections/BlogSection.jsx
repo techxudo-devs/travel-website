@@ -34,7 +34,7 @@ const blogPosts = [
 
 const BlogSection = () => {
   return (
-    <div className="bg-fourth py-20 font-sans">
+    <div id="blog" className="bg-fourth py-20 font-sans">
       <div className="mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-12">

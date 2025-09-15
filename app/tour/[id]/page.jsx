@@ -38,12 +38,10 @@ export default async function TourDetailPage({ params }) {
     return (
         <div className="bg-white">
             <div className="absolute top-0 w-full flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <Image
+                <img loading='lazy'
                     src="/logo23.svg"
                     alt="Logo"
-                    width={120}
-                    height={120}
-                    className="object-contain"
+                    className="object-contain w-60"
                 />
 
                 {/* Menu */}

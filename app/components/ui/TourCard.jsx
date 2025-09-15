@@ -103,9 +103,9 @@ const TourCard = ({ tour }) => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full bg-gradient-to-r from-third to-second hover:from-second hover:to-third text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
+          className="w-full bg-gradient-to-r from-[#D0B4B3] to-black hover:from-black hover:to-[#D0B4B3] text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
         >
-          <Link href={`/tour/${tour.id}`} className="relative  py-3.5 block z-10 w-full cursor-pointer">Book Now</Link>
+          <Link href={`/tour/${tour.id}`} className="relative  py-3.5 block z-10 w-full cursor-pointer uppercase">Book Now</Link>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
         </motion.button>
       </div>
