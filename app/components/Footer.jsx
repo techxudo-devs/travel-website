@@ -21,9 +21,9 @@ const Footer = () => {
           <div className="flex items-center mb-4">
             <img
               loading='lazy'
-              src="/logoo.jpeg"
+              src="/logo23.svg"
               alt="Logo"
-              className="object-contain w-32"
+              className="object-contain w-60"
             />
           </div>
           <p className="text-base">123 Main Street</p>
@@ -46,12 +46,12 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
-                Packages
+                Tours
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
-                Events
+                Blog
               </a>
             </li>
             <li>

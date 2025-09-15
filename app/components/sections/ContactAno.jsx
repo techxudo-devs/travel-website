@@ -17,9 +17,9 @@ const ContactAno = () => {
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
                 <img loading="lazy"
-                    src="/logoo.jpeg"
+                    src="/logo23.svg"
                     alt="Logo"
-                    className="object-contain w-32"
+                    className="object-contain w-60"
                 />
 
                 <div className="flex flex-row items-center gap-6 bg-[#494C4F] px-5 py-3 rounded-full text-lg">
@@ -38,11 +38,11 @@ const ContactAno = () => {
                     </Link>
                     <p>•</p>
                     <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Packages
+                        Tours
                     </p>
                     <p>•</p>
                     <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Pages
+                        Blog
                     </p>
                 </div>
 

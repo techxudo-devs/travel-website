@@ -172,7 +172,7 @@ const TourMap = () => {
                             </div>
                             <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-black -mt-1"></div>
                             <p className="text-xs font-semibold text-white bg-[#D0B4B3] px-3 py-1 shadow-black shadow-sm rounded-full mt-1">
-                                {location.name}
+                                {name}
                             </p>
                         </div>
                     ))}

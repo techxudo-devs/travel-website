@@ -24,9 +24,9 @@ const HeroSection = ({
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
                 <img loading="lazy"
-                    src="/logoo.jpeg"
+                    src="/logo23.svg"
                     alt="Logo"
-                    className="object-contain w-32"
+                    className="object-contain w-60"
                 />
 
                 {/* Menu */}
@@ -46,11 +46,11 @@ const HeroSection = ({
                     </Link>
                     <p>•</p>
                     <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Packages
+                        Tours
                     </p>
                     <p>•</p>
                     <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Pages
+                        Blog
                     </p>
                 </div>
 

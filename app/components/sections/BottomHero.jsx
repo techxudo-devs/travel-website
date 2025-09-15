@@ -63,9 +63,9 @@ const Hero = () => {
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-10 pt-8">
         <img loading="lazy"
-          src="/logoo.jpeg"
+          src="/logo23.svg"
           alt="Logo"
-          className="object-contain w-32"
+          className="object-contain w-60"
         />
 
         <div className="flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-lg">
@@ -78,11 +78,11 @@ const Hero = () => {
           </Link>
           <p>•</p>
           <Link href={"/packages"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-            Packages
+            Tours
           </Link>
           <p>•</p>
           <p className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-            Pages
+            Blog
           </p>
         </div>
 
@@ -159,7 +159,7 @@ const Hero = () => {
             className="uppercase font-extrabold text-[60px] md:text-[100px]  tracking-wider"
           >
             We Are &nbsp;{" "}
-            <span className="text-[#D0B4B3]">Travel Girls</span>
+            <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span>
           </Marquee>
         </div>
 

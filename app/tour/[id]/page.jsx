@@ -39,7 +39,7 @@ export default async function TourDetailPage({ params }) {
         <div className="bg-white">
             <div className="absolute top-0 w-full flex flex-row items-center justify-between px-10 pt-8 z-50">
                 <Image
-                    src="/logoo.jpeg"
+                    src="/logo23.svg"
                     alt="Logo"
                     width={120}
                     height={120}
@@ -63,11 +63,11 @@ export default async function TourDetailPage({ params }) {
                     </Link>
                     <p className='text-[#D0B4B3]'>•</p>
                     <p className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Packages
+                        Tours
                     </p>
                     <p className='text-[#D0B4B3]'>•</p>
                     <p className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Pages
+                        Blog
                     </p>
                 </div>
 

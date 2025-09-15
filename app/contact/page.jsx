@@ -1,12 +1,12 @@
 import React from 'react'
 import ContactAno from '../components/sections/ContactAno'
-import Contact from '../components/sections/Contact'
+import ContactFormAno from '../components/sections/ContactFormAno'
 
 const page = () => {
   return (
     <div>
-        <ContactAno />
-        <Contact />
+      <ContactAno />
+      <ContactFormAno />
     </div>
   )
 }

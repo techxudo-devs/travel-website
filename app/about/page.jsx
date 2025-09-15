@@ -12,10 +12,10 @@ const About = () => {
     <div>
       <AboutAno />
       <AboutNewAno />
-      <AboutHeroAno />
+      {/* <AboutHeroAno /> */}
       <AboutAboutAno />
       <AbooutAniAno />
-      <AboutPicAno />
+      {/* <AboutPicAno /> */}
       <AboutAccAno />
     </div>
   )
