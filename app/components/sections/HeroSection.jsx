@@ -11,7 +11,7 @@ const HeroSection = ({
     return (
         <div className="relative h-screen w-full text-white overflow-hidden">
             {/* Background */}
-            <Image
+            <Image loading="lazy"
                 src={bgImage}
                 alt="Background"
                 fill
@@ -23,7 +23,7 @@ const HeroSection = ({
 
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <img
+                <img loading="lazy"
                     src="/logoo.jpeg"
                     alt="Logo"
                     className="object-contain w-32"
@@ -71,7 +71,7 @@ const HeroSection = ({
             {/* Bottom Decoration */}
             {bottomDecoration && (
                 <div className="absolute bottom-0 left-0 right-0 z-30">
-                    <img
+                    <img loading="lazy"
                         src={bottomDecoration}
                         alt="Bottom decoration"
                         className="w-full object-contain"

@@ -72,7 +72,7 @@ const TravelInfoSection = () => {
           <div className="relative">
             {/* Main large image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img
+              <img loading="lazy"
                 src="/travel1.jpg" // Replace with your actual image URL"
                 alt="Aerial view of Socotra landscape with winding river and dragon blood trees"
                 className="w-full h-[500px] object-cover"
@@ -82,7 +82,7 @@ const TravelInfoSection = () => {
 
             {/* Floating passport image */}
             <div className="absolute -bottom-8 -right-8 w-48 h-32 rounded-2xl overflow-hidden shadow-xl rotate-12 hover:rotate-6 transition-transform duration-300">
-              <img
+              <img loading="lazy"
                 src="/travel.jpg"
                 alt="Passport with travel stamps"
                 className="w-full h-full object-cover"

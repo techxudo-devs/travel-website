@@ -98,7 +98,7 @@ export default function PhotoGallery({ images = [] }) {
                                         className="relative w-full aspect-[4/3] rounded overflow-hidden cursor-pointer group shadow-md"
                                         onClick={() => handleImageClick(idx)}
                                     >
-                                        <img
+                                        <img loading='lazy'
                                             src={url}
                                             alt={`Gallery image ${idx + 1}`}
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

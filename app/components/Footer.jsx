@@ -20,6 +20,7 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <div className="flex items-center mb-4">
             <img
+              loading='lazy'
               src="/logoo.jpeg"
               alt="Logo"
               className="object-contain w-32"

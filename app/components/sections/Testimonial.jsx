@@ -87,7 +87,7 @@ const TestimonialCard = ({ review }) => {
         {/* Enhanced Image Section */}
         <div className="relative mb-8 overflow-hidden rounded-3xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
           <div className="relative overflow-hidden">
-            <img
+            <img loading="lazy"
               src={review.image}
               alt={review.trip}
               className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
@@ -150,7 +150,7 @@ const TestimonialCard = ({ review }) => {
         <div className="flex items-center p-4 bg-gradient-to-r from-[var(--color-semilight)]/10 to-transparent rounded-2xl border border-[var(--color-semilight)]/20">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl">
-              <img
+              <img loading="lazy"
                 src={review.avatar}
                 alt={review.name}
                 className="w-16 h-16 object-cover border-3 border-white shadow-lg"

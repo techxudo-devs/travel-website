@@ -49,7 +49,7 @@ const ItinerarySection = ({ days, visitingLocations }) => {
                             transition={{ duration: 0.5, ease: 'easeInOut' }}
                             className="absolute inset-0"
                         >
-                            <img src={days[activeDayIndex].image} alt={days[activeDayIndex].heading} className="w-full h-full object-cover" />
+                            <img loading='lazy' src={days[activeDayIndex].image} alt={days[activeDayIndex].heading} className="w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
                             <div className="absolute bottom-0 left-0 p-8 text-white">
                                 <h3 className="text-3xl font-bold mb-2">{days[activeDayIndex].heading}</h3>

@@ -90,9 +90,8 @@ const HomeCards = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
       viewport={{ once: true, amount: 0.3 }}
-      className={`w-full max-w-sm md:max-w-md lg:max-w-xl ${
-        imageFirst ? "md:-translate-x-14" : "md:translate-x-14"
-      } translate-x-0`}
+      className={`w-full max-w-sm md:max-w-md lg:max-w-xl ${imageFirst ? "md:-translate-x-14" : "md:translate-x-14"
+        } translate-x-0`}
     >
       <div
         className={`relative ${cardBgColor} ${bgColor} group z-20 px-4 transition-colors cursor-pointer duration-500 ease-in-out overflow-hidden py-12 md:py-22`}
@@ -154,6 +153,7 @@ const HomeCards = ({
       className="w-full max-w-sm md:max-w-[480px] lg:max-w-[580px]"
     >
       <Image
+        loading="lazy"
         src={image}
         width={imgWidth}
         height={imgHeight}
@@ -165,9 +165,8 @@ const HomeCards = ({
 
   return (
     <div
-      className={`flex flex-col md:flex-row gap-8 md:gap-2 items-center justify-center ${
-        imageFirst ? "md:flex-row-reverse" : ""
-      }`}
+      className={`flex flex-col md:flex-row gap-8 md:gap-2 items-center justify-center ${imageFirst ? "md:flex-row-reverse" : ""
+        }`}
     >
       <CardComponent />
       <ImageComponent />

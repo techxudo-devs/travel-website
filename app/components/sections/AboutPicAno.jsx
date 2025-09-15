@@ -42,7 +42,7 @@ const TeamMemberCard = ({ name, title, imageSrc }) => {
 
             {/* The image container has the background color and rounded corners */}
             <div className="bg-[#F9F5F1] rounded-xl overflow-hidden">
-                <img
+                <img loading='lazy'
                     src={imageSrc}
                     alt={`Portrait of ${name}`}
                     // Use standard Tailwind classes for styling the img tag

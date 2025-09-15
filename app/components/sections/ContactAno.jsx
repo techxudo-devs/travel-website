@@ -2,12 +2,12 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
 const ContactAno = () => {
+
     return (
         <div className="relative h-screen w-full text-white overflow-hidden">
             {/* Background */}
-            <img
+            <img loading="lazy"
                 src="/contact-main.jpg"
                 alt="About background"
                 className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
@@ -16,7 +16,7 @@ const ContactAno = () => {
 
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <img
+                <img loading="lazy"
                     src="/logoo.jpeg"
                     alt="Logo"
                     className="object-contain w-32"
@@ -61,7 +61,7 @@ const ContactAno = () => {
 
             {/* Bottom Decoration (fixed to bottom inside h-screen) */}
             <div className="absolute bottom-0 left-0 right-0 z-30">
-                <img
+                <img loading="lazy"
                     src="/about-bottom.png"
                     alt="Bottom decoration"
                     className="w-full object-contain" // use contain instead of cover

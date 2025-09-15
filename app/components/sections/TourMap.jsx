@@ -120,7 +120,7 @@ const TourMap = () => {
                                 onClick={() => toggleDropdown(loc.id)}
                                 className="cursor-pointer flex flex-col items-center"
                             >
-                                <img
+                                <img loading="lazy"
                                     className="w-16 h-16 rounded-full object-cover"
                                     src={loc.image}
                                     alt={loc.name}
@@ -163,7 +163,7 @@ const TourMap = () => {
                         >
                             {/* The circular image */}
                             <div className='relative w-20 h-20 rounded-full border-4 border-black shadow-lg overflow-hidden flex items-center justify-center bg-gray-200'>
-                                <img
+                                <img loading="lazy"
                                     src={image}
                                     alt={name}
                                     layout='fill'

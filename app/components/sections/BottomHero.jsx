@@ -52,7 +52,7 @@ const Hero = () => {
       className="relative min-h-[200vh] w-full text-white overflow-hidden"
     >
       {/* Background with scaling */}
-      <img
+      <img loading="lazy"
         ref={bgRef}
         src="/hero-main.jpg"
         alt="Travel destination"
@@ -62,7 +62,7 @@ const Hero = () => {
 
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-10 pt-8">
-        <img
+        <img loading="lazy"
           src="/logoo.jpeg"
           alt="Logo"
           className="object-contain w-32"
@@ -144,7 +144,7 @@ const Hero = () => {
 
       {/* Girl + Bottom Section */}
       <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-28">
-        <img
+        <img loading="lazy"
           src="/hero-girl.png"
           alt="Travel girl"
           className="object-contain relative z-30"
@@ -163,7 +163,7 @@ const Hero = () => {
           </Marquee>
         </div>
 
-        <img
+        <img loading="lazy"
           src="/hero-bottom.png"
           alt="Bottom decoration"
           className="w-full object-cover relative z-40 -mt-20"

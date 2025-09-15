@@ -79,7 +79,7 @@ export default function ImageCard({
 
                     {/* Main Image */}
                     <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
-                        <Image
+                        <Image loading="lazy"
                             src={image}
                             alt={heading}
                             layout="fill"
@@ -91,7 +91,7 @@ export default function ImageCard({
                     {floatImage && (
                         <div className={`absolute -bottom-12 w-56 h-40 transform -rotate-6 ${isTextOnLeft ? '-right-12' : '-left-12'}`}>
                             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                                <Image
+                                <Image loading="lazy"
                                     src={floatImage}
                                     alt="Floating detail image"
                                     layout="fill"

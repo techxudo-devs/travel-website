@@ -41,6 +41,7 @@ const Hero = () => {
       className="relative md:min-h-screen h-[80vh] w-full text-white"
     >
       <Image
+      loading="lazy"
         src="/hero-main.jpg" // Your background image path
         alt="Panoramic view of a stunning travel destination"
         layout="fill"
@@ -67,7 +68,7 @@ const Hero = () => {
       </motion.div>
       {/* Hero Girl Image */}
       <div className="absolute bottom-0 md:bottom-0 left-0 right-0 z-30 flex justify-center p-4">
-        <Image
+        <Image loading="lazy"
           src="/hero-girl.png"
           alt="Your image description"
           width={400}
@@ -76,7 +77,7 @@ const Hero = () => {
         />
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-30 flex justify-center">
-        <Image
+        <Image loading="lazy"
           src="/hero-bottom.png"
           alt="Your image description"
           width={2000}
@@ -86,7 +87,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute hidden bottom-4 left-4 z-30">
-        <Image
+        <Image loading="lazy"
           src="/virtuoso.png"
           alt="Virtuoso"
           width={120}

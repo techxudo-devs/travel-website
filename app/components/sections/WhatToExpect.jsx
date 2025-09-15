@@ -198,7 +198,7 @@ const WhatToExpectSection = () => {
           {/* Right - Active Image */}
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-              <img
+              <img loading="lazy"
                 src={experiences[activeIndex].image}
                 alt={experiences[activeIndex].title}
                 className="w-full h-[600px] object-cover transition-all duration-700"

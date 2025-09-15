@@ -24,14 +24,14 @@ const AboutHeroAno = () => {
                 {/* Right Image Grid */}
                 <div className="lg:w-1/2 flex justify-center lg:justify-end gap-6">
                     <div className="w-full sm:w-1/2 max-w-xs lg:max-w-none">
-                        <img
+                        <img loading='lazy'
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
                             src="/about4.jpg"
                             alt="Traveler admiring a fjord landscape"
                         />
                     </div>
                     <div className="w-full sm:w-1/2 max-w-xs lg:max-w-none mt-8 sm:mt-0 lg:mt-12"> {/* Adjusted margin-top for second image */}
-                        <img
+                        <img loading='lazy'
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
                             src="/about5.jpg"
                             alt="Woman in yellow dress on a tropical island"

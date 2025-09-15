@@ -237,10 +237,10 @@ export default function BookingForm() {
 
                 {/* Right Side: Image Gallery */}
                 <div className="hidden max-h-screen lg:grid grid-cols-2 grid-rows-3 gap-4 p-4 ">
-                    <img src="/4.jpg" alt="Socotra landscape 1" className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
-                    <img src="/8.jpg" alt="Socotra landscape 2" className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
-                    <img src="/2.jpg" alt="Socotra landscape 3" className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
-                    <img src="/5.jpg" alt="Socotra landscape 4" className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <img loading='lazy' src="/4.jpg" alt="Socotra landscape 1" className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <img loading='lazy' src="/8.jpg" alt="Socotra landscape 2" className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <img loading='lazy' src="/2.jpg" alt="Socotra landscape 3" className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <img loading='lazy' src="/5.jpg" alt="Socotra landscape 4" className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
                 </div>
             </div>
         </div>

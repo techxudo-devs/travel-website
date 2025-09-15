@@ -38,7 +38,7 @@ export default async function TourDetailPage({ params }) {
     return (
         <div className="bg-white">
             <div className="absolute top-0 w-full flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <Image
+                <Image loading='lazy'
                     src="/logoo.jpeg"
                     alt="Logo"
                     width={120}
