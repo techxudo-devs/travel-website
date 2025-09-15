@@ -21,7 +21,7 @@ const tourTypes = [
     tagline: "ANYTHING BUT USUAL",
     title: "Specialized Tours",
     imgSrc:
-      "https://travelgirls.club/tanzania-zanzibar/_assets/media/66203a39a68aff4541128f5f60b50987.jpg",
+      "/5.jpg",
     alt: "An aerial view of blue tents in a lush green mountain valley.",
   },
   {
@@ -153,19 +153,19 @@ const TripSection = () => {
                   {/* Card Content */}
                   <div className="p-8 text-center flex-1 flex flex-col justify-between bg-gradient-to-b from-white/95 to-white">
                     <div className="space-y-4">
-                      <div className="inline-block px-4 py-2 bg-fourth rounded-full">
-                        <p className="text-xs font-semibold tracking-[0.2em] text-[var(--color-brown)] uppercase">
+                      <div className="inline-block px-4 py-2 bg-[#D0B4B3] rounded-full">
+                        <p className="text-xs font-semibold tracking-[0.2em] text-white uppercase">
                           {tagline}
                         </p>
                       </div>
 
-                      <h3 className="text-4xl font-bold text-second leading-tight">
+                      <h3 className="text-4xl font-bold text-[#D0B4B3] leading-tight uppercase">
                         {title}
                       </h3>
                     </div>
 
                     <div className="mt-8">
-                      <button className="group bg-gradient-to-r from-second to-third hover:from-[var(--color-dark)] hover:to-[var(--color-brown)] text-white py-4 px-8 rounded-2xl flex items-center justify-center transition-all duration-300 text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden">
+                      <button className="group bg-gradient-to-r from-[#D0B4B3] to-black hover:from-black hover:to-[#D0B4B3] text-white py-4 px-8 rounded-2xl flex items-center justify-center transition-all duration-300 text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden cursor-pointer">
                         <span className="relative z-10">
                           Book a {title.split(" ")[0].toLowerCase()} tour
                         </span>
@@ -188,7 +188,7 @@ const TripSection = () => {
         <button
           onClick={handlePrev}
           aria-label="Previous slide"
-          className="absolute left-0 md:left-6 top-150  -translate-y-1/2 w-14 h-14 bg-white/90 cursor-pointer backdrop-blur-sm rounded-full flex items-center justify-center text-[var(--color-dark)] hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
+          className="absolute left-0 md:left-6 top-150  -translate-y-1/2 w-14 h-14 bg-[#D0B4B3] cursor-pointer backdrop-blur-sm rounded-full flex items-center justify-center text-[var(--color-dark)] hover:bg-[#bda4a3] hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
         >
           <ArrowLeft size={20} />
         </button>
@@ -196,7 +196,7 @@ const TripSection = () => {
         <button
           onClick={handleNext}
           aria-label="Next slide"
-          className="absolute right-0 md:right-6 top-150  -translate-y-1/2 w-14 h-14 bg-white/90 cursor-pointer backdrop-blur-sm rounded-full flex items-center justify-center text-[var(--color-dark)] hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
+          className="absolute right-0 md:right-6 top-150  -translate-y-1/2 w-14 h-14 bg-[#D0B4B3] cursor-pointer backdrop-blur-sm rounded-full flex items-center justify-center text-[var(--color-dark)] hover:bg-[#bda4a3] hover:scale-110 transition-all duration-300 z-30 shadow-lg hover:shadow-xl border border-[var(--color-semilight)]/20"
         >
           <ArrowRight size={20} />
         </button>
@@ -209,11 +209,10 @@ const TripSection = () => {
               onClick={() => handleDotClick(index)}
               aria-label={`Go to slide ${index + 1}`}
               className={`
-                transition-all duration-300 rounded-full
-                ${
-                  currentIndex === index
-                    ? "w-8 h-3 bg-[var(--color-brown)]"
-                    : "w-3 h-3 bg-[var(--color-semilight)] hover:bg-[var(--color-brown)]/60"
+                transition-all duration-300 rounded-full cursor-pointer
+                ${currentIndex === index
+                  ? "w-8 h-3 bg-[#D0B4B3]"
+                  : "w-3 h-3 bg-[#bda4a3] hover:bg-[var(--color-brown)]/60"
                 }
               `}
             />

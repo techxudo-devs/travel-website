@@ -52,14 +52,11 @@ const Hero = () => {
       className="relative min-h-[200vh] w-full text-white overflow-hidden"
     >
       {/* Background with scaling */}
-      <Image
+      <img
         ref={bgRef}
         src="/hero-main.jpg"
         alt="Travel destination"
-        fill
-        priority
-        quality={90}
-        className="object-cover z-0 will-change-transform"
+        className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
       <div className="absolute inset-0 bg-black/50 z-10" />
 
@@ -124,9 +121,9 @@ const Hero = () => {
         >
           <a
             href="mailto:info@travio.com"
-            className="group flex items-center gap-4 rounded-full bg-[#57809A]/90 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-[#D0B4B3] text-black"
+            className="group flex items-center gap-4 rounded-full bg-[#57809A]/90 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-[#b89f9e] text-black"
           >
-            <div className="bg-blue-700 hover:bg-white transition-all duration-300 rounded-full p-2">
+            <div className="bg-[#D0B4B3] hover:bg-[#D0B4B3] transition-all duration-300 rounded-full p-2">
               <Mail size={16} className="text-black" />
             </div>
             <div>
