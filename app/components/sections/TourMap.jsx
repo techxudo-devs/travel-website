@@ -39,7 +39,7 @@ const leftLocations = [
     },
 ];
 
-const rightLocations = [
+const tourLocations = [
     {
         id: 1,
         name: "Beach",

@@ -13,6 +13,7 @@ import PhotoGallery from '@/app/components/sections/PhotoGallery';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import ActivitiesExtrasSection from '@/app/components/sections/ActivitiesExtras';
 
 // Data fetch karne ke liye function
 async function getTourData(id) {
@@ -46,26 +47,26 @@ export default async function TourDetailPage({ params }) {
                 />
 
                 {/* Menu */}
-                <div className="flex flex-row items-center gap-6 bg-[#494C4F] px-5 py-3 rounded-full text-lg">
+                <div className="flex flex-row items-center gap-6 bg-[#494C4F]/50 px-5 py-3 rounded-full text-lg">
                     <Link
                         href={"/"}
-                        className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
+                        className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
                     >
                         Home
                     </Link>
-                    <p>•</p>
+                    <p className='text-[#D0B4B3]'>•</p>
                     <Link
                         href={"/about"}
-                        className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
+                        className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
                     >
                         About
                     </Link>
-                    <p>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+                    <p className='text-[#D0B4B3]'>•</p>
+                    <p className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Packages
                     </p>
-                    <p>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+                    <p className='text-[#D0B4B3]'>•</p>
+                    <p className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Pages
                     </p>
                 </div>
@@ -101,6 +102,10 @@ export default async function TourDetailPage({ params }) {
                     {tour.description}
                 </p>
             </section>
+            <ActivitiesExtrasSection
+                activities={tour.activities}
+                extras={tour.extras}
+            />
 
             {/* 4. Itinerary (Map + Carousel) Section */}
             <ItinerarySection
