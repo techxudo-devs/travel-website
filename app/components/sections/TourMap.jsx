@@ -107,17 +107,17 @@ const TourMap = () => {
                     {/* Overlay with a slight tint for better readability, optional */}
                     <div className="absolute inset-0 bg-white opacity-30"></div>
 
-                    {tourLocations.map((location) => (
+                    {tourLocations.map(({ id, mapPosition, image, name }) => (
                         <div
-                            key={location.id}
+                            key={id}
                             className='absolute flex flex-col items-center cursor-pointer transform -translate-x-1/2 -translate-y-1/2'
-                            style={location.mapPosition}
+                            style={mapPosition}
                         >
                             {/* The circular image */}
                             <div className='relative w-20 h-20 rounded-full border-4 border-black shadow-lg overflow-hidden flex items-center justify-center bg-gray-200'>
                                 <img
-                                    src={location.image}
-                                    alt={location.name}
+                                    src={image}
+                                    alt={name}
                                     layout='fill'
                                     objectFit='cover'
                                 />

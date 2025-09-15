@@ -122,8 +122,8 @@ const TourPackages = () => {
               image: apiTour.coverImage,
               price: apiTour.basePrice,
               // Placeholders for data not available in the API response
-              country: "Featured Destination",
-              duration: `${apiTour.maxPeople} People Max`, // Available data ka creative use
+              country: apiTour.location,
+              duration: apiTour.category[0].name, // Available data ka creative use
               rating: 4.5, // Placeholder rating
               reviews: "Popular choice", // Placeholder reviews
             };

@@ -25,3 +25,65 @@
   }
 }
 
+/* globals.css me daalein */
+
+.photo-gallery-slider .slick-slide {
+    padding: 0 12px; /* Slides ke beech me gap ke liye */
+}
+
+.photo-gallery-slider .slick-list {
+    margin: 0 -12px; /* Padding ko compensate karne ke liye */
+}
+
+/* Custom Arrow Styles */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background-color: #30708269 !important;
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important; /* to override slick's display: none */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.custom-arrow:hover {
+    background-color: white;
+}
+
+.prev-arrow {
+    left: 160px; /* Slider ke thoda bahar */
+}
+.slick-next{
+  right:-6px !important
+}
+.slick-prev{
+  left:-6px !important
+
+}
+.next-arrow {
+    right: 160px; /* Slider ke thoda bahar */
+}
+
+/* Default slick arrow styling ko hatayein */
+.custom-arrow::before {
+    content: none;
+}
+
+/* Dots ko style karein */
+.slick-dots li button:before {
+  margin-top: 15px !important;
+    font-size: 15px !important;
+    color: var(--color-brown) !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--color-second) !important;
+}
