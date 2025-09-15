@@ -11,7 +11,7 @@ const HeroSection = ({
     return (
         <div className="relative h-screen w-full text-white overflow-hidden">
             {/* Background */}
-            <Image loading="lazy"
+            <Image
                 src={bgImage}
                 alt="Background"
                 fill

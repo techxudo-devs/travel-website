@@ -153,7 +153,6 @@ const HomeCards = ({
       className="w-full max-w-sm md:max-w-[480px] lg:max-w-[580px]"
     >
       <Image
-        loading="lazy"
         src={image}
         width={imgWidth}
         height={imgHeight}

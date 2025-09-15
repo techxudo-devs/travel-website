@@ -22,7 +22,7 @@ const TourCard = ({ tour }) => {
     >
       {/* Image Container */}
       <div className="relative w-full h-64 overflow-hidden">
-        <Image loading="lazy"
+        <Image
           src={tour.image}
           alt={tour.title}
           layout="fill"
