@@ -1,131 +1,173 @@
-import React from 'react';
-import Image from 'next/image';
+"use client";
+import React, { useState } from "react";
 
-const tourLocations = [
+const leftLocations = [
     {
         id: 1,
-        name: 'Africa',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfcf4783fa8a86bdfbc7b8_img5a.webp",
-        mapPosition: { top: '60%', left: '52%' } // Example positioning, adjust as needed
+        name: "Beach",
+        subtitle: "Coastal Hiking",
+        image: "/map1.webp",
+        dropdown: ["Surfing", "Scuba Diving", "Snorkeling", "Beach Volleyball", "Sunbathing"],
     },
     {
         id: 2,
-        name: 'Asia',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3de32c082d060e76255_img6a.webp",
-        mapPosition: { top: '25%', left: '80%' }
+        name: "Forest",
+        subtitle: "Hiking & Trekking",
+        image: "/map2.webp",
+        dropdown: ["Wildlife Safari", "Camping", "Treehouse Stay", "Nature Walk", "Photography"],
     },
     {
         id: 3,
-        name: 'The Caribbean',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3dfe450e9ab71adcb8b_img7a.webp",
-        mapPosition: { top: '40%', left: '25%' }
+        name: "Desert",
+        subtitle: "Desert Camping",
+        image: "/map3.webp",
+        dropdown: ["Camel Ride", "Sand Boarding", "Jeep Safari", "Star Gazing", "Cultural Show"],
     },
     {
         id: 4,
-        name: 'Central America',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3dfdebb9d139a15084f_img8a.webp",
-        mapPosition: { top: '30%', left: '10%' }
+        name: "Mountain",
+        subtitle: "Mountaineering",
+        image: "/map4.webp",
+        dropdown: ["Rock Climbing", "Snow Trekking", "Paragliding", "Skiing", "Hot Springs"],
     },
     {
         id: 5,
-        name: 'Europe',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3df9477fbba4179c0f6_img9a.webp",
-        mapPosition: { top: '25%', left: '50%' }
+        name: "Northern",
+        subtitle: "Glacier Hiking",
+        image: "/map5.webp",
+        dropdown: ["Ice Climbing", "Heli Tour", "Fishing", "Village Visit", "Snowmobile Ride"],
+    },
+];
+
+const rightLocations = [
+    {
+        id: 1,
+        name: "Beach",
+        image: "/map1.webp",
+        mapPosition: { top: "60%", left: "52%" },
+    },
+    {
+        id: 2,
+        name: "Forest",
+        image: "/map2.webp",
+        mapPosition: { top: "25%", left: "80%" },
+    },
+    {
+        id: 3,
+        name: "Desert",
+        image: "/map3.webp",
+        mapPosition: { top: "40%", left: "25%" },
+    },
+    {
+        id: 4,
+        name: "Mountain",
+        image: "/map4.webp",
+        mapPosition: { top: "30%", left: "10%" },
+    },
+    {
+        id: 5,
+        name: "Northern",
+        image: "/map5.webp",
+        mapPosition: { top: "25%", left: "50%" },
     },
     {
         id: 6,
-        name: 'The Middle East',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfcf4783fa8a86bdfbc7b8_img5a.webp", // Using a placeholder, replace with actual image
-        mapPosition: { top: '40%', left: '65%' }
+        name: "Beach",
+        image: "/map1.webp",
+        mapPosition: { top: "40%", left: "65%" },
     },
     {
         id: 7,
-        name: 'North America',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3de32c082d060e76255_img6a.webp", // Using a placeholder, replace with actual image
-        mapPosition: { top: '20%', left: '20%' }
+        name: "Forest",
+        image: "/map2.webp",
+        mapPosition: { top: "20%", left: "20%" },
     },
     {
         id: 8,
-        name: 'Oceania',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3dfe450e9ab71adcb8b_img7a.webp", // Using a placeholder, replace with actual image
-        mapPosition: { top: '68%', left: '80%' }
+        name: "Desert",
+        image: "/map3.webp",
+        mapPosition: { top: "68%", left: "80%" },
     },
     {
         id: 9,
-        name: 'South America',
-        image: "https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3dfdebb9d139a15084f_img8a.webp", // Using a placeholder, replace with actual image
-        mapPosition: { top: '70%', left: '31%' }
+        name: "Mountain",
+        image: "/map4.webp",
+        mapPosition: { top: "70%", left: "31%" },
     },
 ];
 
 const TourMap = () => {
+    const [openDropdown, setOpenDropdown] = useState(null);
+
+    const toggleDropdown = (id) => {
+        setOpenDropdown(openDropdown === id ? null : id);
+    };
+
     return (
-        <div className='bg-[#FFFFFF] py-20 min-h-screen pr-10'>
-            <h1 className='text-center text-5xl font-bold text-[#D0B4B3] pb-4 uppercase'>Choose Your Destination</h1>
+        <div className="bg-[#FFFFFF] py-20 min-h-screen pr-10">
+            <h1 className="text-center text-5xl font-bold text-[#D0B4B3] pb-4 uppercase">
+                Choose Your Destination
+            </h1>
             <div className="w-24 h-1 bg-[#D0B4B3] mx-auto mb-8 rounded-full"></div>
-            <div className='flex'>
-                {/* Left Section - Your existing content */}
-                <div className='flex flex-col gap-10 w-1/5'>
-                    <div className='flex flex-col gap-2 items-center'>
-                        <img className='w-16 h-16 rounded-full object-cover' src="https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfcf4783fa8a86bdfbc7b8_img5a.webp" alt="Tour" width={64} height={64} />
-                        <div className='text-center'>
-                            <p className='text-sm font-medium'>Beach</p>
-                            <p className='text-xs text-gray-600'>Coastal Hiking</p>
+
+            <div className="flex">
+                {/* Left Section with dropdowns */}
+                <div className="w-[220px] flex-shrink-0 relative">
+                    {leftLocations.map((loc) => (
+                        <div key={loc.id} className="mb-8 relative">
+                            {/* Image and title clickable */}
+                            <div
+                                onClick={() => toggleDropdown(loc.id)}
+                                className="cursor-pointer flex flex-col items-center"
+                            >
+                                <img
+                                    className="w-16 h-16 rounded-full object-cover"
+                                    src={loc.image}
+                                    alt={loc.name}
+                                />
+                                <div className="text-center mt-2">
+                                    <p className="text-sm font-medium">{loc.name}</p>
+                                    <p className="text-xs text-gray-600">{loc.subtitle}</p>
+                                </div>
+                            </div>
+
+                            {/* Dropdown absolutely positioned so it won't push layout */}
+                            <div
+                                className={`absolute left-5 top-full overflow-hidden transition-all duration-500 z-20 ease-in-out ${openDropdown === loc.id ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+                                    } w-[200px]`}
+                            >
+                                <ul className="mt-2 bg-[#D0B4B3] rounded-lg shadow-md text-sm p-2">
+                                    {loc.dropdown.map((item, i) => (
+                                        <li
+                                            key={i}
+                                            className="px-3 py-1 hover:bg-[#ad9696] rounded cursor-pointer"
+                                        >
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex flex-col gap-2 items-center'>
-                        <img className='w-16 h-16 rounded-full object-cover' src="https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3de32c082d060e76255_img6a.webp" alt="Tour" width={64} height={64} />
-                        <div className='text-center'>
-                            <p className='text-sm font-medium'>Forest</p>
-                            <p className='text-xs text-gray-600'>Hiking & Trekking</p>
-                        </div>
-                    </div>
-                    <div className='flex flex-col gap-2 items-center'>
-                        <img className='w-16 h-16 rounded-full object-cover' src="https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3dfe450e9ab71adcb8b_img7a.webp" alt="Tour" width={64} height={64} />
-                        <div className='text-center'>
-                            <p className='text-sm font-medium'>Desert</p>
-                            <p className='text-xs text-gray-600'>Desert Camping</p>
-                        </div>
-                    </div>
-                    <div className='flex flex-col gap-2 items-center'>
-                        <img className='w-16 h-16 rounded-full object-cover' src="https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3dfdebb9d139a15084f_img8a.webp" alt="Tour" width={64} height={64} />
-                        <div className='text-center'>
-                            <p className='text-sm font-medium'>Mountain</p>
-                            <p className='text-xs text-gray-600'>Mountaineering</p>
-                        </div>
-                    </div>
-                    <div className='flex flex-col gap-2 items-center'>
-                        <img className='w-16 h-16 rounded-full object-cover' src="https://cdn.prod.website-files.com/67be71af9e8ca0fac0d00356/67bfd3df9477fbba4179c0f6_img9a.webp" alt="Tour" width={64} height={64} />
-                        <div className='text-center'>
-                            <p className='text-sm font-medium'>Northern</p>
-                            <p className='text-xs text-gray-600'>Glacier Hiking</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
-                {/* Right Section - Map with dynamic location icons */}
-                <div className='w-4/5 relative bg-[url("/map.jpg")] bg-cover bg-center'>
-                    {/* Overlay with a slight tint for better readability, optional */}
+                {/* Right Section - Map */}
+                <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center">
                     <div className="absolute inset-0 bg-white opacity-30"></div>
 
-                    {tourLocations.map((location) => (
+                    {rightLocations.map((location) => (
                         <div
                             key={location.id}
-                            className='absolute flex flex-col items-center cursor-pointer transform -translate-x-1/2 -translate-y-1/2'
+                            className="absolute flex flex-col items-center cursor-pointer transform -translate-x-1/2 -translate-y-1/2"
                             style={location.mapPosition}
                         >
-                            {/* The circular image */}
-                            <div className='relative w-20 h-20 rounded-full border-4 border-black shadow-lg overflow-hidden flex items-center justify-center bg-gray-200'>
-                                <img
-                                    src={location.image}
-                                    alt={location.name}
-                                    objectFit='cover'
-                                />
+                            <div className="relative w-20 h-20 rounded-full border-4 border-black shadow-lg overflow-hidden flex items-center justify-center bg-gray-200">
+                                <img src={location.image} alt={location.name} className="w-full h-full object-cover" />
                             </div>
-                            {/* Optional: Add a small triangle/pin point below the circle to make it look like a pin */}
-                            <div className='w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-black -mt-1'></div>
-                            {/* Location Name - optional, can be shown on hover */}
-                            {/* <p className='text-xs font-semibold text-gray-800 mt-1'>{location.name}</p> */}
+                            <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-black -mt-1"></div>
+                            <p className="text-xs font-semibold text-white bg-[#D0B4B3] px-3 py-1 shadow-black shadow-sm rounded-full mt-1">
+                                {location.name}
+                            </p>
                         </div>
                     ))}
                 </div>
