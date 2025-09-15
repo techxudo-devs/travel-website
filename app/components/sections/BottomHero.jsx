@@ -160,13 +160,13 @@ const Hero = () => {
         {/* Marquee Background Behind Last Image */}
         <div className="absolute bottom-20 w-full z-20">
           <Marquee
-            speed={80}
+            speed={100}
             gradient={false}
             direction="right"
             className="uppercase font-extrabold text-[60px] md:text-[100px]  tracking-wider"
           >
-            Your Gateway To{" "}
-            <span className="text-[#D0B4B3]">Amazing Journeys &nbsp;</span>
+            We Are &nbsp;{" "}
+            <span className="text-[#D0B4B3]">Travel Girls</span>
           </Marquee>
         </div>
 

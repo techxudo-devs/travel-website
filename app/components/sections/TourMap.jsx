@@ -118,7 +118,6 @@ const TourMap = () => {
                                 <img
                                     src={location.image}
                                     alt={location.name}
-                                    layout='fill'
                                     objectFit='cover'
                                 />
                             </div>
