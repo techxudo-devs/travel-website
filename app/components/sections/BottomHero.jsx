@@ -52,20 +52,31 @@ const Hero = () => {
       className="relative min-h-[200vh] w-full text-white overflow-hidden"
     >
       {/* Background with scaling */}
-      <img loading="lazy"
+      <Image loading="lazy"
         ref={bgRef}
         src="/hero-main.jpg"
         alt="Travel destination"
+        layout="fill"
+        objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-10 pt-8">
+<<<<<<< HEAD
         <img loading="lazy"
           src="/logo23.svg"
           alt="Logo"
           className="object-contain w-60"
+=======
+        <Image loading="lazy"
+          src="/logoo.jpeg"
+          alt="Logo"
+          width={128}
+          height={128}
+          className="object-contain w-32"
+>>>>>>> bfba1a0fa610157d356fc33613ed7c76bd4d53a3
         />
 
         <div className="flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-lg">
@@ -144,9 +155,11 @@ const Hero = () => {
 
       {/* Girl + Bottom Section */}
       <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-28">
-        <img loading="lazy"
+        <Image loading="lazy"
           src="/hero-girl.png"
           alt="Travel girl"
+          width={500}
+          height={500}
           className="object-contain relative z-30"
         />
 
@@ -163,9 +176,11 @@ const Hero = () => {
           </Marquee>
         </div>
 
-        <img loading="lazy"
+        <Image loading="lazy"
           src="/hero-bottom.png"
           alt="Bottom decoration"
+          width={1920}
+          height={200}
           className="w-full object-cover relative z-40 -mt-20"
         />
       </div>

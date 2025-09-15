@@ -23,10 +23,19 @@ const HeroSection = ({
 
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
+<<<<<<< HEAD
                 <img loading="lazy"
                     src="/logo23.svg"
                     alt="Logo"
                     className="object-contain w-60"
+=======
+                <Image loading="lazy"
+                    src="/logoo.jpeg"
+                    alt="Logo"
+                    width={128}
+                    height={128}
+                    className="object-contain w-32"
+>>>>>>> bfba1a0fa610157d356fc33613ed7c76bd4d53a3
                 />
 
                 {/* Menu */}
@@ -71,9 +80,11 @@ const HeroSection = ({
             {/* Bottom Decoration */}
             {bottomDecoration && (
                 <div className="absolute bottom-0 left-0 right-0 z-30">
-                    <img loading="lazy"
+                    <Image loading="lazy"
                         src={bottomDecoration}
                         alt="Bottom decoration"
+                        width={1920}
+                        height={100}
                         className="w-full object-contain"
                     />
                 </div>

@@ -4,6 +4,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 
 // Data for the tour cards with updated, working image sources
+import Image from "next/image";
+
 const tourTypes = [
   {
     tagline: "DISCOVER AT YOUR OWN PACE",
@@ -141,9 +143,11 @@ const TripSection = () => {
                 <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl overflow-hidden h-full flex flex-col transform-gpu border border-white transition-all duration-300">
                   {/* Card Image */}
                   <div className="relative h-72 w-full overflow-hidden">
-                    <img loading="lazy"
+                    <Image loading="lazy"
                       src={imgSrc}
                       alt={alt}
+                      width={288}
+                      height={288}
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                     />
                     {/* Gradient overlay for better text contrast */}

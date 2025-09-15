@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import HomeCards from "../ui/HomeCards"; // Assuming this is the correct path
+import dynamic from "next/dynamic";
+const HomeCards = dynamic(() => import("../ui/HomeCards")); // Assuming this is the correct path
 
 export default function AboutSection() {
   return (

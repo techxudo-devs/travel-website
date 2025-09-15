@@ -1,11 +1,12 @@
 "use client";
 import { MapPin, Share2, Edit } from "lucide-react";
+import Image from "next/image";
 
 const TourHero = ({ title, location, coverImage, basePrice, currency }) => {
     return (
         <section className="relative h-[60vh] md:h-[97vh] w-full text-white ">
             {/* Background Image */}
-            <img loading="lazy" src={coverImage} alt={title} className="absolute inset-0 w-full h-full object-cover" />
+            <Image priority src={coverImage} alt={title} layout="fill" objectFit="cover" className="absolute inset-0 w-full h-full" />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
 

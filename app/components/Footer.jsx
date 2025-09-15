@@ -19,11 +19,17 @@ const Footer = () => {
         {/* Logo and Address */}
         <div className="flex flex-col items-start">
           <div className="flex items-center mb-4">
-            <img
+            <Image
               loading='lazy'
               src="/logo23.svg"
               alt="Logo"
+<<<<<<< HEAD
               className="object-contain w-60"
+=======
+              width={128}
+              height={128}
+              className="object-contain w-32"
+>>>>>>> bfba1a0fa610157d356fc33613ed7c76bd4d53a3
             />
           </div>
           <p className="text-base">123 Main Street</p>

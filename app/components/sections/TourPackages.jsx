@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import TourCard from "../ui/TourCard";
+import dynamic from "next/dynamic";
+const TourCard = dynamic(() => import("../ui/TourCard"));
 import { BASE_URL } from "@/app/utils/ApiBaseUrl";
+import { motion } from "framer-motion";
 
-// Animation variants (Inme koi badlav nahi kiya gaya)
 const tourSectionVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -33,34 +33,35 @@ const TourPackages = () => {
   // --- START: Data fetching logic ---
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+  const [error, setError] = useState("");
   useEffect(() => {
     const fetchTourPackages = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/api/tours/preplanned`); // Aapka API endpoint
+        const response = await fetch(`${BASE_URL}/api/tours/preplanned`); // ✅ fixed interpolation
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        setTours(data); // Fetched data ko state me save karein
+        setTours(data); // ✅ save fetched data
       } catch (e) {
         setError(e.message);
         console.error("Failed to fetch tour packages:", e);
       } finally {
-        setLoading(false); // Loading complete
+        setLoading(false); // ✅ loading complete
       }
     };
 
     fetchTourPackages();
-  }, []); // Empty array ensures this runs only once on component mount
+  }, []); // ✅ runs once on mount
   // --- END: Data fetching logic ---
 
   // --- START: Loading and Error states ---
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-white">
-        <p className="text-2xl text-[#D0B4B3] font-bold uppercase">Loading Tour Packages...</p>
+        <p className="text-2xl text-[#D0B4B3] font-bold uppercase">
+          Loading Tour Packages...
+        </p>
       </div>
     );
   }
@@ -68,25 +69,42 @@ const TourPackages = () => {
   if (error) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-white">
-        <p className="text-2xl text-red-500 font-bold uppercase">Error loading tours: {error}</p>
+        <p className="text-2xl text-red-500 font-bold uppercase">
+          Error loading tours: {error}
+        </p>
       </div>
     );
   }
   // --- END: Loading and Error states ---
 
   return (
-    // Baaki ka component bilkul waisa hi hai
     <div className="relative z-40 w-full min-h-screen py-24 bg-gradient-to-b from-white to-fourth overflow-hidden">
-      {/* Decorative elements (as they were) */}
+      {/* Decorative elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[#D0B4B3] blur-3xl"></div>
         <div className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-[var(--color-semilight)] blur-3xl"></div>
       </div>
       <div className="absolute top-20 right-32 w-64 h-64">
-        <svg className="w-full h-full opacity-30" viewBox="0 0 200 200"><path d="M20,100 Q100,20 180,100" stroke="#d97706" strokeWidth="2" fill="none" strokeDasharray="10,10" /></svg>
+        <svg className="w-full h-full opacity-30" viewBox="0 0 200 200">
+          <path
+            d="M20,100 Q100,20 180,100"
+            stroke="#d97706"
+            strokeWidth="2"
+            fill="none"
+            strokeDasharray="10,10"
+          />
+        </svg>
       </div>
       <div className="absolute bottom-32 left-20 w-48 h-48">
-        <svg className="w-full h-full opacity-30" viewBox="0 0 200 200"><path d="M180,100 Q100,180 20,100" stroke="#d97706" strokeWidth="2" fill="none" strokeDasharray="8,8" /></svg>
+        <svg className="w-full h-full opacity-30" viewBox="0 0 200 200">
+          <path
+            d="M180,100 Q100,180 20,100"
+            stroke="#d97706"
+            strokeWidth="2"
+            fill="none"
+            strokeDasharray="8,8"
+          />
+        </svg>
       </div>
 
       <motion.div
@@ -96,7 +114,7 @@ const TourPackages = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {/* Section Header (as it was) */}
+        {/* Section Header */}
         <motion.div variants={tourItemVariants} className="mb-16">
           <motion.h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-wide">
             All inclusive
@@ -115,28 +133,26 @@ const TourPackages = () => {
         {/* --- START: Dynamic Grid Rendering --- */}
         <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {tours.map((apiTour) => {
-            // API data ko TourCard ke format me map karein
             const tourForCard = {
-              id: apiTour._id, // Real ID for key prop
+              id: apiTour._id,
               title: apiTour.title,
               image: apiTour.coverImage,
               price: apiTour.basePrice,
-              // Placeholders for data not available in the API response
               country: apiTour.location,
-              duration: apiTour.category[0].name, // Available data ka creative use
-              rating: 4.5, // Placeholder rating
-              reviews: "Popular choice", // Placeholder reviews
+              duration: apiTour.category?.[0]?.name || "N/A",
+              rating: 4.5,
+              reviews: "Popular choice",
             };
 
             return (
               <motion.div
-                key={tourForCard.id} // Hamesha unique key ka use karein
+                key={tourForCard.id}
                 variants={tourItemVariants}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="group"
               >
-                <div className="bg-white/70  backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[var(--color-semilight)]/30 overflow-hidden">
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[var(--color-semilight)]/30 overflow-hidden">
                   <TourCard tour={tourForCard} />
                 </div>
               </motion.div>
@@ -144,10 +160,9 @@ const TourPackages = () => {
           })}
         </motion.div>
         {/* --- END: Dynamic Grid Rendering --- */}
-
       </motion.div>
 
-      {/* Decorative Elements (as they were) */}
+      {/* Decorative Bottom Gradient */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[var(--color-semilight)]/20 to-transparent pointer-events-none"></div>
     </div>
   );

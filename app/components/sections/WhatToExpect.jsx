@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { ArrowRight, MapPin, Camera, Mountain, Waves } from "lucide-react";
 
+import Image from "next/image";
+
 const experiences = [
   {
     icon: Mountain,
@@ -198,9 +200,11 @@ const WhatToExpectSection = () => {
           {/* Right - Active Image */}
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-              <img loading="lazy"
+              <Image loading="lazy"
                 src={experiences[activeIndex].image}
                 alt={experiences[activeIndex].title}
+                width={600}
+                height={600}
                 className="w-full h-[600px] object-cover transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>

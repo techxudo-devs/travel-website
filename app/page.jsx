@@ -1,4 +1,4 @@
-"use-client"
+"use-client";
 
 import React from "react";
 
@@ -13,6 +13,7 @@ import TourPackages from "./components/sections/TourPackages";
 import HeroAndTripSection from "./components/sections/Hero";
 import BottomHero from "./components/sections/BottomHero";
 import TourMap from "./components/sections/TourMap";
+import TourPackagesClient from "./components/sections/TourPackages";
 
 const LandingPage = () => {
   return (
@@ -22,7 +23,7 @@ const LandingPage = () => {
       <BottomHero />
       {/* <HeroAndTripSection backgroundImageUrl={"/hero.webp"} /> */}
       <TripSection />
-      <TourPackages />
+      <TourPackagesClient />
       <TourMap />
       <DestinationsSection />
       <TravelInfoSection />

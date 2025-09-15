@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   Instagram,
   Globe,
@@ -41,9 +42,11 @@ const ContactForm = () => {
           <div>
             <div className="relative  mx-auto">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img loading="lazy"
+                <Image loading="lazy"
                   src="/contact.avif"
                   alt="Woman walking on a beautiful beach"
+                  width={500}
+                  height={500}
                   className="w-full h-[500px] object-cover"
                 />
               </div>
