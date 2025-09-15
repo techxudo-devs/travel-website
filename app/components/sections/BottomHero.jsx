@@ -65,12 +65,10 @@ const Hero = () => {
 
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-10 pt-8">
-        <Image
+        <img
           src="/logoo.jpeg"
           alt="Logo"
-          width={120}
-          height={120}
-          className="object-contain"
+          className="object-contain w-32"
         />
 
         <div className="flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-lg">
@@ -168,11 +166,9 @@ const Hero = () => {
           </Marquee>
         </div>
 
-        <Image
+        <img
           src="/hero-bottom.png"
           alt="Bottom decoration"
-          width={2000}
-          height={200}
           className="w-full object-cover relative z-40 -mt-20"
         />
       </div>
