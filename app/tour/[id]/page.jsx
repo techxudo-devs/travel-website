@@ -60,13 +60,13 @@ export default async function TourDetailPage({ params }) {
                         About
                     </Link>
                     <p className='text-[#D0B4B3]'>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+                    <a href='/' className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Tours
-                    </p>
+                    </a>
                     <p className='text-[#D0B4B3]'>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+                    <a href='/' className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Blog
-                    </p>
+                    </a>
                 </div>
 
                 <Link

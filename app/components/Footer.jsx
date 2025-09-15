@@ -45,12 +45,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a href="#tour" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
                 Tours
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a href="#blog" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
                 Blog
               </a>
             </li>

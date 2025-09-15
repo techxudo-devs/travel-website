@@ -77,13 +77,13 @@ const Hero = () => {
             About
           </Link>
           <p>•</p>
-          <Link href={"/packages"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+          <a href={"#tour"} className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             Tours
-          </Link>
+          </a>
           <p>•</p>
-          <p id="#blog" className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+          <a href="#blog" className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
             Blog
-          </p>
+          </a>
         </div>
 
         <Link href={"/contact"} className="bg-white px-8 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] flex items-center gap-2">

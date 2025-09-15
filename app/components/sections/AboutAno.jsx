@@ -37,13 +37,13 @@ const AboutAno = () => {
                         About
                     </Link>
                     <p>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+                    <a href="/" className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Tours
-                    </p>
+                    </a>
                     <p>•</p>
-                    <p className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
+                    <a href="/" className="px-6 py-2 bg-[#3A3E45] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
                         Blog
-                    </p>
+                    </a>
                 </div>
 
                 <Link href={"/contact"} className="bg-white px-8 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] flex items-center gap-2">
