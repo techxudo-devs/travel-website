@@ -97,7 +97,7 @@ const TripSection = () => {
               <div className="w-16 h-1 bg-[#D0B4B3] mx-auto mb-6 rounded-full"></div>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold text-[#D0B4B3] leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold uppercase text-[#D0B4B3] leading-tight">
               Come on a Trip With Us!
               <span className="font-medium text-black block mt-2"></span>
             </h2>

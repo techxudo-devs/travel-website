@@ -7,24 +7,19 @@ const ContactAno = () => {
     return (
         <div className="relative h-screen w-full text-white overflow-hidden">
             {/* Background */}
-            <Image
+            <img
                 src="/contact-main.jpg"
                 alt="About background"
-                fill
-                priority
-                quality={90}
-                className="object-cover z-0"
+                className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
             />
             <div className="absolute inset-0 bg-black/70 z-10" />
 
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <Image
+                <img
                     src="/logoo.jpeg"
                     alt="Logo"
-                    width={120}
-                    height={120}
-                    className="object-contain"
+                    className="object-contain w-32"
                 />
 
                 <div className="flex flex-row items-center gap-6 bg-[#494C4F] px-5 py-3 rounded-full text-lg">
@@ -66,11 +61,9 @@ const ContactAno = () => {
 
             {/* Bottom Decoration (fixed to bottom inside h-screen) */}
             <div className="absolute bottom-0 left-0 right-0 z-30">
-                <Image
+                <img
                     src="/about-bottom.png"
                     alt="Bottom decoration"
-                    width={2000}
-                    height={500} // give it more height for better proportion
                     className="w-full object-contain" // use contain instead of cover
                 />
             </div>

@@ -64,7 +64,7 @@ export default function Inclusions({
                                 </p>
                             )}
 
-                            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-[#D0B4B3] uppercase">
                                 This is included:
                             </h2>
 

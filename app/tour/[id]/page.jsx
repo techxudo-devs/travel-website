@@ -43,7 +43,7 @@ export default async function TourDetailPage({ params }) {
 
                 {/* Tour Description Section */}
                 <section className="max-w-4xl mx-auto text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-800 mb-4">About The Adventure</h2>
+                    <h2 className="text-4xl font-bold text-[#D0B4B3] uppercase mb-4">About The Adventure</h2>
                     <p className="text-lg text-gray-600 leading-relaxed">
                         {tour.description}
                     </p>
@@ -60,7 +60,7 @@ export default async function TourDetailPage({ params }) {
 
                 {/* Itinerary / Days Section */}
                 <section className="flex flex-col items-center gap-16 md:gap-24">
-                    <h2 className="text-4xl font-bold text-center text-gray-800">Your Daily Itinerary</h2>
+                    <h2 className="text-4xl font-bold text-center uppercase text-[#D0B4B3]">Your Daily Itinerary</h2>
                     <div className="w-full flex flex-col gap-20">
                         {tour.days.map((day, index) => (
                             <ImageCard

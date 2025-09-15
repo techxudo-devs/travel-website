@@ -67,7 +67,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li>
               <a href="mailto:website@gmail.com" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
-                website@gmail.com
+                travelgirls@gmail.com
               </a>
             </li>
             <li>
@@ -109,7 +109,7 @@ const Footer = () => {
       {/* Social Media and Copyright */}
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-white">
         <p className="mb-4 md:mb-0 text-center md:text-left">
-          Copyright &copy; Website | Designed by Techxudo - Powered by Techxudo
+          Copyright &copy; TravelGirls | Designed by Techxudo - Powered by Techxudo
         </p>
         <div className="flex space-x-4">
           <a href="#" className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300">
