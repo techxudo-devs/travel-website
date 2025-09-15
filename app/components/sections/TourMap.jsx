@@ -152,7 +152,6 @@ const TourMap = () => {
                 className="cursor-pointer flex flex-col items-center"
               >
                 <Image
-                  loading="lazy"
                   className="w-16 h-16 rounded-full object-cover"
                   src={loc.image}
                   width={64}
@@ -180,8 +179,6 @@ const TourMap = () => {
                                 <img loading="lazy"
                                     src={image}
                                     alt={name}
-                                    layout='fill'
-                                    objectFit='cover'
                                 />
                             </div>
                             <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-black -mt-1"></div>

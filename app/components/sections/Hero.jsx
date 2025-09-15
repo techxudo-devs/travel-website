@@ -70,10 +70,6 @@ const Hero = () => {
       {/* Hero Girl Image */}
       <div className="absolute bottom-0 md:bottom-0 left-0 right-0 z-30 flex justify-center p-4">
         <Image
-<<<<<<< HEAD
-=======
-          loading="lazy"
->>>>>>> bfba1a0fa610157d356fc33613ed7c76bd4d53a3
           src="/hero-girl.png"
           alt="Your image description"
           width={400}
@@ -83,10 +79,6 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-30 flex justify-center">
         <Image
-<<<<<<< HEAD
-=======
-          loading="lazy"
->>>>>>> bfba1a0fa610157d356fc33613ed7c76bd4d53a3
           src="/hero-bottom.png"
           alt="Your image description"
           width={2000}
@@ -97,10 +89,6 @@ const Hero = () => {
 
       <div className="absolute hidden bottom-4 left-4 z-30">
         <Image
-<<<<<<< HEAD
-=======
-          loading="lazy"
->>>>>>> bfba1a0fa610157d356fc33613ed7c76bd4d53a3
           src="/virtuoso.png"
           alt="Virtuoso"
           width={120}
