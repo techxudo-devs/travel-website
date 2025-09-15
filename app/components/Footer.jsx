@@ -10,7 +10,7 @@ const Footer = () => {
 
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/6774e3e00617c7701b4eb3c0_Footer%20BG.jpg')` }}
+        style={{ backgroundImage: `url('/footer-main.jpg')` }}
       ></div>
 
       <div className="absolute inset-0 bg-black/70"></div>
@@ -19,12 +19,10 @@ const Footer = () => {
         {/* Logo and Address */}
         <div className="flex flex-col items-start">
           <div className="flex items-center mb-4">
-            <Image
+            <img
               src="/logoo.jpeg"
               alt="Logo"
-              width={120}
-              height={120}
-              className="object-contain"
+              className="object-contain w-32"
             />
           </div>
           <p className="text-base">123 Main Street</p>
@@ -33,7 +31,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-2xl font-semibold text-white mb-4">Quick Links</h3>
+          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
               <Link href="/" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
@@ -65,7 +63,7 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h3 className="text-2xl font-semibold text-white mb-4">Contact</h3>
+          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">Contact</h3>
           <ul className="space-y-2">
             <li>
               <a href="mailto:website@gmail.com" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
@@ -82,7 +80,7 @@ const Footer = () => {
 
         {/* Utility Pages */}
         <div>
-          <h3 className="text-2xl font-semibold text-white mb-4">Utility Pages</h3>
+          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">Utility Pages</h3>
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
@@ -130,7 +128,7 @@ const Footer = () => {
       </div>
       <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 z-[999]">
         <div className="relative">
-          <div className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform duration-300">
+          <div className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300">
             <FaWhatsapp className="text-white text-4xl" />
           </div>
           <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-white">

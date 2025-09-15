@@ -9,7 +9,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 // Updated data with travel-related images and content
 const travelSpots = [
   {
-    src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2070&q=80",
+    src: "/swiper3.avif",
     alt: "Picturesque view of Pragser Wildsee in Italy",
     title: "Dolomites, Italy",
     description:
@@ -23,14 +23,14 @@ const travelSpots = [
       "Witness a breathtaking sunrise from a hot air balloon over a unique landscape.",
   },
   {
-    src: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2070&q=80",
+    src: "/swiper1.avif",
     alt: "Lush green rice terraces in Bali, Indonesia",
     title: "Bali, Indonesia",
     description:
       "Discover the vibrant culture and lush, terraced rice paddies.",
   },
   {
-    src: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=2070&q=80",
+    src: "/swiper2.avif",
     alt: "Fushimi Inari Shrine in Kyoto, Japan at night",
     title: "Kyoto, Japan",
     description:
@@ -88,13 +88,13 @@ export default function PictureSwiper() {
       <div className="absolute flex flex-col gap-4 right-10 md:right-40 top-1/2 transform -translate-y-1/2 z-20">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className="bg-five hover:bg-dark transition-colors cursor-pointer text-white p-3 rounded-full shadow-lg"
+          className="bg-[#D0B4B3] hover:bg-[#b49a99] transition-colors duration-300 cursor-pointer text-black p-3 rounded-full shadow-lg"
         >
           <ArrowLeft strokeWidth={3} size={24} />
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className="bg-five hover:bg-dark  transition-colors cursor-pointer text-white p-3 rounded-full shadow-lg"
+          className="bg-[#D0B4B3] hover:bg-[#b49a99]  transition-colors duration-300 cursor-pointer text-black p-3 rounded-full shadow-lg"
         >
           <ArrowRight strokeWidth={3} size={24} />
         </button>

@@ -35,10 +35,10 @@ const TourCard = ({ tour }) => {
 
         {/* Country & Duration Badge */}
         <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
-          <span className="px-3 py-1.5 bg-fourth backdrop-blur-sm text-second text-sm font-medium rounded-full shadow-sm">
+          <span className="px-3 py-1.5 bg-[#D0B4B3] backdrop-blur-sm text-black text-xs font-medium rounded-full shadow-sm">
             {tour.country}
           </span>
-          <span className="px-3 py-1.5 bg-brown backdrop-blur-sm text-white text-sm font-medium rounded-full shadow-sm">
+          <span className="px-3 py-1.5 bg-brown backdrop-blur-sm text-white text-xs font-medium rounded-full shadow-sm">
             {tour.duration}
           </span>
         </div>
@@ -62,12 +62,12 @@ const TourCard = ({ tour }) => {
       {/* Content */}
       <div className="p-6 space-y-4">
         {/* Title */}
-        <h3 className="text-xl font-bold text-[var(--color-dark)] leading-tight line-clamp-2 group-hover:text-[var(--color-brown)] transition-colors duration-300">
+        <h3 className="text-xl font-bold uppercase text-black leading-tight line-clamp-2 group-hover:text-[#ad9695] transition-colors duration-300">
           {tour.title}
         </h3>
 
         {/* Reviews */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-between space-x-2">
           <div className="flex items-center space-x-1">
             {[...Array(5)].map((_, i) => (
               <svg
@@ -83,17 +83,17 @@ const TourCard = ({ tour }) => {
             ))}
           </div>
           <span className="text-sm text-[var(--color-dark)]/70">
-            Excellent ({tour.reviews})
+            ({tour.reviews})
           </span>
         </div>
 
         {/* Price */}
         <div className="flex items-baseline justify-between">
           <div>
-            <span className="text-3xl font-bold text-five">
+            <span className="text-3xl font-bold text-[#b89f9e]">
               ${tour.price.toLocaleString()}
             </span>
-            <span className="text-sm text-[var(--color-dark)]/60 ml-1">
+            <span className="text-sm text-black ml-1">
               / per person
             </span>
           </div>
@@ -103,7 +103,7 @@ const TourCard = ({ tour }) => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full py-3.5 bg-gradient-to-r from-third to-second hover:from-second hover:to-third text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
+          className="w-full py-3.5 bg-gradient-to-r from-[#D0B4B3] to-black hover:from-black hover:to-[#D0B4B3] text-white font-bold uppercase rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group cursor-pointer"
         >
           <Link href={`/tour/${tour.id}`} className="relative z-10">Book Now</Link>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

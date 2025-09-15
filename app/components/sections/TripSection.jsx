@@ -138,7 +138,7 @@ const TripSection = () => {
                   opacity: isCenter ? 1 : 0.7,
                 }}
               >
-                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl overflow-hidden h-full flex flex-col transform-gpu border border-[var(--color-semilight)]/20 transition-all duration-300">
+                <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl overflow-hidden h-full flex flex-col transform-gpu border border-white transition-all duration-300">
                   {/* Card Image */}
                   <div className="relative h-72 w-full overflow-hidden">
                     <img

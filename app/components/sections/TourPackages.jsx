@@ -60,7 +60,7 @@ const TourPackages = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-white">
-        <p className="text-2xl text-gray-600">Loading Tour Packages...</p>
+        <p className="text-2xl text-[#D0B4B3] font-bold uppercase">Loading Tour Packages...</p>
       </div>
     );
   }
@@ -68,7 +68,7 @@ const TourPackages = () => {
   if (error) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-white">
-        <p className="text-2xl text-red-500">Error loading tours: {error}</p>
+        <p className="text-2xl text-red-500 font-bold uppercase">Error loading tours: {error}</p>
       </div>
     );
   }
@@ -79,7 +79,7 @@ const TourPackages = () => {
     <div className="relative z-40 w-full min-h-screen py-24 bg-gradient-to-b from-white to-fourth overflow-hidden">
       {/* Decorative elements (as they were) */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[var(--color-brown)] blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[#D0B4B3] blur-3xl"></div>
         <div className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-[var(--color-semilight)] blur-3xl"></div>
       </div>
       <div className="absolute top-20 right-32 w-64 h-64">
@@ -98,14 +98,14 @@ const TourPackages = () => {
       >
         {/* Section Header (as it was) */}
         <motion.div variants={tourItemVariants} className="mb-16">
-          <motion.h2 className="text-5xl md:text-6xl font-light text-first mb-6 tracking-wide">
-            All Inclusive
-            <span className="block font-medium text-second mt-2">
+          <motion.h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-wide">
+            All inclusive
+            <span className="block font-bold text-6xl text-[#D0B4B3] mt-2 uppercase">
               Tour Packages
             </span>
           </motion.h2>
-          <motion.div className="w-24 h-1 bg-five mx-auto mb-8 rounded-full"></motion.div>
-          <motion.p className="max-w-3xl mx-auto text-lg leading-relaxed text-[var(--color-dark)] opacity-80">
+          <motion.div className="w-24 h-1 bg-[#D0B4B3] mx-auto mb-8 rounded-full"></motion.div>
+          <motion.p className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 opacity-80">
             Travel from anywhere in India or worldwide. Pick a tour that fits
             you — starting right from your city. Experience curated journeys
             designed for every traveler.

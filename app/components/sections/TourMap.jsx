@@ -61,7 +61,8 @@ const tourLocations = [
 const TourMap = () => {
     return (
         <div className='bg-[#FFFFFF] py-20 min-h-screen pr-10'>
-            <h1 className='text-center text-5xl font-bold text-[#D0B4B3] pb-4'>Choose Your Destination</h1>
+            <h1 className='text-center text-5xl font-bold text-[#D0B4B3] pb-4 uppercase'>Choose Your Destination</h1>
+            <div className="w-24 h-1 bg-[#D0B4B3] mx-auto mb-8 rounded-full"></div>
             <div className='flex'>
                 {/* Left Section - Your existing content */}
                 <div className='flex flex-col gap-10 w-1/5'>
