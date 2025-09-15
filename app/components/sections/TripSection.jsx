@@ -143,11 +143,9 @@ const TripSection = () => {
                 <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl overflow-hidden h-full flex flex-col transform-gpu border border-white transition-all duration-300">
                   {/* Card Image */}
                   <div className="relative h-72 w-full overflow-hidden">
-                    <Image loading="lazy"
+                    <img
                       src={imgSrc}
                       alt={alt}
-                      width={288}
-                      height={288}
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                     />
                     {/* Gradient overlay for better text contrast */}

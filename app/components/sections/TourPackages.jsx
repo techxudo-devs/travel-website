@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-const TourCard = dynamic(() => import("../ui/TourCard"));
+const  TourCard = dynamic(() => import("../ui/TourCard"));
 import { BASE_URL } from "@/app/utils/ApiBaseUrl";
 import { motion } from "framer-motion";
 
