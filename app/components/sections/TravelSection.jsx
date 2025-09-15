@@ -34,13 +34,13 @@ const TravelInfoSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div>
-              <p className="text-sm font-semibold tracking-[0.3em] text-stone-600 uppercase mb-4">
+              <p className="text-sm font-semibold tracking-[0.3em] text-black uppercase mb-4">
                 GETTING HERE
               </p>
-              <h2 className="text-5xl lg:text-6xl font-bold text-second leading-tight mb-8">
+              <h2 className="text-5xl lg:text-6xl font-bold text-[#D0B4B3] uppercase leading-tight mb-8">
                 How to travel
                 <br />
-                <span className="text-five">to Socotra</span>
+                <span className="text-[#a08180]">to Socotra?</span>
               </h2>
             </div>
 
@@ -59,7 +59,7 @@ const TravelInfoSection = () => {
               </p>
             </div>
 
-            <button className="group inline-flex items-center bg-third cursor-pointer text-white font-semibold py-4 px-8 rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+            <button className="group inline-flex items-center bg-[#D0B4B3] cursor-pointer text-white font-semibold py-4 px-8 rounded-full hover:bg-[#a08180] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-95">
               Read more
               <ArrowRight
                 size={20}
@@ -73,7 +73,7 @@ const TravelInfoSection = () => {
             {/* Main large image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://manyarassecret.com/wp-content/uploads/2020/11/ManyarasSecret_2020_1101.jpg" // Replace with your actual image URL"
+                src="/travel1.jpg" // Replace with your actual image URL"
                 alt="Aerial view of Socotra landscape with winding river and dragon blood trees"
                 className="w-full h-[500px] object-cover"
               />
@@ -83,16 +83,16 @@ const TravelInfoSection = () => {
             {/* Floating passport image */}
             <div className="absolute -bottom-8 -right-8 w-48 h-32 rounded-2xl overflow-hidden shadow-xl rotate-12 hover:rotate-6 transition-transform duration-300">
               <img
-                src="https://travelgirls.club/tanzania-zanzibar/_assets/media/9ac3043abf04b0f415721b24dc9daa4b.jpg"
+                src="/travel.jpg"
                 alt="Passport with travel stamps"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 bg-amber-400 rounded-full opacity-60"></div>
-            <div className="absolute top-1/4 -left-8 w-4 h-4 bg-orange-400 rounded-full opacity-40"></div>
-            <div className="absolute -bottom-4 left-1/4 w-6 h-6 bg-stone-400 rounded-full opacity-50"></div>
+            <div className="absolute -top-4 -left-4 w-8 h-8 bg-[#D0B4B3] rounded-full opacity-60"></div>
+            <div className="absolute top-1/4 -left-8 w-4 h-4 bg-[#a08180] rounded-full opacity-40"></div>
+            <div className="absolute -bottom-4 left-1/4 w-6 h-6 bg-[#a08180] rounded-full opacity-50"></div>
           </div>
         </div>
       </div>

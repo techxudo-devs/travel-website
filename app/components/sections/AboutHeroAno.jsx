@@ -7,11 +7,11 @@ const AboutHeroAno = () => {
                 {/* Left Content Area */}
                 <div className="lg:w-1/2 text-center lg:text-left">
                     <p className="text-[#D0B4B3] text-lg font-semibold mb-2">About Us</p>
-                    <h1 className="text-5xl font-extrabold text-[gray-900] leading-tight mb-6">
+                    <h1 className="text-4xl font-extrabold text-[#D0B4B3] uppercase leading-tight mb-6">
                         Travel Experts Crafting Unique Experiences
                     </h1>
                     <p className="text-gray-700 text-lg mb-8 max-w-lg mx-auto lg:mx-0">
-                        Step into a world of unforgettable adventures with Travlo. Whether you're seeking serene beaches, vibrant cities, or hidden gems, we make every journey seamless and extraordinary. Your dream destination is just a click away!
+                        Step into a world of unforgettable adventures with Travel Girls. Whether you're seeking serene beaches, vibrant cities, or hidden gems, we make every journey seamless and extraordinary. Your dream destination is just a click away!
                     </p>
                     <button className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-[#D0B4B3] bg-black hover:scale-95 transition-all cursor-pointer duration-300">
                         Contact Us
@@ -26,14 +26,14 @@ const AboutHeroAno = () => {
                     <div className="w-full sm:w-1/2 max-w-xs lg:max-w-none">
                         <img
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
-                            src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677675fa2a7899f775cf4397_About%20Grid%20Image%20(2).jpg"
+                            src="/about4.jpg"
                             alt="Traveler admiring a fjord landscape"
                         />
                     </div>
                     <div className="w-full sm:w-1/2 max-w-xs lg:max-w-none mt-8 sm:mt-0 lg:mt-12"> {/* Adjusted margin-top for second image */}
                         <img
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
-                            src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677675fa2a7899f775cf4405_About%20Grid%20Image%20(1).jpg"
+                            src="/about5.jpg"
                             alt="Woman in yellow dress on a tropical island"
                         />
                     </div>

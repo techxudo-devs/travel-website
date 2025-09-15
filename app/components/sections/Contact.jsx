@@ -6,7 +6,7 @@ import { IoLocation } from "react-icons/io5";
 const Contact = () => {
   return (
     <div className="bg-white min-h-screen px-6 md:px-10 lg:px-16 pt-10">
-      <h1 className="tim text-4xl md:text-6xl font-extrabold">
+      <h1 className="tim text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-[#D0B4B3]">
         Contact Us
       </h1>
       <p className="p-regular text-lg md:text-xl lg:text-2xl max-w-2xl pt-4 text-gray-800">

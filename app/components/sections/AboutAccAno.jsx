@@ -3,12 +3,11 @@
 import React, { useState } from 'react';
 import { Plus, Minus, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
 
 // FAQ data array - easy to add, remove, or edit questions
 const faqData = [
     {
-        question: "How do I book a trip with Travlo?",
+        question: "How do I book a trip with Travel Girls?",
         answer: "You can book a trip directly through our website by selecting a package and following the checkout process. You can also contact our travel consultants via phone or email for personalized assistance."
     },
     {
@@ -16,7 +15,7 @@ const faqData = [
         answer: "We understand that plans can change. You can request changes to your booking by contacting our support team. Please note that changes are subject to availability and may incur fees depending on the notice period."
     },
     {
-        question: "Does Travlo offer support during my trip?",
+        question: "Does Travel Girls offer support during my trip?",
         answer: "Absolutely! We provide 24/7 on-trip support. You will be given a dedicated contact number to reach our team for any assistance you may need during your travels."
     },
     {
@@ -24,7 +23,7 @@ const faqData = [
         answer: "Yes, we offer a wide range of family-friendly packages. We can also customize itineraries to suit the needs and interests of all family members, including children and elderly travelers."
     },
     {
-        question: "How do I know my booking is secure with Travlo?",
+        question: "How do I know my booking is secure with Travel Girls?",
         answer: "We use industry-standard SSL encryption to protect your personal and payment information. All bookings are processed through a secure payment gateway for your peace of mind."
     },
     {
@@ -72,13 +71,13 @@ const AboutAccAno = () => {
     };
 
     return (
-        <section className="relative bg-[#D0B4B3] pt-20 pb-40 px-4">
+        <section className="relative bg-[#ffe0df] pt-20 pb-40 px-4">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
                     {/* Left Column: FAQs */}
                     <div className="lg:col-span-2">
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#c2a7a6] uppercase mb-8">
                             Frequently Asked Questions
                         </h2>
                         <div className="space-y-2">
@@ -97,7 +96,7 @@ const AboutAccAno = () => {
                     {/* Right Column: Help Card */}
                     <div className="relative rounded-2xl overflow-hidden h-full mt-4 lg:mt-0">
                         <img
-                            src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677df3417108ec1ebad49038_Faq%20Image.jpg" // 👈 Replace with your image path
+                            src="/acc.jpg" // 👈 Replace with your image path
                             alt="Customer support agent"
                             width={400}
                             height={600}

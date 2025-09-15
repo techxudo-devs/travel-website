@@ -15,7 +15,7 @@ const AboutNewAno = () => {
                             <span className="text-sm font-bold text-[#D0B4B3] uppercase tracking-widest">
                                 Travel Agency
                             </span>
-                            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-[#D0B4B3] uppercase mt-2">
                                 Explore Nearby
                             </h2>
                         </div>
@@ -36,7 +36,7 @@ const AboutNewAno = () => {
                             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg">
                                 {/* --- Replace with your image path --- */}
                                 <img
-                                    src="https://themexriver.com/wp/travlia/wp-content/uploads/2025/07/ab1.webp"
+                                    src="/about1.webp"
                                     alt="Couple taking a selfie while hiking"
                                     layout="fill"
                                     objectFit="cover"
@@ -49,7 +49,7 @@ const AboutNewAno = () => {
                                         <GiWorld className="text-4xl text-gray-800" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-2xl text-gray-900">Trusted Travel Guide</h3>
+                                        <h3 className="font-bold text-xl text-[#D0B4B3] uppercase">Trusted Guide</h3>
                                         <p className="text-gray-600 mt-1">
                                             One shall be subjected to arbitrary arrest, detention or exile.
                                         </p>
@@ -61,7 +61,7 @@ const AboutNewAno = () => {
                                         <FaRoute className="text-4xl text-gray-800" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-2xl text-gray-900">Personalized Trips</h3>
+                                        <h3 className="font-bold text-xl text-[#D0B4B3] uppercase">Personalized Trips</h3>
                                         <p className="text-gray-600 mt-1">
                                             One shall be subjected to arbitrary arrest, detention or exile.
                                         </p>
@@ -84,7 +84,7 @@ const AboutNewAno = () => {
                             {/* --- Replace with your video path --- */}
                             <video
                                 className="w-full h-full object-cover"
-                                src="https://themexriver.com/wp/travlia/3.mp4"
+                                src="/about3.mp4"
                                 autoPlay
                                 loop
                                 muted
@@ -97,7 +97,7 @@ const AboutNewAno = () => {
                         <div className="absolute top-1/2 left-[0%] transform -translate-y-1/2 -rotate-[5deg] w-[300px] h-auto z-10">
                             {/* --- Replace with your image path --- */}
                             <img
-                                src="https://themexriver.com/wp/travlia/wp-content/uploads/2025/07/ab3.webp"
+                                src="/about2.webp"
                                 alt="Open suitcase for travel"
                                 width={600}
                                 height={450}

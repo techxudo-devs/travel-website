@@ -7,30 +7,30 @@ const teamMembers = [
     {
         name: "Emma Larson",
         title: "Lead Travel Consultant",
-        imageSrc: "https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f670b6a775b86866c533b_Team%20Image%20(3).jpg",
+        imageSrc: "/team1.jpg",
     },
     {
         name: "Liam Chen",
         title: "Head of Itinerary Planning",
-        imageSrc: "https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f670bccb56cc327eeb0e2_Team%20Image%20(2).jpg",
+        imageSrc: "/team2.jpg",
     },
     {
         name: "Sophia Martinez",
         title: "Customer Experience Manager",
-        imageSrc: "https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f670b50b972dff835f575_Team%20Image%20(1).jpg",
+        imageSrc: "/team3.jpg",
     },
     {
         name: "Noah Patel", // Example name
         title: "Adventure Specialist", // Example title
-        imageSrc: "https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f670be5c106d6580c6c3f_Team%20Image%20(4).jpg",
+        imageSrc: "/team4.jpg",
     }, {
         name: "Isabella Rossi", // Example name
         title: "Logistics Coordinator", // Example title
-        imageSrc: "https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f670b5058243ca49716ad_Team%20Image%20(5).jpg",
+        imageSrc: "/team5.jpg",
     }, {
         name: "James Wilson", // Example name
         title: "Senior Guide", // Example title
-        imageSrc: "https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f670b0ecf79b244a00e8c_Team%20Image%20(6).jpg",
+        imageSrc: "/team6.jpg",
     },
 ];
 
@@ -71,7 +71,7 @@ const AboutPicAno = () => {
                     <p className="font-semibold text-[#D0B4B3] uppercase tracking-wide">
                         Our Team
                     </p>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2">
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#b49a99] uppercase mt-2">
                         Meet the Experts Behind<br />Your Next Adventure
                     </h2>
                 </div>

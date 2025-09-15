@@ -7,7 +7,7 @@ const AboutAboutAno = () => {
                 {/* Left Content and Features */}
                 <div className="lg:w-1/2 text-center lg:text-left">
                     <p className="text-[#D0B4B3] text-lg font-semibold mb-2">Our Promise</p>
-                    <h2 className="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    <h2 className="text-4xl font-extrabold text-[#D0B4B3] uppercase leading-tight mb-6">
                         Why Choose Travel Girls
                     </h2>
                     <p className="text-gray-700 text-lg mb-12 max-w-lg mx-auto lg:mx-0">
@@ -17,25 +17,25 @@ const AboutAboutAno = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Feature 1 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#EAF3EF] bg-opacity-70 shadow-sm">
-                            <img className='w-14' src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f56d4d0fcd497ed607b17_Why%20Choose%20Icon%20(1).svg" alt="" />
+                            <img className='w-14' src="/aboutc1.svg" alt="" />
                             <p className="text-xl font-semibold text-gray-800">Personalized Itineraries</p>
                         </div>
 
                         {/* Feature 2 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#F6EFE6] bg-opacity-70 shadow-sm">
-                            <img className='w-14' src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f56d4d10be7d5944cc0c1_Why%20Choose%20Icon%20(4).svg" alt="" />
+                            <img className='w-14' src="/aboutc2.svg" alt="" />
                             <p className="text-xl font-semibold text-gray-800">Unmatched Support</p>
                         </div>
 
                         {/* Feature 3 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#F6EFE6] bg-opacity-70 shadow-sm">
-                            <img className='w-14' src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f56d3f353c25f10907373_Why%20Choose%20Icon%20(3).svg" alt="" />
+                            <img className='w-14' src="/aboutc3.svg" alt="" />
                             <p className="text-xl font-semibold text-gray-800">Global Expertisess</p>
                         </div>
 
                         {/* Feature 4 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#EAF3EF] bg-opacity-70 shadow-sm">
-                            <img className='w-14' src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f56d4d10be7d5944cc0c1_Why%20Choose%20Icon%20(4).svg" alt="" />
+                            <img className='w-14' src="/aboutc4.svg" alt="" />
                             <p className="text-xl font-semibold text-gray-800">Memorable Experiences</p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ const AboutAboutAno = () => {
                     <div className="w-full max-w-lg lg:max-w-none">
                         <img
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
-                            src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677f5829384da10cc773b1d9_Why%20Choose%20Image.jpg"
+                            src="/about6.jpg"
                             alt="Couple looking at a map on a trip"
                         />
                     </div>

@@ -77,7 +77,7 @@ const DestinationsSection = () => {
 
       {/* Gradient Overlay for Readability */}
       <div
-        className="absolute inset-0 z-10"
+        className="absolute inset-0 bg-black/50 z-10"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1))`,
         }}
@@ -87,10 +87,10 @@ const DestinationsSection = () => {
       <div className="relative z-20 max-w-7xl mx-auto px-4 py-20">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-white/80 sofia text-lg mb-4">
+          <p className="text-white sofia text-lg mb-4">
             Explore Destinations Country
           </p>
-          <h2 className="text-fourth boucher text-4xl md:text-7xl font-light">
+          <h2 className="text-[#D0B4B3] boucher uppercase text-4xl md:text-7xl font-bold">
             Where to next?
           </h2>
         </div>
@@ -119,11 +119,11 @@ const DestinationsSection = () => {
 
               {/* Card Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <h3 className="text-white boucher text-3xl font-light mb-2 transform transition-all duration-300 group-hover:translate-y-[-4px]">
+                <h3 className="text-[#D0B4B3] boucher uppercase font-bold text-3xl mb-2 transform transition-all duration-300 group-hover:translate-y-[-4px]">
                   {destination.name}
                 </h3>
                 <div className="inline-flex">
-                  <span className="bg-white/20 backdrop-blur-sm text-white sofia text-sm px-3 py-1 rounded-full border border-white/30 transition-all duration-300 group-hover:bg-white/30 group-hover:border-white/50">
+                  <span className="bg-white/20 backdrop-blur-sm text-white sofia text-sm px-3 py-1 rounded-full border border-black transition-all duration-300 group-hover:bg-white/30 group-hover:border-black">
                     {destination.packages}
                   </span>
                 </div>

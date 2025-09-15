@@ -60,7 +60,7 @@ const AbooutAniAno = () => {
                 {/* Video Player Section */}
                 <div className="relative w-full rounded-2xl overflow-hidden cursor-pointer group">
                     <img
-                        src="https://cdn.prod.website-files.com/6773bb8ef041a39ae66da8da/677e4135fc4587d3267affd3_About%20Us%20Video%20Thumbnail.jpg" // 👈 Replace with your video thumbnail image
+                        src="/women.jpg" // 👈 Replace with your video thumbnail image
                         alt="Woman taking a photo on a mountain"
                         width={1000}
                         height={600}
@@ -83,11 +83,11 @@ const AbooutAniAno = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
                     {stats.map((stat, index) => (
                         <div key={index} className="flex flex-col items-center">
-                            <div className="w-64 h-64 bg-[#084D2B] rounded-full flex flex-col items-center justify-center text-[white]">
+                            <div className="w-64 h-64 bg-[#b49a99] rounded-full flex flex-col items-center justify-center text-[white]">
                                 <span
                                     // Assign a ref to each number span
                                     ref={el => statsRef.current[index] = el}
-                                    className="text-5xl font-bold text-[#D0B4B3]"
+                                    className="text-5xl font-bold text-[#ffdddc]"
                                 >
                                     0{stat.suffix}
                                 </span>

@@ -52,25 +52,20 @@ const Hero = () => {
       className="relative min-h-[200vh] w-full text-white overflow-hidden"
     >
       {/* Background with scaling */}
-      <Image
+      <img
         ref={bgRef}
         src="/hero-main.jpg"
         alt="Travel destination"
-        fill
-        priority
-        quality={90}
-        className="object-cover z-0 will-change-transform"
+        className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-10 pt-8">
-        <Image
+        <img
           src="/logoo.jpeg"
           alt="Logo"
-          width={120}
-          height={120}
-          className="object-contain"
+          className="object-contain w-32"
         />
 
         <div className="flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-lg">
@@ -126,9 +121,9 @@ const Hero = () => {
         >
           <a
             href="mailto:info@travio.com"
-            className="group flex items-center gap-4 rounded-full bg-[#57809A]/90 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-[#D0B4B3] text-black"
+            className="group flex items-center gap-4 rounded-full bg-[#57809A]/90 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-[#b89f9e] text-black"
           >
-            <div className="bg-blue-700 hover:bg-white transition-all duration-300 rounded-full p-2">
+            <div className="bg-[#D0B4B3] hover:bg-[#D0B4B3] transition-all duration-300 rounded-full p-2">
               <Mail size={16} className="text-black" />
             </div>
             <div>
@@ -149,32 +144,28 @@ const Hero = () => {
 
       {/* Girl + Bottom Section */}
       <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-28">
-        <Image
+        <img
           src="/hero-girl.png"
           alt="Travel girl"
-          width={550}
-          height={500}
           className="object-contain relative z-30"
         />
 
         {/* Marquee Background Behind Last Image */}
         <div className="absolute bottom-20 w-full z-20">
           <Marquee
-            speed={80}
+            speed={100}
             gradient={false}
             direction="right"
             className="uppercase font-extrabold text-[60px] md:text-[100px]  tracking-wider"
           >
-            Your Gateway To{" "}
-            <span className="text-[#D0B4B3]">Amazing Journeys &nbsp;</span>
+            We Are &nbsp;{" "}
+            <span className="text-[#D0B4B3]">Travel Girls</span>
           </Marquee>
         </div>
 
-        <Image
+        <img
           src="/hero-bottom.png"
           alt="Bottom decoration"
-          width={2000}
-          height={200}
           className="w-full object-cover relative z-40 -mt-20"
         />
       </div>
