@@ -149,11 +149,9 @@ const Hero = () => {
 
       {/* Girl + Bottom Section */}
       <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-28">
-        <Image
+        <img
           src="/hero-girl.png"
           alt="Travel girl"
-          width={550}
-          height={500}
           className="object-contain relative z-30"
         />
 

@@ -91,15 +91,15 @@ const TripSection = () => {
         <div className="flex flex-col items-center gap-6 justify-center py-12 mb-12">
           <div className="text-center space-y-2">
             <div className="inline-block">
-              <span className="text-sm font-semibold tracking-[0.3em] text-[var(--color-brown)] uppercase mb-4 block">
+              <span className="text-sm font-bold tracking-[0.3em] text-black uppercase mb-4 block">
                 EXPLORE THE WORLD
               </span>
-              <div className="w-16 h-1 bg-five mx-auto mb-6 rounded-full"></div>
+              <div className="w-16 h-1 bg-[#D0B4B3] mx-auto mb-6 rounded-full"></div>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-light text-second leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold text-[#D0B4B3] leading-tight">
               Come on a Trip With Us!
-              <span className="font-medium text-[var(--color-brown)] block mt-2"></span>
+              <span className="font-medium text-black block mt-2"></span>
             </h2>
 
             <p className="max-w-4xl text-center text-lg leading-relaxed mx-auto text-first">
