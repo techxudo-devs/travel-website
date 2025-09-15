@@ -42,11 +42,9 @@ const ContactForm = () => {
           <div>
             <div className="relative  mx-auto">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <Image loading="lazy"
+                <img loading="lazy"
                   src="/contact.avif"
                   alt="Woman walking on a beautiful beach"
-                  width={500}
-                  height={500}
                   className="w-full h-[500px] object-cover"
                 />
               </div>

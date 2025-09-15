@@ -96,11 +96,9 @@ const AboutAccAno = () => {
 
                     {/* Right Column: Help Card */}
                     <div className="relative rounded-2xl overflow-hidden h-full mt-4 lg:mt-0">
-                        <Image loading='lazy'
+                        <img loading='lazy'
                             src="/acc.jpg" // 👈 Replace with your image path
                             alt="Customer support agent"
-                            width={400}
-                            height={500}
                             className="object-cover w-full h-[500px]"
                         />
                         <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 to-transparent text-white">

@@ -18,25 +18,25 @@ const AboutAboutAno = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Feature 1 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#EAF3EF] bg-opacity-70 shadow-sm">
-                            <Image loading='lazy' className='w-14' src="/aboutc1.svg" alt="" width={56} height={56} />
+                            <img loading='lazy' className='w-14' src="/aboutc1.svg" alt=""/>
                             <p className="text-xl font-semibold text-gray-800">Personalized Itineraries</p>
                         </div>
 
                         {/* Feature 2 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#F6EFE6] bg-opacity-70 shadow-sm">
-                            <Image loading='lazy' className='w-14' src="/aboutc2.svg" alt="" width={56} height={56} />
+                            <img loading='lazy' className='w-14' src="/aboutc2.svg" alt=""/>
                             <p className="text-xl font-semibold text-gray-800">Unmatched Support</p>
                         </div>
 
                         {/* Feature 3 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#F6EFE6] bg-opacity-70 shadow-sm">
-                            <Image loading='lazy' className='w-14' src="/aboutc3.svg" alt="" width={56} height={56} />
+                            <img loading='lazy' className='w-14' src="/aboutc3.svg" alt=""/>
                             <p className="text-xl font-semibold text-gray-800">Global Expertisess</p>
                         </div>
 
                         {/* Feature 4 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#EAF3EF] bg-opacity-70 shadow-sm">
-                            <Image loading='lazy' className='w-14' src="/aboutc4.svg" alt="" width={56} height={56} />
+                            <img loading='lazy' className='w-14' src="/aboutc4.svg" alt=""/>
                             <p className="text-xl font-semibold text-gray-800">Memorable Experiences</p>
                         </div>
                     </div>
@@ -45,11 +45,9 @@ const AboutAboutAno = () => {
                 {/* Right Image */}
                 <div className="lg:w-1/2 flex justify-center lg:justify-end">
                     <div className="w-full max-w-lg lg:max-w-none">
-                        <Image loading='lazy'
+                        <img loading='lazy'
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
                             src="/about6.jpg"
-                            width={500}
-                            height={500}
                             alt="Couple looking at a map on a trip"
                         />
                     </div>

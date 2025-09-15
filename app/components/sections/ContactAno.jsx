@@ -7,11 +7,9 @@ const ContactAno = () => {
     return (
         <div className="relative h-screen w-full text-white overflow-hidden">
             {/* Background */}
-            <Image loading="lazy"
+            <img loading="lazy"
                 src="/contact-main.jpg"
                 alt="About background"
-                layout="fill"
-                objectFit="cover"
                 className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
             />
             <div className="absolute inset-0 bg-black/70 z-10" />
@@ -63,11 +61,9 @@ const ContactAno = () => {
 
             {/* Bottom Decoration (fixed to bottom inside h-screen) */}
             <div className="absolute bottom-0 left-0 right-0 z-30">
-                <Image loading="lazy"
+                <img loading="lazy"
                     src="/about-bottom.png"
                     alt="Bottom decoration"
-                    width={1920}
-                    height={100}
                     className="w-full object-contain" // use contain instead of cover
                 />
             </div>

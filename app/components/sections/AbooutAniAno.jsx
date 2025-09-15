@@ -59,11 +59,9 @@ const AbooutAniAno = () => {
 
                 {/* Video Player Section */}
                 <div className="relative w-full rounded-2xl overflow-hidden cursor-pointer group">
-                    <Image loading='lazy'
+                    <img loading='lazy'
                         src="/women.jpg" // 👈 Replace with your video thumbnail image
                         alt="Woman taking a photo on a mountain"
-                        width={1000}
-                        height={600}
                         className="w-full object-cover"
                     />
                     {/* Play Button Overlay */}
