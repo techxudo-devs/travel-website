@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const AboutHeroAno = () => {
     return (
@@ -24,16 +25,20 @@ const AboutHeroAno = () => {
                 {/* Right Image Grid */}
                 <div className="lg:w-1/2 flex justify-center lg:justify-end gap-6">
                     <div className="w-full sm:w-1/2 max-w-xs lg:max-w-none">
-                        <img loading='lazy'
+                        <Image loading='lazy'
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
                             src="/about4.jpg"
+                            width={400}
+                            height={400}
                             alt="Traveler admiring a fjord landscape"
                         />
                     </div>
                     <div className="w-full sm:w-1/2 max-w-xs lg:max-w-none mt-8 sm:mt-0 lg:mt-12"> {/* Adjusted margin-top for second image */}
-                        <img loading='lazy'
+                        <Image loading='lazy'
                             className="rounded-xl shadow-lg object-cover w-full h-auto"
                             src="/about5.jpg"
+                            width={400}
+                            height={400}
                             alt="Woman in yellow dress on a tropical island"
                         />
                     </div>

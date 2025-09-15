@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 // Note: Replace these image URLs with the actual images from your project.
 // I have used placeholders that resemble the images in the screenshot.
@@ -67,9 +68,11 @@ const BlogSection = () => {
                     ${index === 2 ? "shadow-2xl transform scale-105" : ""}
                   `}
               >
-                <img loading="lazy"
+                <Image loading="lazy"
                   src={post.image}
                   alt={post.title}
+                  width={360}
+                  height={480}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/80 to-transparent">

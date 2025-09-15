@@ -4,6 +4,7 @@
 
 import { useState } from 'react';
 import { Camera, ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from "next/image";
 
 // React Slick component aur zaroori CSS files
 import Slider from "react-slick";
@@ -98,9 +99,11 @@ export default function PhotoGallery({ images = [] }) {
                                         className="relative w-full aspect-[4/3] rounded overflow-hidden cursor-pointer group shadow-md"
                                         onClick={() => handleImageClick(idx)}
                                     >
-                                        <img loading='lazy'
+                                        <Image loading='lazy'
                                             src={url}
                                             alt={`Gallery image ${idx + 1}`}
+                                            width={400}
+                                            height={300}
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

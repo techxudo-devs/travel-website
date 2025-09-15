@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Plus, Minus, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 // FAQ data array - easy to add, remove, or edit questions
 const faqData = [
@@ -95,11 +96,11 @@ const AboutAccAno = () => {
 
                     {/* Right Column: Help Card */}
                     <div className="relative rounded-2xl overflow-hidden h-full mt-4 lg:mt-0">
-                        <img loading='lazy'
+                        <Image loading='lazy'
                             src="/acc.jpg" // 👈 Replace with your image path
                             alt="Customer support agent"
                             width={400}
-                            height={600}
+                            height={500}
                             className="object-cover w-full h-[500px]"
                         />
                         <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 to-transparent text-white">

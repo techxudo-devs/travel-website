@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -87,9 +88,11 @@ const TestimonialCard = ({ review }) => {
         {/* Enhanced Image Section */}
         <div className="relative mb-8 overflow-hidden rounded-3xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
           <div className="relative overflow-hidden">
-            <img loading="lazy"
+            <Image loading="lazy"
               src={review.image}
               alt={review.trip}
+              width={256}
+              height={256}
               className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
             />
             {/* Multi-layered gradient overlay */}
@@ -150,9 +153,11 @@ const TestimonialCard = ({ review }) => {
         <div className="flex items-center p-4 bg-gradient-to-r from-[var(--color-semilight)]/10 to-transparent rounded-2xl border border-[var(--color-semilight)]/20">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl">
-              <img loading="lazy"
+              <Image loading="lazy"
                 src={review.avatar}
                 alt={review.name}
+                width={64}
+                height={64}
                 className="w-16 h-16 object-cover border-3 border-white shadow-lg"
               />
             </div>

@@ -23,9 +23,11 @@ const HeroSection = ({
 
             {/* Navbar */}
             <div className="relative flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <img loading="lazy"
+                <Image loading="lazy"
                     src="/logoo.jpeg"
                     alt="Logo"
+                    width={128}
+                    height={128}
                     className="object-contain w-32"
                 />
 
@@ -71,9 +73,11 @@ const HeroSection = ({
             {/* Bottom Decoration */}
             {bottomDecoration && (
                 <div className="absolute bottom-0 left-0 right-0 z-30">
-                    <img loading="lazy"
+                    <Image loading="lazy"
                         src={bottomDecoration}
                         alt="Bottom decoration"
+                        width={1920}
+                        height={100}
                         className="w-full object-contain"
                     />
                 </div>

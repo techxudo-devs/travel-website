@@ -1,6 +1,5 @@
 import React from 'react';
-// Note: You are using the standard <img> tag, so Next.js Image component is not needed here.
-// import Image from 'next/image'; 
+import Image from 'next/image'; 
 
 // Data for the team members. This remains as you provided.
 const teamMembers = [
@@ -42,9 +41,11 @@ const TeamMemberCard = ({ name, title, imageSrc }) => {
 
             {/* The image container has the background color and rounded corners */}
             <div className="bg-[#F9F5F1] rounded-xl overflow-hidden">
-                <img loading='lazy'
+                <Image loading='lazy'
                     src={imageSrc}
                     alt={`Portrait of ${name}`}
+                    width={400}
+                    height={400}
                     // Use standard Tailwind classes for styling the img tag
                     className="w-full h-auto object-cover object-top"
                 />

@@ -35,7 +35,7 @@ const AboutNewAno = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg">
                                 {/* --- Replace with your image path --- */}
-                                <img loading='lazy'
+                                <Image loading='lazy'
                                     src="/about1.webp"
                                     alt="Couple taking a selfie while hiking"
                                     layout="fill"
@@ -96,7 +96,7 @@ const AboutNewAno = () => {
 
                         <div className="absolute top-1/2 left-[0%] transform -translate-y-1/2 -rotate-[5deg] w-[300px] h-auto z-10">
                             {/* --- Replace with your image path --- */}
-                            <img loading='lazy'
+                            <Image loading='lazy'
                                 src="/about2.webp"
                                 alt="Open suitcase for travel"
                                 width={600}

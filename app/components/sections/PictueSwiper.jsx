@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 // Updated data with travel-related images and content
 const travelSpots = [
@@ -56,9 +57,11 @@ export default function PictureSwiper() {
         {travelSpots.map((spot, idx) => (
           <SwiperSlide key={idx}>
             <div className="w-full h-[620px] relative overflow-hidden rounded-2xl shadow-lg">
-              <img loading="lazy"
+              <Image loading="lazy"
                 src={spot.src}
                 alt={spot.alt}
+                width={620}
+                height={620}
                 className="w-full h-full object-cover"
               />
               {/* Gradient overlay for better text readability */}

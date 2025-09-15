@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { BASE_URL } from '@/app/utils/ApiBaseUrl';
+import Image from "next/image";
 
 // Stepper Component - Top par 1-2-3 dikhane ke liye
 const Stepper = ({ currentStep }) => {
@@ -237,10 +238,10 @@ export default function BookingForm() {
 
                 {/* Right Side: Image Gallery */}
                 <div className="hidden max-h-screen lg:grid grid-cols-2 grid-rows-3 gap-4 p-4 ">
-                    <img loading='lazy' src="/4.jpg" alt="Socotra landscape 1" className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
-                    <img loading='lazy' src="/8.jpg" alt="Socotra landscape 2" className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
-                    <img loading='lazy' src="/2.jpg" alt="Socotra landscape 3" className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
-                    <img loading='lazy' src="/5.jpg" alt="Socotra landscape 4" className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <Image loading='lazy' src="/4.jpg" alt="Socotra landscape 1" width={800} height={360} className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <Image loading='lazy' src="/8.jpg" alt="Socotra landscape 2" width={400} height={360} className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <Image loading='lazy' src="/2.jpg" alt="Socotra landscape 3" width={400} height={360} className="col-span-1 row-span-1 object-cover w-full h-full rounded-lg" />
+                    <Image loading='lazy' src="/5.jpg" alt="Socotra landscape 4" width={800} height={360} className="col-span-2 row-span-1 object-cover w-full h-full rounded-lg" />
                 </div>
             </div>
         </div>
