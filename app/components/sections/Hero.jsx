@@ -73,6 +73,8 @@ const Hero = () => {
           src="/hero-girl.png"
           alt="Your image description"
           width={400}
+          unoptimized
+          fetchPriority="high"
           height={150}
           className="object-contain"
         />
