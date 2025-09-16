@@ -46,6 +46,8 @@ const Hero = () => {
         layout="fill"
         objectFit="cover"
         fill
+        unoptimized
+        fetchPriority="high"
         blurDataURL="/hero-main.jpg"
         quality={90}
         priority
