@@ -11,7 +11,7 @@ const AboutAboutAno = () => {
                     <h2 className="text-4xl font-extrabold text-[#D0B4B3] uppercase leading-tight mb-6">
                         Why Choose Travel Girls
                     </h2>
-                    <p className="text-gray-700 text-lg mb-12 max-w-lg mx-auto lg:mx-0">
+                    <p className="text-gray-700 text-base sm:text-lg mb-12 max-w-lg mx-auto lg:mx-0">
                         We don't just plan trips—we craft unforgettable experiences. With personalized itineraries, local expertise, and dedicated support, we make every journey seamless, safe, and truly memorable.
                     </p>
 
@@ -19,25 +19,25 @@ const AboutAboutAno = () => {
                         {/* Feature 1 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#EAF3EF] bg-opacity-70 shadow-sm">
                             <img loading='lazy' className='w-14' src="/aboutc1.svg" alt=""/>
-                            <p className="text-xl font-semibold text-gray-800">Personalized Itineraries</p>
+                            <p className="text-lg sm:text-xl font-semibold text-gray-800">Personalized Itineraries</p>
                         </div>
 
                         {/* Feature 2 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#F6EFE6] bg-opacity-70 shadow-sm">
                             <img loading='lazy' className='w-14' src="/aboutc2.svg" alt=""/>
-                            <p className="text-xl font-semibold text-gray-800">Unmatched Support</p>
+                            <p className="text-lg sm:text-xl font-semibold text-gray-800">Unmatched Support</p>
                         </div>
 
                         {/* Feature 3 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#F6EFE6] bg-opacity-70 shadow-sm">
                             <img loading='lazy' className='w-14' src="/aboutc3.svg" alt=""/>
-                            <p className="text-xl font-semibold text-gray-800">Global Expertisess</p>
+                            <p className="text-lg sm:text-xl font-semibold text-gray-800">Global Expertisess</p>
                         </div>
 
                         {/* Feature 4 */}
                         <div className="flex items-center gap-4 p-6 rounded-xl bg-[#EAF3EF] bg-opacity-70 shadow-sm">
                             <img loading='lazy' className='w-14' src="/aboutc4.svg" alt=""/>
-                            <p className="text-xl font-semibold text-gray-800">Memorable Experiences</p>
+                            <p className="text-lg sm:text-xl font-semibold text-gray-800">Memorable Experiences</p>
                         </div>
                     </div>
                 </div>

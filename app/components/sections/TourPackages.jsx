@@ -116,14 +116,14 @@ const TourPackages = () => {
       >
         {/* Section Header */}
         <motion.div variants={tourItemVariants} className="mb-16">
-          <motion.h2 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-wide">
+          <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 tracking-wide">
             All inclusive
-            <span className="block font-bold text-6xl text-[#D0B4B3] mt-2 uppercase">
+            <span className="block font-bold text-5xl sm:text-6xl text-[#D0B4B3] mt-2 uppercase">
               Tour Packages
             </span>
           </motion.h2>
           <motion.div className="w-24 h-1 bg-[#D0B4B3] mx-auto mb-8 rounded-full"></motion.div>
-          <motion.p className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 opacity-80">
+          <motion.p className="max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-gray-700 opacity-80">
             Travel from anywhere in India or worldwide. Pick a tour that fits
             you — starting right from your city. Experience curated journeys
             designed for every traveler.
@@ -131,7 +131,7 @@ const TourPackages = () => {
         </motion.div>
 
         {/* --- START: Dynamic Grid Rendering --- */}
-        <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {tours.map((apiTour) => {
             const tourForCard = {
               id: apiTour._id,

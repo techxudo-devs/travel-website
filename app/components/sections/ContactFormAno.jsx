@@ -30,107 +30,102 @@ const ContactFormAno = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Add your form submission logic here (e.g., API call)
   };
 
   return (
-    <div className="bg-white text-black min-h-screen flex items-center justify-center font-sans p-8">
-      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-16">
+    <div className="bg-gradient-to-br from-[#b49a99] to-second text-white min-h-screen flex items-center justify-center font-sans p-6 sm:p-8">
+      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-12 lg:gap-16">
         {/* Left Side */}
-        <div className="w-full md:w-1/2 flex flex-col justify-between">
-          <div>
-            <div className="relative  mx-auto">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img loading="lazy"
-                  src="/contact.avif"
-                  alt="Woman walking on a beautiful beach"
-                  className="w-full h-[500px] object-cover"
-                />
-              </div>
-              <div className="absolute -top-8 -left-8 w-80 bg-[#D0B4B3] text-black p-8 rounded-3xl shadow-lg">
-                <h2 className="text-3xl uppercase font-extrabold mb-1">
-                  Travel Girls<span className="text-white">.</span>
-                  <span className="block w-8 h-1 bg-white rounded-full -mt-2 ml-12"></span>
-                </h2>
-                <p className="text-base font-semibold mt-4 leading-tight text-gray-700">
-                  Keep travelling all year round!
-                </p>
-                <div className="flex items-center space-x-3 mt-6">
-                  <a
-                    href="#"
-                    className="w-9 h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white font-bold text-xl hover:bg-[#9b8484] transition-colors"
-                  >
-                    X
-                  </a>
-                  <a
-                    href="#"
-                    className="w-9 h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white hover:bg-[#9b8484] transition-colors"
-                  >
-                    <Instagram size={18} />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-9 h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white hover:bg-[#9b8484] transition-colors"
-                  >
-                    <Globe size={18} />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-9 h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white hover:bg-[#9b8484] transition-colors"
-                  >
-                    <Facebook size={18} />
-                  </a>
-                </div>
+        <div className="w-full md:w-1/2 flex flex-col justify-between relative">
+          <div className="relative mx-auto w-full">
+            <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                loading="lazy"
+                src="/contact.avif"
+                alt="Woman walking on a beautiful beach"
+                className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover"
+              />
+            </div>
+            {/* Floating Card */}
+            <div className="absolute -top-6 sm:-top-8 -left-4 sm:-left-8 w-64 sm:w-72 md:w-80 bg-[#D0B4B3] text-black p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg">
+              <h2 className="text-2xl sm:text-3xl uppercase font-extrabold mb-1">
+                Travel Girls<span className="text-white">.</span>
+                <span className="block w-6 sm:w-8 h-1 bg-white rounded-full -mt-2 ml-10 sm:ml-12"></span>
+              </h2>
+              <p className="text-sm sm:text-base font-semibold mt-3 sm:mt-4 leading-tight text-gray-700">
+                Keep travelling all year round!
+              </p>
+              <div className="flex flex-wrap items-center gap-3 mt-6">
+                <a
+                  href="#"
+                  className="w-8 h-8 sm:w-9 sm:h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white font-bold text-lg hover:bg-[#9b8484] transition-colors"
+                >
+                  X
+                </a>
+                <a
+                  href="#"
+                  className="w-8 h-8 sm:w-9 sm:h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white hover:bg-[#9b8484] transition-colors"
+                >
+                  <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
+                </a>
+                <a
+                  href="#"
+                  className="w-8 h-8 sm:w-9 sm:h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white hover:bg-[#9b8484] transition-colors"
+                >
+                  <Globe size={16} className="sm:w-[18px] sm:h-[18px]" />
+                </a>
+                <a
+                  href="#"
+                  className="w-8 h-8 sm:w-9 sm:h-9 bg-[#b49a99] rounded-full flex items-center justify-center text-white hover:bg-[#9b8484] transition-colors"
+                >
+                  <Facebook size={16} className="sm:w-[18px] sm:h-[18px]" />
+                </a>
               </div>
             </div>
           </div>
-          {/* <div className="text-light text-sm mt-8 md:mt-0 max-w-sm mx-auto">
-            <p className="mb-6">© 2025. All rights reserved.</p>
-            <div className="flex space-x-6 mb-6">
-              <a href="#" className="hover:text-white">
-                License
-              </a>
-              <a href="#" className="hover:text-white">
-                Changelog
-              </a>
-              <a href="#" className="hover:text-white">
-                StyleGuide
-              </a>
-            </div>
-            <p>Designed by Flowcub Design</p>
-            <p>Powered by Webflow</p>
-          </div> */}
         </div>
 
         {/* Right Side */}
-        <div className="w-full md:w-1/2 bg-gray-50 rounded-3xl p-10">
-          <h1 className="text-4xl font-extrabold uppercase text-[#D0B4B3] mb-3">Let's work together</h1>
-          <p className="text-[#B49A99] font-medium text-sm mb-10">
-            Drop me a message or reach out directly – I'll get back within a
-            day.
+        <div className="w-full md:w-1/2">
+          <h1 className="text-3xl sm:text-4xl font-extrabold uppercase text-[#D0B4B3] mb-3">
+            Let's work together
+          </h1>
+          <p className="text-gray-200 font-medium mb-8 sm:mb-10 text-sm sm:text-base">
+            Drop me a message or reach out directly – I'll get back within a day.
           </p>
 
-          <div className="flex space-x-12 mb-10">
-            <div className="flex items-center space-x-2">
-              <ChevronRight size={20} className="text-[#D0B4B3]" />
+          <div className="flex flex-col sm:flex-row sm:space-x-12 mb-8 sm:mb-10 space-y-4 sm:space-y-0">
+            <div className="flex items-start space-x-2">
+              <ChevronRight size={18} className="text-[#D0B4B3]" />
               <div>
-                <h3 className="font-semibold text-black">Mobile Number</h3>
-                <p className="text-[#B49A99] text-sm">+ (38) 0292 7380 9925</p>
+                <h3 className="font-semibold text-black text-sm sm:text-base">
+                  Mobile Number
+                </h3>
+                <p className="text-light text-xs sm:text-sm">
+                  + (38) 0292 7380 9925
+                </p>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <ChevronRight size={20} className="text-[#D0B4B3]" />
+            <div className="flex items-start space-x-2">
+              <ChevronRight size={18} className="text-[#D0B4B3]" />
               <div>
-                <h3 className="font-semibold text-black">Email Address</h3>
-                <p className="text-[#B49A99] text-sm">yourmailaddress@gmail.com</p>
+                <h3 className="font-semibold text-black text-sm sm:text-base">
+                  Email Address
+                </h3>
+                <p className="text-light text-xs sm:text-sm">
+                  yourmailaddress@gmail.com
+                </p>
               </div>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
               <div>
-                <label className="text-sm font-medium text-black" htmlFor="firstName">
+                <label
+                  className="text-xs sm:text-sm font-medium text-black"
+                  htmlFor="firstName"
+                >
                   First Name*
                 </label>
                 <input
@@ -140,12 +135,15 @@ const ContactFormAno = () => {
                   placeholder="John"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className="w-full mt-2 p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black"
+                  className="w-full mt-2 p-3 sm:p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black text-sm sm:text-base"
                   required
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-black" htmlFor="lastName">
+                <label
+                  className="text-xs sm:text-sm font-medium text-black"
+                  htmlFor="lastName"
+                >
                   Last Name*
                 </label>
                 <input
@@ -155,14 +153,17 @@ const ContactFormAno = () => {
                   placeholder="Doe"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className="w-full mt-2 p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black"
+                  className="w-full mt-2 p-3 sm:p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black text-sm sm:text-base"
                   required
                 />
               </div>
             </div>
 
             <div>
-              <label className="text-sm font-medium text-black" htmlFor="email">
+              <label
+                className="text-xs sm:text-sm font-medium text-black"
+                htmlFor="email"
+              >
                 Email Address*
               </label>
               <input
@@ -172,12 +173,15 @@ const ContactFormAno = () => {
                 placeholder="johndoe@gmail.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full mt-2 p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black"
+                className="w-full mt-2 p-3 sm:p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black text-sm sm:text-base"
                 required
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-black" htmlFor="contactNumber">
+              <label
+                className="text-xs sm:text-sm font-medium text-black"
+                htmlFor="contactNumber"
+              >
                 Contact number*
               </label>
               <input
@@ -187,13 +191,16 @@ const ContactFormAno = () => {
                 placeholder="+971 570 8230"
                 value={formData.contactNumber}
                 onChange={handleChange}
-                className="w-full mt-2 p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black"
+                className="w-full mt-2 p-3 sm:p-4 bg-[#b49a99] rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black text-sm sm:text-base"
                 required
               />
             </div>
 
             <div>
-              <label className="text-sm font-medium text-black" htmlFor="message">
+              <label
+                className="text-xs sm:text-sm font-medium text-black"
+                htmlFor="message"
+              >
                 Write your Message
               </label>
               <textarea
@@ -204,32 +211,35 @@ const ContactFormAno = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full mt-2 p-4 bg-[#b49a99] rounded-3xl border border-transparent resize-none focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black"
+                className="w-full mt-2 p-3 sm:p-4 bg-[#b49a99] rounded-2xl sm:rounded-3xl border border-transparent resize-none focus:outline-none focus:ring-2 focus:ring-[#D0B4B3] text-black text-sm sm:text-base"
               ></textarea>
             </div>
 
             <div>
               <button
                 type="submit"
-                className="w-auto bg-white text-first font-bold py-3 pl-6 pr-3 rounded-full flex items-center space-x-4 group transition-all duration-300 hover:scale-95 cursor-pointer"
+                className="w-full sm:w-auto bg-white text-first font-bold py-3 px-6 rounded-full flex items-center justify-center sm:justify-start space-x-3 group transition-all duration-300 hover:scale-95 cursor-pointer text-sm sm:text-base"
               >
                 <span>Send Message</span>
                 <div className="bg-black text-white rounded-full p-2 group-hover:bg-gray-800 transition-colors">
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
                 </div>
               </button>
             </div>
 
-            <div className="flex items-center space-x-3">
+            <div className="flex items-start space-x-2">
               <input
                 type="checkbox"
                 name="agreeToPolicy"
                 id="agreeToPolicy"
                 checked={formData.agreeToPolicy}
                 onChange={handleChange}
-                className="h-4 w-4 bg-dark border-gray-600 rounded cursor-pointer"
+                className="h-4 w-4 bg-dark border-gray-600 rounded cursor-pointer mt-1"
               />
-              <label htmlFor="agreeToPolicy" className="text-xs text-[#B49A99]">
+              <label
+                htmlFor="agreeToPolicy"
+                className="text-xs sm:text-sm text-light leading-snug"
+              >
                 I have read and accept the Privacy policy, and agree to join.
               </label>
             </div>

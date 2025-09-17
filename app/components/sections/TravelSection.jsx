@@ -38,7 +38,7 @@ const TravelInfoSection = () => {
               <p className="text-sm font-semibold tracking-[0.3em] text-black uppercase mb-4">
                 GETTING HERE
               </p>
-              <h2 className="text-5xl lg:text-6xl font-bold text-[#D0B4B3] uppercase leading-tight mb-8">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#D0B4B3] uppercase leading-tight mb-8">
                 How to travel
                 <br />
                 <span className="text-[#a08180]">to Socotra?</span>
@@ -46,13 +46,13 @@ const TravelInfoSection = () => {
             </div>
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
-              <p className="text-lg">
+              <p className="text-base sm:text-lg">
                 Traveling to Socotra requires careful planning due to its remote
                 location in the Indian Ocean and limited accessibility from the
                 continent.
               </p>
 
-              <p className="text-lg">
+              <p className="text-base sm:text-lg">
                 We at Traveling Socotra provide you with all the necessary
                 information and we will help you book your flights and arrange
                 your visa for Socotra. Everything you need to ensure a smooth
@@ -60,7 +60,7 @@ const TravelInfoSection = () => {
               </p>
             </div>
 
-            <button className="group inline-flex items-center bg-[#D0B4B3] cursor-pointer text-white font-semibold py-4 px-8 rounded-full hover:bg-[#a08180] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-95">
+            <button className="group text-sm sm:tetx-base inline-flex items-center bg-[#D0B4B3] cursor-pointer text-white font-semibold py-4 px-8 rounded-full hover:bg-[#a08180] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-95">
               Read more
               <ArrowRight
                 size={20}

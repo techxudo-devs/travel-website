@@ -44,10 +44,10 @@ const AboutNewAno = () => {
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <GiWorld className="text-4xl text-gray-800" />
+                                        <GiWorld className="text-3xl sm:text-4xl text-gray-800" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-xl text-[#D0B4B3] uppercase">Trusted Guide</h3>
+                                        <h3 className="font-bold text-lg sm:text-xl text-[#D0B4B3] uppercase">Trusted Guide</h3>
                                         <p className="text-gray-600 mt-1">
                                             One shall be subjected to arbitrary arrest, detention or exile.
                                         </p>
@@ -56,10 +56,10 @@ const AboutNewAno = () => {
 
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <FaRoute className="text-4xl text-gray-800" />
+                                        <FaRoute className="text-3xl sm:text-4xl text-gray-800" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-xl text-[#D0B4B3] uppercase">Personalized Trips</h3>
+                                        <h3 className="font-bold text-lg sm:text-xl text-[#D0B4B3] uppercase">Personalized Trips</h3>
                                         <p className="text-gray-600 mt-1">
                                             One shall be subjected to arbitrary arrest, detention or exile.
                                         </p>
@@ -69,7 +69,7 @@ const AboutNewAno = () => {
                         </div>
 
                         <div>
-                            <button className="bg-[#D0B4B3] text-black font-bold py-3 px-8 rounded-md hover:scale-95 transition-all duration-300 shadow-md cursor-pointer">
+                            <button className="bg-[#D0B4B3] text-black font-bold py-3 px-8 rounded-md hover:scale-95 transition-all duration-300 shadow-md cursor-pointer sm:text-base text-sm">
                                 MORE ABOUT US
                             </button>
                         </div>

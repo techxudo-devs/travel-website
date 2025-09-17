@@ -41,7 +41,7 @@ const BlogSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-[#a08180] uppercase mb-4">
             Read more on our blog
           </h2>
-          <p className="text-gray-700 font-medium">
+          <p className="text-gray-700 font-medium text-base">
             Need more info and inspiration? Browse our blog for more insights on
             what to do and see in Socotra.
           </p>

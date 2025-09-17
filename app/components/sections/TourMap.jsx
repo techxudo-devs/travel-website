@@ -9,21 +9,54 @@ const leftLocations = [
     name: "Africa",
     subtitle: "Coastal Hiking",
     image: "/map1.webp",
-    dropdown: ["BOTSWANA", "EGYPT", "Snorkeling", "KENYA", "MAURITIUS", "MOROCCO", "NAMIBIA", "THE SEYCHELLES", "TANZANIA", "ZIMBABWE"],
+    dropdown: [
+      "BOTSWANA",
+      "EGYPT",
+      "SNORKELING",
+      "KENYA",
+      "MAURITIUS",
+      "MOROCCO",
+      "NAMIBIA",
+      "THE SEYCHELLES",
+      "TANZANIA",
+      "ZIMBABWE",
+    ],
   },
   {
     id: 2,
     name: "Asia",
     subtitle: "Hiking & Trekking",
     image: "/map2.webp",
-    dropdown: ["CAMBODIA", "CHINA", "HONG KONG", "INDONESIA", "JAPAN", "THE MALDIVES", "SINGAPORE", "SRI LANKA", "THAILAND", "VIETNAM"],
+    dropdown: [
+      "CAMBODIA",
+      "CHINA",
+      "HONG KONG",
+      "INDONESIA",
+      "JAPAN",
+      "THE MALDIVES",
+      "SINGAPORE",
+      "SRI LANKA",
+      "THAILAND",
+      "VIETNAM",
+    ],
   },
   {
     id: 3,
     name: "Europe",
     subtitle: "Desert Camping",
     image: "/map3.webp",
-    dropdown: ["AUSTRIA", "BELGIUM", "CROATIA", "CZECH REPUBLIC", "ENGLAND", "FRANCE", "GERMANY", "HUNGARY", "ICELAND", "PORTUGAL"],
+    dropdown: [
+      "AUSTRIA",
+      "BELGIUM",
+      "CROATIA",
+      "CZECH REPUBLIC",
+      "ENGLAND",
+      "FRANCE",
+      "GERMANY",
+      "HUNGARY",
+      "ICELAND",
+      "PORTUGAL",
+    ],
   },
   {
     id: 4,
@@ -106,64 +139,73 @@ const TourMap = () => {
   };
 
   return (
-    <div className="bg-[#FFFFFF] py-20 min-h-screen pr-10">
-      <h1 className="text-center text-5xl font-bold text-[#D0B4B3] pb-4 uppercase">
+    <div className="bg-[#FFFFFF] py-16 min-h-screen">
+      {/* Heading */}
+      <h1 className="text-center text-3xl md:text-5xl font-bold text-[#D0B4B3] pb-4 uppercase">
         Choose Your Destination
       </h1>
-      <div className="w-24 h-1 bg-[#D0B4B3] mx-auto mb-8 rounded-full"></div>
+      <div className="w-20 md:w-24 h-1 bg-[#D0B4B3] mx-auto mb-8 rounded-full"></div>
 
-      <div className="flex">
-        {/* Left Section with dropdowns */}
-        <div className="w-[220px] flex-shrink-0 relative">
+      {/* Main Layout */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Sidebar / Top Row */}
+        <div className="lg:w-[240px] flex-shrink-0 relative px-4">
+          {/* Animated Label */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="bg-[#D0B4B3] px-3 py-1 w-fit mx-auto mb-10 flex items-center gap-2 rounded-md shadow-md cursor-pointer"
+            className="bg-[#D0B4B3] px-4 py-2 w-fit mx-auto mb-6 flex items-center gap-2 rounded-md shadow-md cursor-pointer"
           >
-            <span className="font-medium">Click To Choose</span>
-            <ChevronDown className="w-5 h-5" />
-          </motion.div>          {leftLocations.map((loc) => (
-            <div key={loc.id} className="mb-8 relative">
-              {/* Image and title clickable */}
+            <span className="font-medium sm:text-base text-sm text-white">Click To Choose</span>
+            <ChevronDown className="w-5 h-5 text-white" />
+          </motion.div>
 
-              <div
-                onClick={() => toggleDropdown(loc.id)}
-                className="cursor-pointer flex flex-col items-center hover:scale-95 transition-all duration-300"
-              >
-                <img
-                  className="w-16 h-16 rounded-full object-cover"
-                  src={loc.image}
-                  alt={loc.name}
-                />
-                <div className="text-center mt-2">
-                  <p className="text-sm font-medium">{loc.name}</p>
-                  <p className="text-xs text-gray-600">{loc.subtitle}</p>
+          {/* Location List - Horizontal on small, vertical on lg */}
+          <div className="flex lg:flex-col gap-6 overflow-x-auto pb-4 lg:overflow-visible lg:pb-0">
+            {leftLocations.map((loc) => (
+              <div key={loc.id} className="relative flex-shrink-0">
+                {/* Image + title */}
+                <div
+                  onClick={() => toggleDropdown(loc.id)}
+                  className="cursor-pointer flex flex-col items-center hover:scale-95 transition-all duration-300"
+                >
+                  <img
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-[#D0B4B3]"
+                    src={loc.image}
+                    alt={loc.name}
+                  />
+                  <div className="text-center mt-2">
+                    <p className="text-sm font-medium">{loc.name}</p>
+                    <p className="text-xs text-gray-600">{loc.subtitle}</p>
+                  </div>
+                </div>
+
+                {/* Dropdown */}
+                <div
+                  className={`absolute lg:left-5 z-20 top-full transition-all duration-500 ease-in-out ${openDropdown === loc.id
+                    ? "h-fit opacity-100"
+                    : "max-h-0 opacity-0"
+                    } w-[200px] overflow-hidden`}
+                >
+                  <ul className="mt-2 bg-[#D0B4B3] rounded-lg shadow-md text-sm p-2">
+                    {loc.dropdown.map((item, i) => (
+                      <li
+                        key={i}
+                        className="px-3 py-1 hover:bg-[#998584] rounded cursor-pointer text-white"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-
-              {/* Dropdown absolutely positioned so it won't push layout */}
-              <div
-                className={`absolute left-5 z-20 top-full overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === loc.id ? "max-h-fit opacity-100" : "max-h-0 opacity-0"
-                  } w-[200px]`}
-              >
-                <ul className="mt-2 bg-[#D0B4B3] rounded-lg shadow-md text-sm p-2">
-                  {loc.dropdown.map((item, i) => (
-                    <li
-                      key={i}
-                      className="px-3 py-1 hover:bg-[#998584] rounded cursor-pointer"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Right Section - Map */}
-        <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-white opacity-30"></div>
+        {/* Map Section */}
+        <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center min-h-[500px] w-full overflow-hidden">
+          <div className="absolute inset-0 bg-white opacity-20"></div>
 
           {rightLocations.map((location) => (
             <div
@@ -171,11 +213,15 @@ const TourMap = () => {
               className="absolute flex flex-col items-center cursor-pointer transform -translate-x-1/2 -translate-y-1/2"
               style={location.mapPosition}
             >
-              <div className="relative w-20 h-20 rounded-full border-4 border-black shadow-lg overflow-hidden flex items-center justify-center bg-gray-200">
-                <img src={location.image} alt={location.name} className="w-full h-full object-cover" />
+              <div className="relative w-14 h-14 md:w-20 md:h-20 rounded-full border-4 border-white shadow-lg overflow-hidden flex items-center justify-center bg-gray-200">
+                <img
+                  src={location.image}
+                  alt={location.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-black -mt-1"></div>
-              <p className="text-xs font-semibold text-white bg-[#D0B4B3] px-3 py-1 shadow-black shadow-sm rounded-full mt-1">
+              <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-[#D0B4B3] -mt-1"></div>
+              <p className="text-[10px] md:text-xs font-semibold text-white bg-[#D0B4B3] px-2 py-1 rounded-full mt-1 shadow-md">
                 {location.name}
               </p>
             </div>

@@ -14,6 +14,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import ActivitiesExtrasSection from '@/app/components/sections/ActivitiesExtras';
+import Navbar from '@/app/components/Navbar';
 
 // Data fetch karne ke liye function
 async function getTourData(id) {
@@ -37,46 +38,7 @@ export default async function TourDetailPage({ params }) {
 
     return (
         <div className="bg-white">
-            <div className="absolute top-0 w-full flex flex-row items-center justify-between px-10 pt-8 z-50">
-                <img loading='lazy'
-                    src="/logo23.svg"
-                    alt="Logo"
-                    className="object-contain w-60"
-                />
-
-                {/* Menu */}
-                <div className="flex flex-row items-center gap-6 bg-[#494C4F]/50 px-5 py-3 rounded-full text-lg">
-                    <Link
-                        href={"/"}
-                        className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
-                    >
-                        Home
-                    </Link>
-                    <p className='text-[#D0B4B3]'>•</p>
-                    <Link
-                        href={"/about"}
-                        className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
-                    >
-                        About
-                    </Link>
-                    <p className='text-[#D0B4B3]'>•</p>
-                    <a href='/' className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Tours
-                    </a>
-                    <p className='text-[#D0B4B3]'>•</p>
-                    <a href='/' className="px-6 py-2 bg-[#3A3E45] text-[#D0B4B3] rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300">
-                        Blog
-                    </a>
-                </div>
-
-                <Link
-                    href={"/contact"}
-                    className="bg-white px-8 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] flex items-center gap-2"
-                >
-                    <p>Contact Us</p>
-                    <ArrowRight />
-                </Link>
-            </div>
+            <Navbar />
             {/* 1. Hero Section */}
             <TourHero
                 title={tour.title}
@@ -96,7 +58,7 @@ export default async function TourDetailPage({ params }) {
             {/* 3. Description Section */}
             <section className="container mx-auto px-4 py-16">
                 <h2 className="text-4xl font-bold text-first text-center mb-6">Description</h2>
-                <p className="text-lg text-dark leading-relaxed max-w-4xl mx-auto whitespace-pre-wrap">
+                <p className="text-base sm:text-lg text-dark leading-relaxed max-w-4xl mx-auto whitespace-pre-wrap">
                     {tour.description}
                 </p>
             </section>

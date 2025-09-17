@@ -99,12 +99,12 @@ const TripSection = () => {
               <div className="w-16 h-1 bg-[#D0B4B3] mx-auto mb-6 rounded-full"></div>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold uppercase text-[#D0B4B3] leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase text-[#D0B4B3] leading-tight">
               Come on a Trip With Us!
               <span className="font-medium text-black block mt-2"></span>
             </h2>
 
-            <p className="max-w-4xl text-center text-lg leading-relaxed mx-auto text-first">
+            <p className="max-w-4xl text-center text-base sm:text-lg leading-relaxed mx-auto text-first">
               Whether you're seeking the companionship of a group tour, the
               solitude of a private adventure or something totally different –
               we make sure to help create memories on Socotra that last a
@@ -133,7 +133,7 @@ const TripSection = () => {
             return (
               <div
                 key={title}
-                className="absolute w-110 h-[560px] transition-all duration-500 ease-in-out"
+                className="absolute w-100 sm:w-110 h-[560px] transition-all duration-500 ease-in-out"
                 style={{
                   transform: transform,
                   zIndex: isCenter ? 20 : 10,
@@ -161,7 +161,7 @@ const TripSection = () => {
                         </p>
                       </div>
 
-                      <h3 className="text-4xl font-bold text-[#D0B4B3] leading-tight uppercase">
+                      <h3 className="text-3xl sm:text-4xl font-bold text-[#D0B4B3] leading-tight uppercase">
                         {title}
                       </h3>
                     </div>

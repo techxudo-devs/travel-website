@@ -49,7 +49,7 @@ export default function PictureSwiper() {
         modules={[Navigation]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         spaceBetween={45}
-        slidesPerView={1.3}
+        slidesPerView={1.1}
         centeredSlides={true}
         loop={true}
         className="w-full max-w-full"
@@ -68,13 +68,13 @@ export default function PictureSwiper() {
               {/* Centered Content */}
               <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-white text-center p-8">
                 <h2
-                  className="text-4xl lg:text-5xl font-bold"
+                  className="text-3xl sm:text-4xl lg:text-5xl font-bold"
                   style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.7)" }}
                 >
                   {spot.title}
                 </h2>
                 <p
-                  className="mt-4 text-lg max-w-md"
+                  className="mt-4 text-base sm:text-lg max-w-md"
                   style={{ textShadow: "1px 1px 6px rgba(0,0,0,0.7)" }}
                 >
                   {spot.description}

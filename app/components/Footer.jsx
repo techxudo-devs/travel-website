@@ -110,7 +110,7 @@ const Footer = () => {
       {/* Social Media and Copyright */}
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-white">
         <p className="mb-4 md:mb-0 text-center md:text-left">
-          Copyright &copy; TravelGirls | Designed by Techxudo - Powered by Techxudo
+          Copyright &copy; TravelGirls
         </p>
         <div className="flex space-x-4">
           <a href="#" className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300">
@@ -129,8 +129,8 @@ const Footer = () => {
       </div>
       <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 z-[999]">
         <div className="relative">
-          <div className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300">
-            <FaWhatsapp className="text-white text-4xl" />
+          <div className="w-14 sm:w-16 h-14 sm:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <FaWhatsapp className="text-white text-2xl sm:text-4xl" />
           </div>
           <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-white">
             1

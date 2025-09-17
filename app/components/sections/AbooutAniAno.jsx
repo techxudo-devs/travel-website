@@ -66,14 +66,14 @@ const AbooutAniAno = () => {
                     />
                     {/* Play Button Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                        <div className="flex items-center justify-center w-24 h-24 bg-white/30 rounded-full backdrop-blur-sm transition-all duration-300 group-hover:scale-110">
-                            <Play size={40} className="text-white fill-white ml-1" />
+                        <div className="flex items-center justify-center w-20 sm:w-24 h-20 sm:h-24 bg-white/30 rounded-full backdrop-blur-sm transition-all duration-300 group-hover:scale-110">
+                            <Play size={30} className="text-white fill-white ml-1" />
                         </div>
                     </div>
                 </div>
 
                 {/* Text Section */}
-                <p className="text-center text-xl md:text-4xl text-gray-900 max-w-5xl mx-auto my-12">
+                <p className="text-center text-xl sm:text-2xl md:text-4xl text-gray-900 max-w-5xl mx-auto my-12">
                     Founded with a passion for exploration and a commitment to quality, Travlo was created to provide a seamless, inspiring travel experience for everyone. Over the years, we’ve built a trusted network of local guides.
                 </p>
 
