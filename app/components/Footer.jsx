@@ -1,13 +1,12 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black text-gray-300 py-12 px-6">
-
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('/footer-main.jpg')` }}
@@ -16,11 +15,10 @@ const Footer = () => {
       <div className="absolute inset-0 bg-black/70"></div>
 
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
-        {/* Logo and Address */}
         <div className="flex flex-col items-start">
           <div className="flex items-center mb-4">
             <img
-              loading='lazy'
+              loading="lazy"
               src="/logo23.svg"
               alt="Logo"
               className="object-contain w-60"
@@ -32,30 +30,47 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">Quick Links</h3>
+          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">
+            Quick Links
+          </h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <Link
+                href="/"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <Link
+                href="/about"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <a href="#tour" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="#tour"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Tours
               </a>
             </li>
             <li>
-              <a href="#blog" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="#blog"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Blog
               </a>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <Link
+                href="/contact"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Contact
               </Link>
             </li>
@@ -64,15 +79,23 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">Contact</h3>
+          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">
+            Contact
+          </h3>
           <ul className="space-y-2">
             <li>
-              <a href="mailto:website@gmail.com" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="mailto:website@gmail.com"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 travelgirls@gmail.com
               </a>
             </li>
             <li>
-              <a href="tel:+1500321852789" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="tel:+1500321852789"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 +1 500 321 852 789
               </a>
             </li>
@@ -81,25 +104,39 @@ const Footer = () => {
 
         {/* Utility Pages */}
         <div>
-          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">Utility Pages</h3>
+          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">
+            Utility Pages
+          </h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="#"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Style Guide
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="#"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Licenses
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="#"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Changelog
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D0B4B3] transition-all duration-300 text-base">
+              <a
+                href="#"
+                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+              >
                 Search Result
               </a>
             </li>
@@ -113,21 +150,38 @@ const Footer = () => {
           Copyright &copy; TravelGirls
         </p>
         <div className="flex space-x-4">
-          <a href="#" className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300">
+          <a
+            href="#"
+            className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
+          >
             IG
           </a>
-          <a href="#" className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300">
+          <a
+            href="#"
+            className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
+          >
             TW
           </a>
-          <a href="#" className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300">
+          <a
+            href="#"
+            className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
+          >
             FB
           </a>
-          <a href="#" className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300">
+          <a
+            href="#"
+            className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
+          >
             WS
           </a>
         </div>
       </div>
-      <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 z-[999]">
+      <a
+        href="https://wa.me/yourphonenumber"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-[999]"
+      >
         <div className="relative">
           <div className="w-14 sm:w-16 h-14 sm:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 cursor-pointer">
             <FaWhatsapp className="text-white text-2xl sm:text-4xl" />

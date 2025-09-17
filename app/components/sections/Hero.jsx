@@ -46,6 +46,8 @@ const Hero = () => {
         layout="fill"
         objectFit="cover"
         fill
+        unoptimized
+        fetchPriority="high"
         blurDataURL="/hero-main.jpg"
         quality={90}
         priority
@@ -73,6 +75,7 @@ const Hero = () => {
           src="/hero-girl.png"
           alt="Your image description"
           width={400}
+          unoptimized
           height={150}
           className="object-contain"
         />
