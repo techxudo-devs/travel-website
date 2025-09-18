@@ -95,19 +95,19 @@ const Hero = () => {
             About
           </Link>
           <p>•</p>
-          <a
-            href={"#tour"}
+          <Link
+            href={"/tourpage"}
             className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
           >
             Tours
-          </a>
+          </Link>
           <p>•</p>
-          <a
-            href="#blog"
+          <Link
+            href="/blog"
             className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
           >
             Blog
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Contact Btn */}
@@ -175,20 +175,20 @@ const Hero = () => {
                   >
                     About
                   </Link>
-                  <a
-                    href="#tour"
+                  <Link
+                    href="/tourpage"
                     onClick={() => setMenuOpen(false)}
                     className="hover:text-[#D0B4B3] transition-all"
                   >
                     Tours
-                  </a>
-                  <a
-                    href="#blog"
+                  </Link>
+                  <Link
+                    href="/blog"
                     onClick={() => setMenuOpen(false)}
                     className="hover:text-[#D0B4B3] transition-all"
                   >
                     Blog
-                  </a>
+                  </Link>
                 </nav>
                 <Link
                   href={"/contact"}
@@ -256,7 +256,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Girl + Bottom Section */}
-      <div className="relative z-30 flex flex-col items-center justify-end min-h-screen"> <img loading="lazy" src="/hero-girl.png" alt="Travel girl" className="object-contain relative z-30" /> {/* Marquee Background Behind Last Image */} <div className="absolute bottom-20 w-full z-20"> <Marquee speed={100} gradient={false} direction="right" className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider" > We Are &nbsp;{" "} <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span> </Marquee> </div> <img loading="lazy" src="/hero-bottom.png" alt="Bottom decoration" className="w-full object-cover relative z-40 sm:-mt-20 -mt-10" /> </div> </div>
+      <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-40 sm:-mt-0"> <img loading="lazy" src="/hero-girl.png" alt="Travel girl" className="object-contain relative z-30" /> {/* Marquee Background Behind Last Image */} <div className="absolute bottom-20 w-full z-20"> <Marquee speed={100} gradient={false} direction="right" className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider" > We Are &nbsp;{" "} <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span> </Marquee> </div> <img loading="lazy" src="/hero-bottom.png" alt="Bottom decoration" className="w-full object-cover relative z-40 sm:-mt-20 -mt-10" /> </div> </div>
   );
 };
 

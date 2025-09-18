@@ -59,19 +59,19 @@ const HeroSection = ({
                         About
                     </Link>
                     <p>•</p>
-                    <a
-                        href={"#tour"}
+                    <Link
+                        href={"/tourpage"}
                         className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
                     >
                         Tours
-                    </a>
+                    </Link>
                     <p>•</p>
-                    <a
-                        href="#blog"
+                    <Link
+                        href="/blog"
                         className="px-6 py-2 bg-[#202528]/80 rounded-full cursor-pointer hover:bg-[#D0B4B3] hover:text-black transition-all duration-300"
                     >
                         Blog
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Desktop Contact Btn */}
@@ -138,20 +138,20 @@ const HeroSection = ({
                                     >
                                         About
                                     </Link>
-                                    <a
-                                        href="#tour"
+                                    <Link
+                                        href="/tourpage"
                                         onClick={() => setMenuOpen(false)}
                                         className="hover:text-[#D0B4B3] transition-all"
                                     >
                                         Tours
-                                    </a>
-                                    <a
-                                        href="#blog"
+                                    </Link>
+                                    <Link
+                                        href="/blog"
                                         onClick={() => setMenuOpen(false)}
                                         className="hover:text-[#D0B4B3] transition-all"
                                     >
                                         Blog
-                                    </a>
+                                    </Link>
                                 </nav>
                                 <Link
                                     href={"/contact"}
