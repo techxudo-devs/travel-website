@@ -256,7 +256,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Girl + Bottom Section */}
-      <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-40 sm:-mt-0"> <img loading="lazy" src="/hero-girl.png" alt="Travel girl" className="object-contain relative z-30" /> {/* Marquee Background Behind Last Image */} <div className="absolute bottom-20 w-full z-20"> <Marquee speed={100} gradient={false} direction="right" className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider" > We Are &nbsp;{" "} <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span> </Marquee> </div> <img loading="lazy" src="/hero-bottom.png" alt="Bottom decoration" className="w-full object-cover relative z-40 sm:-mt-20 -mt-10" /> </div> </div>
+      <div className="relative z-30 flex flex-col items-center justify-end min-h-screen -mt-0"> <img loading="lazy" src="/hero-girl.png" alt="Travel girl" className="object-contain relative z-30" /> {/* Marquee Background Behind Last Image */} <div className="absolute bottom-20 w-full z-20"> <Marquee speed={100} gradient={false} direction="right" className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider" > We Are &nbsp;{" "} <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span> </Marquee> </div> <img loading="lazy" src="/hero-bottom.png" alt="Bottom decoration" className="w-full object-cover relative z-40 sm:-mt-20 -mt-10" /> </div> </div>
   );
 };
 
