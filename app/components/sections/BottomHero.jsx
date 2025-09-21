@@ -58,7 +58,7 @@ const Hero = () => {
   return (
     <div
       ref={heroRef}
-      className="relative min-h-[200vh] w-full text-white overflow-hidden"
+      className="relative min-h-[0vh] sm:min-h-[200vh] w-full text-white overflow-hidden"
     >
       {/* Background with scaling */}
       <img
