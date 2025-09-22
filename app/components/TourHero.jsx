@@ -15,7 +15,7 @@ const TourHero = ({ title, location, coverImage, basePrice, currency }) => {
                     <MapPin size={20} />
                     <span>{location}</span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-tight max-w-4xl">{title}</h1>
+                <h1 className="text-3xl md:text-6xl font-extrabold leading-tight max-w-4xl">{title}</h1>
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mt-6 gap-6">
                     <div>
