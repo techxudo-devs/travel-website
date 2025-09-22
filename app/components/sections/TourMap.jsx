@@ -148,7 +148,7 @@ const TourMap = () => {
 
       {/* Main Layout */}
       <div className="flex flex-col lg:flex-row gap-8">
-        {/* Sidebar / Top Row */}
+        {/* Sidebar */}
         <div className="lg:w-[240px] flex-shrink-0 relative px-4">
           {/* Animated Label */}
           <motion.div
@@ -156,14 +156,17 @@ const TourMap = () => {
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
             className="bg-[#D0B4B3] px-4 py-2 w-fit mx-auto mb-6 flex items-center gap-2 rounded-md shadow-md cursor-pointer"
           >
-            <span className="font-medium sm:text-base text-sm text-white">Click To Choose</span>
+            <span className="font-medium sm:text-base text-sm text-white">
+              Click To Choose
+            </span>
             <ChevronDown className="w-5 h-5 text-white" />
           </motion.div>
 
-          {/* Location List - Horizontal on small, vertical on lg */}
-          <div className="flex lg:flex-col gap-6 overflow-x-auto pb-4 lg:overflow-visible lg:pb-0">
+          {/* Location List */}
+          {/* Location List */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-6 lg:flex lg:flex-col">
             {leftLocations.map((loc) => (
-              <div key={loc.id} className="relative flex-shrink-0">
+              <div key={loc.id} className="relative">
                 {/* Image + title */}
                 <div
                   onClick={() => toggleDropdown(loc.id)}
@@ -176,41 +179,38 @@ const TourMap = () => {
                   />
                   <div className="text-center mt-2">
                     <p className="text-sm font-medium">{loc.name}</p>
-                    <p className="text-xs text-gray-600">{loc.subtitle}</p>
                   </div>
                 </div>
 
                 {/* Dropdown */}
-                <div
-                  className={`absolute lg:left-5 z-20 top-full transition-all duration-500 ease-in-out ${openDropdown === loc.id
-                    ? "h-fit opacity-100"
-                    : "max-h-0 opacity-0"
-                    } w-[200px] overflow-hidden`}
-                >
-                  <ul className="mt-2 bg-[#D0B4B3] rounded-lg shadow-md text-sm p-2">
-                    {loc.dropdown.map((item, i) => (
-                      <li
-                        key={i}
-                        className="px-3 py-1 hover:bg-[#998584] rounded cursor-pointer text-white"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {openDropdown === loc.id && (
+                  <div className="absolute lg:left-5 z-20 top-full w-fit mt-2">
+                    <ul className="bg-[#D0B4B3] rounded-lg shadow-md text-sm p-2 animate-fadeIn">
+                      {loc.dropdown.map((item, i) => (
+                        <li
+                          key={i}
+                          className="px-3 py-1 hover:bg-[#998584] rounded cursor-pointer text-white"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             ))}
           </div>
+
         </div>
 
         {/* Map Section */}
-        <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center min-h-[500px] w-full overflow-hidden">
+        <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center min-h-[500px] w-full overflow-hidden mt-10 sm:mt-0">
           <div className="absolute inset-0 bg-white opacity-20"></div>
 
           {rightLocations.map((location) => (
             <div
               key={location.id}
-              className="absolute flex flex-col items-center cursor-pointer transform -translate-x-1/2 -translate-y-1/2"
+              className="absolute flex flex-col items-center cursor-pointer hover:scale-95 transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2"
               style={location.mapPosition}
             >
               <div className="relative w-14 h-14 md:w-20 md:h-20 rounded-full border-4 border-white shadow-lg overflow-hidden flex items-center justify-center bg-gray-200">

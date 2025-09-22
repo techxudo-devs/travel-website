@@ -17,6 +17,21 @@ html {
   /* For Chrome, Safari, and Opera */
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
 
 @theme {
   --color-dark: #43555d;
