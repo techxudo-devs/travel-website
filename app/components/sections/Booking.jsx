@@ -215,18 +215,18 @@ export default function BookingForm() {
                         {/* Navigation Buttons */}
                         <div className="flex justify-between mt-12">
                             {currentStep > 1 && (
-                                <button type="button" onClick={prevStep} className="px-8 py-3 font-bold text-gray-800 border-2 border-gray-800 rounded-full hover:bg-white transition-colors flex items-center gap-2">
+                                <button type="button" onClick={prevStep} className="px-8 py-3 font-bold text-gray-800 border-2 border-gray-300 rounded-full hover:bg-gray-100 transition-colors flex items-center gap-2">
                                     <FaArrowLeft /> Previous
                                 </button>
                             )}
                             <div className="ml-auto">
                                 {currentStep < 3 && (
-                                    <button type="button" onClick={nextStep} className="px-8 py-3 font-bold text-white bg-gray-800 rounded-full hover:bg-gray-900 transition-colors flex items-center gap-2">
+                                    <button type="button" onClick={nextStep} className="px-8 py-3 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors flex items-center gap-2">
                                         Next <FaArrowRight />
                                     </button>
                                 )}
                                 {currentStep === 3 && (
-                                    <button type="submit" disabled={submitting} className="px-8 py-3 font-bold text-white bg-gray-800 rounded-full hover:bg-gray-900 transition-colors disabled:bg-gray-400">
+                                    <button type="submit" disabled={submitting} className="px-8 py-3 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors disabled:bg-blue-300">
                                         {submitting ? 'Sending...' : 'Send'}
                                     </button>
                                 )}

@@ -60,7 +60,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="relative z-20 flex flex-col items-center  justify-end translate-y-55 -translate-x-75 px-4 flex-grow"
+        className="relative z-20 flex flex-col items-center  justify-end translate-y-60 -translate-x-75 px-4 flex-grow"
       >
         <motion.h1
           variants={itemVariants}

@@ -238,10 +238,10 @@ const ContactForm = () => {
             <div>
               <button
                 type="submit"
-                className="w-full sm:w-auto bg-[#a37b64] text-[#f8efe3] font-bold py-3 px-6 rounded-full flex items-center justify-center sm:justify-start space-x-3 group transition-all duration-300 hover:scale-95 active:scale-90 cursor-pointer text-sm sm:text-base"
+                className="w-full sm:w-auto bg-brown  text-white font-bold py-3 px-6 rounded-full flex items-center justify-center sm:justify-start space-x-3 group transition-all duration-300 hover:bg-first active:scale-95 cursor-pointer text-sm sm:text-base"
               >
                 <span>Send Message</span>
-                <div className="bg-[#f8efe3] text-[#a37b64] rounded-full p-2 group-hover:bg-[#f8efe3]/80 transition-colors">
+                <div className="bg-white text-blue-500 rounded-full p-2 group-hover:bg-gray-100 transition-colors">
                   <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
                 </div>
               </button>

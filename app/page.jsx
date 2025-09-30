@@ -21,7 +21,7 @@ const LandingPage = () => {
     <div>
       {/* <Hero /> */}
       {/* <TripSection /> */}
-      <InitialLoader />
+
       <BottomHero />
       {/* <HeroAndTripSection backgroundImageUrl={"/hero.webp"} /> */}
       <TripSection />

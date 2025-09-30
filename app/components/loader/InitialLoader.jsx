@@ -7,7 +7,7 @@ const InitialLoader = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsVisible(false), 3000); // 3 seconds
+    const timeout = setTimeout(() => setIsVisible(false), 2000); // 3 seconds
     return () => clearTimeout(timeout);
   }, []);
 
@@ -39,7 +39,7 @@ const InitialLoader = () => {
             transition={{ delay: 0.5, duration: 1 }}
             className="text-sm md: text-xl  tracking-widest text-white pb-2 uppercase"
           >
-            Travel Around The World!
+            Travel Around The World
           </motion.div>
         </div>
       </motion.div>
