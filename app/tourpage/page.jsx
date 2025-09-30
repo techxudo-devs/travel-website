@@ -1,14 +1,14 @@
-import React from 'react'
-import TourMain from '../components/sections/TourMain'
-import TourPackages from '../components/sections/TourPackages'
+import React from "react";
+import TourMain from "../components/sections/TourMain";
+import TourPackages from "../components/sections/home/TourPackages";
 
 const page = () => {
   return (
     <div>
-        <TourMain />
-        <TourPackages />
+      <TourMain />
+      <TourPackages />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

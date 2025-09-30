@@ -5,7 +5,6 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   // disable body scroll when sidebar open
@@ -18,9 +17,8 @@ const Navbar = () => {
   }, [menuOpen]);
 
   return (
-
     <div>
-      <div className="relative z-20 flex flex-row items-center justify-between px-6 md:px-10 py-4 bg-black">
+      <div className="relative z-20 flex flex-row items-center justify-between px-6 md:px-10 py-2 bg-black">
         <img
           loading="lazy"
           src="/logo23.svg"
@@ -62,7 +60,7 @@ const Navbar = () => {
         {/* Desktop Contact Btn */}
         <Link
           href={"/contact"}
-          className="hidden lg:flex bg-white px-8 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] items-center gap-2"
+          className="hidden lg:flex bg-white px-8 py-2 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] items-center gap-2"
         >
           <p>Contact Us</p>
           <ArrowRight />
@@ -100,7 +98,11 @@ const Navbar = () => {
                 className="fixed top-0 right-0 w-3/4 h-full bg-black z-50 flex flex-col p-6"
               >
                 <div className="flex items-center justify-between mb-12">
-                  <img src="/logo23.svg" className="object-contain w-40" alt="Logo" />
+                  <img
+                    src="/logo23.svg"
+                    className="object-contain w-40"
+                    alt="Logo"
+                  />
                   <button
                     className="text-white cursor-pointer"
                     onClick={() => setMenuOpen(false)}
@@ -141,7 +143,7 @@ const Navbar = () => {
                 <Link
                   href={"/contact"}
                   onClick={() => setMenuOpen(false)}
-                  className="mt-8 bg-white text-black px-6 py-3 rounded-full hover:bg-[#D0B4B3] transition-all flex items-center gap-2"
+                  className="mt-8 bg-white text-black px-6 py-2 rounded-full hover:bg-[#D0B4B3] transition-all flex items-center gap-2"
                 >
                   Contact Us <ArrowRight />
                 </Link>
@@ -151,7 +153,7 @@ const Navbar = () => {
         </AnimatePresence>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
