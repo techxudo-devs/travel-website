@@ -36,10 +36,12 @@ const HeroSection = ({
 
             {/* Navbar */}
             <div className="relative z-50 flex flex-row items-center justify-between px-6 md:px-10 pt-6 md:pt-8">
-                <img
+                <Image
                     loading="lazy"
                     src="/logo23.svg"
                     alt="Logo"
+                    width={240}
+                    height={60}
                     className="object-contain w-40 md:w-60"
                 />
 
@@ -115,7 +117,7 @@ const HeroSection = ({
                                 className="fixed top-0 right-0 w-3/4 h-full bg-black z-50 flex flex-col p-6"
                             >
                                 <div className="flex items-center justify-between mb-12">
-                                    <img src="/logo23.svg" className="object-contain w-40" alt="Logo" />
+                                    <Image src="/logo23.svg" width={160} height={40} className="object-contain w-40" alt="Logo" />
                                     <button
                                         className="text-white cursor-pointer"
                                         onClick={() => setMenuOpen(false)}

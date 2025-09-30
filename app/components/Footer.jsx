@@ -17,10 +17,12 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
         <div className="flex flex-col items-start">
           <div className="flex items-center mb-4">
-            <img
+            <Image
               loading="lazy"
               src="/logo23.svg"
               alt="Logo"
+              width={240}
+              height={60}
               className="object-contain w-60"
             />
           </div>

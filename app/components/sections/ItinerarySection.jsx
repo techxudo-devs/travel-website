@@ -12,12 +12,12 @@ const ItinerarySection = ({ days, visitingLocations }) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Left Column: Map & Day Tabs */}
                 <div className="lg:col-span-1 space-y-6">
-                    {/* <div className="relative h-64 bg-gray-200 rounded overflow-hidden">
-                        <img src="/map_placeholder.png" alt="Map of Tuscany" className="w-full h-full object-cover opacity-70" />
+                    <div className="relative h-64 bg-gray-200 rounded overflow-hidden">
+                        <Image src="/map_placeholder.png" alt="Map of Tuscany" layout="fill" objectFit="cover" className="w-full h-full object-cover opacity-70" />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <button className="px-4 py-2 bg-white/80 backdrop-blur-sm rounded shadow hover:bg-white transition">Enlarge map</button>
                         </div>
-                    </div> */}
+                    </div>
 
                     {/* Day Tabs */}
                     <div className="space-y-2">

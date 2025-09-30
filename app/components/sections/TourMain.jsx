@@ -20,19 +20,23 @@ const TourMain = () => {
     return (
         <div className="relative h-screen w-full text-white overflow-hidden">
             {/* Background */}
-            <img loading="lazy"
+            <Image loading="lazy"
                 src="/tour.webp"
                 alt="About background"
+                layout="fill"
+                objectFit="cover"
                 className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
             />
             <div className="absolute inset-0 bg-black/70 z-10" />
 
             {/* Navbar */}
             <div className="relative z-50 flex flex-row items-center justify-between px-6 md:px-10 pt-6 md:pt-8">
-                <img
+                <Image
                     loading="lazy"
                     src="/logo23.svg"
                     alt="Logo"
+                    width={240}
+                    height={60}
                     className="object-contain w-40 md:w-60"
                 />
 
@@ -107,7 +111,7 @@ const TourMain = () => {
                             className="fixed top-0 right-0 w-3/4 h-full bg-black z-50 flex flex-col p-6"
                         >
                             <div className="flex items-center justify-between mb-12">
-                                <img src="/logo23.svg" className="object-contain w-40" alt="Logo" />
+                                <Image src="/logo23.svg" width={160} height={40} className="object-contain w-40" alt="Logo" />
                                 <button
                                     className="text-white cursor-pointer"
                                     onClick={() => setMenuOpen(false)}
@@ -164,9 +168,11 @@ const TourMain = () => {
 
             {/* Bottom Decoration (fixed to bottom inside h-screen) */}
             <div className="absolute bottom-0 left-0 right-0 z-30">
-                <img loading="lazy"
+                <Image loading="lazy"
                     src="/about-bottom.png"
                     alt="Bottom decoration"
+                    width={1000}
+                    height={100}
                     className="w-full object-contain" // use contain instead of cover
                 />
             </div>

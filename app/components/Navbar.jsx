@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,10 +20,12 @@ const Navbar = () => {
   return (
     <div>
       <div className="relative z-20 flex flex-row items-center justify-between px-6 md:px-10 py-2 bg-black">
-        <img
+        <Image
           loading="lazy"
           src="/logo23.svg"
           alt="Logo"
+          width={240}
+          height={60}
           className="object-contain w-40 md:w-60"
         />
 
@@ -98,8 +101,10 @@ const Navbar = () => {
                 className="fixed top-0 right-0 w-3/4 h-full bg-black z-50 flex flex-col p-6"
               >
                 <div className="flex items-center justify-between mb-12">
-                  <img
+                  <Image
                     src="/logo23.svg"
+                    width={160}
+                    height={40}
                     className="object-contain w-40"
                     alt="Logo"
                   />
