@@ -164,7 +164,7 @@ const TourMap = () => {
           ref={sidebarRef}
           className="lg:w-[240px] flex-shrink-0 relative px-4"
         >
-          <div className="grid grid-cols-3 sm:grid-cols-3 gap-6 lg:flex lg:flex-col">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 lg:flex lg:flex-col">
             {leftLocations.map((loc) => (
               <div key={loc.id} className="relative">
                 <div
