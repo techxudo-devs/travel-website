@@ -84,9 +84,7 @@ const Hero = () => {
           variants={itemVariants}
           className="max-w-xl text-base sm:text-lg md:text-xl text-white/90 mt-4"
         >
-          Step into a world of unforgettable adventures with Travio. Whether
-          you're seeking serene beaches, vibrant cities, or hidden gems, we make
-          every journey seamless and extraordinary.
+          Welcome to Travel Girls Club, a global community created by women, for women who love to explore the world and connect through meaningful travel.
         </motion.p>
 
         <motion.div

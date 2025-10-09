@@ -40,7 +40,7 @@ const ContactFormAno = () => {
         <div className="w-full md:w-1/2 flex flex-col justify-between relative">
           <div className="relative mx-auto w-full">
             <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
-              <Image
+              <img
                 loading="lazy"
                 src="/contact.avif"
                 alt="Woman walking on a beautiful beach"

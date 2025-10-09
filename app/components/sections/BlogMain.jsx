@@ -29,7 +29,7 @@ const BlogMain = () => {
       <div className="absolute inset-0 bg-black/70 z-10" />
 
       {/* About Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center -mt-24">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold">Blogs</h1>
       </div>
 

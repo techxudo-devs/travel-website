@@ -20,11 +20,10 @@ const TourMain = () => {
   return (
     <div className="relative h-screen w-full text-white overflow-hidden">
       {/* Background */}
-      <Image
+      <img
         loading="lazy"
         src="/tour.webp"
         alt="About background"
-        layout="fill"
         objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
@@ -33,13 +32,13 @@ const TourMain = () => {
       {/* Navbar */}
 
       {/* About Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center -mt-24">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold">Tours</h1>
       </div>
 
       {/* Bottom Decoration (fixed to bottom inside h-screen) */}
       <div className="absolute bottom-0 left-0 right-0 z-30">
-        <Image
+        <img
           loading="lazy"
           src="/about-bottom.png"
           alt="Bottom decoration"
