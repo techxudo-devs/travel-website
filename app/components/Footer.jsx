@@ -103,53 +103,12 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        {/* Utility Pages */}
-        <div>
-          <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">
-            Utility Pages
-          </h3>
-          <ul className="space-y-2">
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-              >
-                Style Guide
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-              >
-                Licenses
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-              >
-                Changelog
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-              >
-                Search Result
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
 
       {/* Social Media and Copyright */}
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-white">
         <p className="mb-4 md:mb-0 text-center md:text-left">
-          Copyright &copy; TravelGirls
+          Website Powered by: <a href="https://techxudo.com/">Techxudo</a>
         </p>
         <div className="flex space-x-4">
           <a

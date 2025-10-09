@@ -5,7 +5,7 @@ import { Cable, HandFist, UsersRound, BaggageClaim, Telescope, ShieldCheck } fro
 const AboutAboutAno = () => {
     return (
         <section className="bg-white py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-end gap-12">
                 {/* Left Content and Features */}
                 <div className="lg:w-1/2 text-center lg:text-left">
                     <p className="text-[#D0B4B3] text-lg font-semibold mb-2 uppercase">Our Values</p>
@@ -62,7 +62,7 @@ const AboutAboutAno = () => {
                 </div>
 
                 {/* Right Image */}
-                <div className="lg:w-1/2 flex justify-center lg:justify-end">
+                <div className="lg:w-1/2">
                     <div className="w-full max-w-lg lg:max-w-none">
                         <img loading='lazy'
                             className="rounded-xl shadow-lg object-cover w-full h-auto"

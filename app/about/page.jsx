@@ -6,6 +6,9 @@ import AbooutAniAno from "../components/sections/AbooutAniAno";
 import AboutPicAno from "../components/sections/AboutPicAno";
 import AboutAccAno from "../components/sections/AboutAccAno";
 import AboutNewAno from "../components/sections/AboutNewAno";
+import AboutPicsSec from "../components/sections/AboutPicsSec";
+import AboutTravels from "../components/sections/AboutTravels";
+import AboutPics from "../components/sections/AboutPics";
 
 const About = () => {
   return (
@@ -14,7 +17,10 @@ const About = () => {
       <AboutNewAno />
       {/* <AboutHeroAno /> */}
       <AboutAboutAno />
-      <AbooutAniAno />
+      {/* <AbooutAniAno /> */}
+      <AboutPicsSec />
+      <AboutTravels />
+      <AboutPics />
       {/* <AboutPicAno /> */}
       <AboutAccAno />
     </div>
