@@ -57,10 +57,9 @@ export default function PictureSwiper() {
         {travelSpots.map((spot, idx) => (
           <SwiperSlide key={idx}>
             <div className="w-full h-[620px] relative overflow-hidden rounded-2xl shadow-lg">
-              <Image loading="lazy"
+              <img loading="lazy"
                 src={spot.src}
                 alt={spot.alt}
-                layout="fill"
                 objectFit="cover"
                 className="w-full h-full object-cover"
               />

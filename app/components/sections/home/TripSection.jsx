@@ -161,12 +161,10 @@ const TripSection = () => {
                 <div className="relative h-full  overflow-hidden shadow-2xl">
                   {/* Card Image with Overlay */}
                   <div className="absolute inset-0">
-                    <Image
+                    <img
+                    loading="lazy"
                       src={imgSrc}
                       alt={alt}
-                      layout="fill"
-                      objectFit="cover"
-                      priority
                       className="w-full h-full object-cover transition-transform duration-700"
                       // style={{
                       //   transform: isHovered ? "scale(1.1)" : "scale(1)",
@@ -225,7 +223,7 @@ const TripSection = () => {
 
                   {/* Hover Glow Effect */}
                   {isCenter && isHovered && (
-                    <div className="absolute inset-0 rounded-3xl ring-4 ring-white/50 pointer-events-none transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 pointer-events-none transition-opacity duration-300"></div>
                   )}
                 </div>
               </div>
