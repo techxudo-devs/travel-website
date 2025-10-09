@@ -84,7 +84,7 @@ const TripSection = () => {
   const visibleCards = getVisibleCards();
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100">
+    <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-rose-200/30 rounded-full blur-3xl animate-pulse"></div>

@@ -31,7 +31,7 @@ const AboutAno = () => {
             {/* Navbar */}
 
             {/* About Content */}
-            <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center -mt-24">
+            <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
                 <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold pb-4">About Us</h1>
                 <p className="text-xl">Travel Girls Club began with one simple wish: "to find a travel girlfriend for a trip to Thailand."</p>
                 <p className="">This journey wouldn’t be the same without you.</p>
