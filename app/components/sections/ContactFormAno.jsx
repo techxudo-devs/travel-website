@@ -34,7 +34,7 @@ const ContactFormAno = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-[#b49a99] to-second text-white min-h-screen flex items-center justify-center font-sans p-6 sm:p-8">
+    <div className="bg-[#FFFFFF] text-black min-h-screen flex items-center justify-center font-sans p-6 sm:p-8">
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-12 lg:gap-16">
         {/* Left Side */}
         <div className="w-full md:w-1/2 flex flex-col justify-between relative">
@@ -93,7 +93,7 @@ const ContactFormAno = () => {
           <h1 className="text-3xl sm:text-4xl font-extrabold uppercase text-[#D0B4B3] mb-3">
             Let's work together
           </h1>
-          <p className="text-gray-200 font-medium mb-8 sm:mb-10 text-sm sm:text-base">
+          <p className="text-[#364153] font-medium mb-8 sm:mb-10 text-sm sm:text-base">
             Drop me a message or reach out directly – I'll get back within a day.
           </p>
 
@@ -104,7 +104,7 @@ const ContactFormAno = () => {
                 <h3 className="font-semibold text-black text-sm sm:text-base">
                   Mobile Number
                 </h3>
-                <p className="text-light text-xs sm:text-sm">
+                <p className="text-[#364153] text-xs sm:text-sm">
                   + (38) 0292 7380 9925
                 </p>
               </div>
@@ -115,7 +115,7 @@ const ContactFormAno = () => {
                 <h3 className="font-semibold text-black text-sm sm:text-base">
                   Email Address
                 </h3>
-                <p className="text-light text-xs sm:text-sm">
+                <p className="text-[#364153] text-xs sm:text-sm">
                   yourmailaddress@gmail.com
                 </p>
               </div>
@@ -221,10 +221,10 @@ const ContactFormAno = () => {
             <div>
               <button
                 type="submit"
-                className="w-full sm:w-auto bg-white text-first font-bold py-3 px-6 rounded-full flex items-center justify-center sm:justify-start space-x-3 group transition-all duration-300 hover:scale-95 cursor-pointer text-sm sm:text-base"
+                className="w-full sm:w-auto bg-[#D0B4B3] text-first font-bold py-3 px-6 rounded-full flex items-center justify-center sm:justify-start space-x-3 group transition-all duration-300 hover:scale-95 cursor-pointer text-sm sm:text-base"
               >
                 <span>Send Message</span>
-                <div className="bg-black text-white rounded-full p-2 group-hover:bg-gray-800 transition-colors">
+                <div className="bg-black text-white rounded-full p-2 group-hover:bg-gray-800 transition-colors duration-300">
                   <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
                 </div>
               </button>
@@ -241,7 +241,7 @@ const ContactFormAno = () => {
               />
               <label
                 htmlFor="agreeToPolicy"
-                className="text-xs sm:text-sm text-light leading-snug"
+                className="text-xs sm:text-sm text-[#364153] leading-snug"
               >
                 I have read and accept the Privacy policy, and agree to join.
               </label>

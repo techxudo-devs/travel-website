@@ -1,9 +1,9 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NextNProgress from "nextjs-toploader";
 import InitialLoader from "./components/loader/InitialLoader";
+import ClientLayout from "./components/ClientLayout";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -18,11 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${outfit.className} antialiased`}>
-        <Navbar />
+        <ClientLayout>{children}</ClientLayout>
+        <Footer />
         <NextNProgress />
         <InitialLoader />
-        <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );
