@@ -7,7 +7,7 @@ import Image from "next/image";
 const leftLocations = [
   {
     id: 1,
-    name: "Africa",
+    name: "Spain",
     subtitle: "Coastal Hiking",
     image: "/map1.webp",
     dropdown: [
@@ -25,7 +25,7 @@ const leftLocations = [
   },
   {
     id: 2,
-    name: "Asia",
+    name: "India",
     subtitle: "Hiking & Trekking",
     image: "/map2.webp",
     dropdown: [
@@ -43,7 +43,7 @@ const leftLocations = [
   },
   {
     id: 3,
-    name: "Europe",
+    name: "Australia",
     subtitle: "Desert Camping",
     image: "/map3.webp",
     dropdown: [
@@ -61,14 +61,14 @@ const leftLocations = [
   },
   {
     id: 4,
-    name: "North America",
+    name: "Peru",
     subtitle: "Mountaineering",
     image: "/map4.webp",
     dropdown: ["CANADA", "MEXICO", "PUERTO RICO", "USA"],
   },
   {
     id: 5,
-    name: "Oceania",
+    name: "Serbia",
     subtitle: "Glacier Hiking",
     image: "/map5.webp",
     dropdown: ["AUSTRALIA", "FRENCH POLYNESIA", "NEW ZEALAND"],
@@ -78,50 +78,31 @@ const leftLocations = [
 const rightLocations = [
   {
     id: 1,
-    name: "Africa",
+    name: "Spain",
     image: "/map1.webp",
     mapPosition: { top: "60%", left: "53%" },
   },
   {
     id: 2,
-    name: "Asia",
-    image: "/map2.webp",
-    mapPosition: { top: "35%", left: "78%" },
-  },
-  {
-    id: 3,
-    name: "The Caribbean",
-    image: "/map3.webp",
-    mapPosition: { top: "45%", left: "28%" },
-  },
-  {
-    id: 4,
-    name: "Europe",
-    image: "/map4.webp",
-    mapPosition: { top: "28%", left: "48%" },
-  },
-
-  {
-    id: 6,
-    name: "Middle East",
-    image: "/map1.webp",
-    mapPosition: { top: "42%", left: "60%" },
+    name: "Australia",
+    image: "/map5.webp",
+    mapPosition: { top: "30%", left: "70%" },
   },
   {
     id: 7,
-    name: "North America",
+    name: "India",
     image: "/map2.webp",
-    mapPosition: { top: "25%", left: "20%" },
+    mapPosition: { top: "30%", left: "20%" },
   },
   {
     id: 8,
-    name: "Oceania",
+    name: "Peru",
     image: "/map3.webp",
-    mapPosition: { top: "70%", left: "85%" },
+    mapPosition: { top: "68%", left: "80%" },
   },
   {
     id: 9,
-    name: "South America",
+    name: "Serbia",
     image: "/map4.webp",
     mapPosition: { top: "68%", left: "32%" },
   },

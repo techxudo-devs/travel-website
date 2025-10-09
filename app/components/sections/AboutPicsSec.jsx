@@ -13,20 +13,17 @@ const AboutPicsSec = () => {
 
                     {/* --- Heading Text --- */}
                     <div className="text-center lg:text-left">
-                        <h2 className="text-lg text-gray-500 tracking-widest">MEET THE</h2>
+                        <h2 className="text-lg text-gray-500 tracking-widest">OUR</h2>
                         {/* Using style attribute for the specific font */}
                         {/* Khaas font ke liye style attribute istemal kiya gaya hai */}
                         <h1 className="text-6xl font-bold text-[#c5a78c]">
-                            Blonde
-                        </h1>
-                        <h1 className="text-6xl font-bold text-[#c5a78c] -mt-2">
-                            ABROAD
+                            Vision
                         </h1>
                     </div>
 
                     {/* --- Intro Paragraph --- */}
                     <p className="max-w-md text-center lg:text-left text-gray-600 leading-relaxed">
-                        Hi, I'm Kiki, a California native, who left my career in corporate wealth management in 2011 to embark on a summer of soul-searching that would change the course of my life forever.
+                        What started in January 2022 as one woman’s search for a travel buddy quickly became a worldwide sisterhood of over 100,000 women who inspire, support, and travel together.
                     </p>
 
                     {/* --- Image Collage Section --- */}
@@ -73,7 +70,7 @@ const AboutPicsSec = () => {
 
                     {/* --- Second Paragraph --- */}
                     <p className="max-w-md text-center lg:text-left text-gray-600 leading-relaxed">
-                        Like many people, I was taught to go to college, get a job, get married, have kids and live happily ever after. Not once did I consider that changing the 'societal idea of success' would lead me to an unfulfilled and unhappy life. Back in 2011, I took a detour from my career and began my travels, traveling through Australia, Thailand, Cambodia, Vietnam, Bali and New Zealand and experienced the empowerment of solo travel for the first time.
+                        Our mission is to create a safe, empowering, and welcoming space where women can find travel friends, plan trips, and make memories that last a lifetime. Doesn´t matter if you’re planning your first solo adventure or joining one of our curated group experiences, Travel Girls Club is here to help you feel confident, supported, and never alone on your journey.
                     </p>
                 </div>
 

@@ -143,7 +143,7 @@ const AboutTravels = () => {
                     <div className="absolute -bottom-24 left-0 sm:left-12 lg:left-20 w-96 h-auto shadow-xl transform -rotate-6 z-20 transition-transform duration-300 mt-8 lg:mt-0 translate-y-40">
                         <div className="relative bg-white p-2 pb-3">
                             <img src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/DSCF7203.jpg" alt="The Most Remote Place I've Been" className="w-full h-auto" />
-                            <p className="absolute bottom-4 left-0 right-0 text-center text-black bg-[#D6BFA8] text-sm w-fit mx-auto px-2 py-1 font-semibold uppercase tracking-wide">
+                            <p className="absolute bottom-4 left-0 right-0 text-center text-black bg-[#D6BFA8] text-sm w-fit mx-auto px-4 py-1 font-semibold uppercase tracking-wide">
                                 THE MOST REMOTE PLACE I'VE BEEN
                             </p>
                         </div>
