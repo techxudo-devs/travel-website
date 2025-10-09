@@ -8,28 +8,32 @@ import Image from 'next/image';
 // FAQ data array - easy to add, remove, or edit questions
 const faqData = [
     {
-        question: "How do I book a trip with Travel Girls?",
-        answer: "You can book a trip directly through our website by selecting a package and following the checkout process. You can also contact our travel consultants via phone or email for personalized assistance."
+        question: "Once in a lifetime experience?",
+        answer: "Tanzania, seeing the animals in their natural habitat gives you goosebumps. It is emotional, powerful, and almost surreal to watch them roaming free where they truly belong."
     },
     {
-        question: "What if I need to make changes to my booking?",
-        answer: "We understand that plans can change. You can request changes to your booking by contacting our support team. Please note that changes are subject to availability and may incur fees depending on the notice period."
+        question: "Favorite destination?",
+        answer: "Thailand, exploring it island by island, from jungle waterfalls to incredible beaches. The nature, the people, the food, one month is not even enough to see all of its beauty."
     },
     {
-        question: "Does Travel Girls offer support during my trip?",
-        answer: "Absolutely! We provide 24/7 on-trip support. You will be given a dedicated contact number to reach our team for any assistance you may need during your travels."
+        question: "Most stunning beach?",
+        answer: "Whitsunday Islands, Australia, the light there feels different, like the sun shines just for that place."
     },
     {
-        question: "Are your trips family-friendly?",
-        answer: "Yes, we offer a wide range of family-friendly packages. We can also customize itineraries to suit the needs and interests of all family members, including children and elderly travelers."
+        question: "Place that felt like home?",
+        answer: "Croatia, I lived there for five months, exploring its islands and falling in love with its sea, its sunsets, and its calm rhythm of life."
     },
     {
-        question: "How do I know my booking is secure with Travel Girls?",
-        answer: "We use industry-standard SSL encryption to protect your personal and payment information. All bookings are processed through a secure payment gateway for your peace of mind."
+        question: "Most surprising destination?",
+        answer: "Russia, I never planned to visit, but it completely took me by surprise. It was a trip unlike anything I expected."
     },
     {
-        question: "Can I customize my travel itinerary?",
-        answer: "Yes, customization is one of our specialties. Our travel experts can work with you to create a bespoke itinerary tailored to your specific interests, budget, and travel style."
+        question: "Destination that changed me?",
+        answer: "Aruba, it was my first solo trip and the experience that changed everything. The moment I realized I was not scared to be alone anymore, I finally got to see who I really was and started to truly get to know myself."
+    },
+    {
+        question: "Favorite travel memory?",
+        answer: "Any moment spent traveling with my family. Those are the memories that always stay closest to my heart."
     },
 ];
 
@@ -79,7 +83,7 @@ const AboutAccAno = () => {
                     {/* Left Column: FAQs */}
                     <div className="lg:col-span-2">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#c2a7a6] uppercase mb-8">
-                            Frequently Asked Questions
+                            Questions & Answers
                         </h2>
                         <div className="space-y-2">
                             {faqData.map((faq, index) => (

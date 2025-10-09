@@ -13,22 +13,20 @@ const AboutNewAno = () => {
                     <div className="flex flex-col space-y-8">
                         <div>
                             <span className="text-sm font-bold text-[#D0B4B3] uppercase tracking-widest">
-                                Travel Agency
+                                The Beginning
                             </span>
                             <h2 className="text-4xl md:text-5xl font-extrabold text-[#D0B4B3] uppercase mt-2">
-                                Explore Nearby
+                                What started in January 2022
                             </h2>
                         </div>
 
                         <div className="text-gray-600 space-y-4">
+                            <p>Our founder <strong>Valeria Rivas Baccega</strong> was a solo traveler and digital nomad who had spent years exploring the world on her own. But one day, she realized she wanted something more</p>
                             <p>
-                                No one shall be subjected to arbitrary arrest, detention or exile.
-                                Everyone is entitled in full equality to a fair and public hearing
-                                by an independent and impartial tribunal.
+                                What started as an attempt not to travel alone in January 2022 soon turned into a global community that connects, inspires, and supports women travelers.
                             </p>
                             <p>
-                                No one shall be subjected to arbitrary arrest, detention or exile.
-                                Everyone is entitled our latest world tour package.
+                                Today, Travel Girls Club brings together thousands of women from around the world. It’s a place where strangers become lifelong friends, solo dreams transform into shared adventures, and every woman feels empowered to discover the world in her own way, but never alone.
                             </p>
                         </div>
 
@@ -49,7 +47,7 @@ const AboutNewAno = () => {
                                     <div>
                                         <h3 className="font-bold text-lg sm:text-xl text-[#D0B4B3] uppercase">Trusted Guide</h3>
                                         <p className="text-gray-600 mt-1">
-                                            One shall be subjected to arbitrary arrest, detention or exile.
+                                            Your reliable companion for every step of the journey.
                                         </p>
                                     </div>
                                 </div>
@@ -61,7 +59,7 @@ const AboutNewAno = () => {
                                     <div>
                                         <h3 className="font-bold text-lg sm:text-xl text-[#D0B4B3] uppercase">Personalized Trips</h3>
                                         <p className="text-gray-600 mt-1">
-                                            One shall be subjected to arbitrary arrest, detention or exile.
+                                            Tailored travel experiences designed just for you.
                                         </p>
                                     </div>
                                 </div>
