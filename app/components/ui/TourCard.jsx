@@ -1,58 +1,42 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 const TourCard = ({ tour }) => {
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
-    <motion.div
-      variants={cardVariants}
-      whileHover={{ y: -12, scale: 1.02 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border border-[var(--color-semilight)]/20 backdrop-blur-sm"
-    >
+    <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm  transition-shadow duration-300 border border-gray-100">
       {/* Image Container */}
-      <div className="relative w-full h-64 overflow-hidden">
+      <div className="relative w-full h-64 overflow-hidden bg-gray-100">
         <Image
           src={tour.image}
           alt={tour.title}
           layout="fill"
           objectFit="cover"
-          className="transition-transform duration-700 group-hover:scale-110"
+          className="transition-transform duration-500 "
         />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+        {/* Subtle Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 
-        {/* Country & Duration Badge */}
-        <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
-          <span className="px-3 py-1.5 bg-[#D0B4B3] backdrop-blur-sm text-black text-xs font-medium rounded-full shadow-sm">
+        {/* Badges */}
+        <div className="absolute top-4 left-4 right-4 flex justify-between items-start gap-2">
+          <span className="px-3 py-1.5 bg-white/95 backdrop-blur-sm text-gray-900 text-xs font-semibold rounded-lg shadow-sm">
             {tour.country}
           </span>
-          <span className="px-3 py-1.5 bg-brown backdrop-blur-sm text-white text-xs font-medium rounded-full shadow-sm">
+          <span className="px-3 py-1.5 bg-[#D0B4B3]/95 backdrop-blur-sm text-white text-xs font-semibold rounded-lg shadow-sm">
             {tour.duration}
           </span>
         </div>
 
         {/* Rating Badge */}
         <div className="absolute bottom-4 right-4">
-          <div className="flex items-center space-x-1 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-2xl shadow-lg">
+          <div className="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm">
             <svg
-              className="w-4 h-4 text-yellow-400 fill-current"
+              className="w-4 h-4 text-yellow-500 fill-current"
               viewBox="0 0 20 20"
             >
               <path d="M9.049 2.927c.3-.921 1.612-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
-            <span className="text-[var(--color-dark)] text-sm font-semibold">
+            <span className="text-gray-900 text-sm font-semibold">
               {tour.rating}
             </span>
           </div>
@@ -60,61 +44,53 @@ const TourCard = ({ tour }) => {
       </div>
 
       {/* Content */}
-      <div className="p-6 space-y-4">
+      <div className="p-5 space-y-4">
         {/* Title */}
-        <h3 className="text-xl font-bold uppercase text-black leading-tight line-clamp-2 group-hover:text-[#ad9695] transition-colors duration-300">
+        <h3 className="text-lg font-bold text-gray-900 leading-snug line-clamp-2 min-h-[3.5rem]">
           {tour.title}
         </h3>
 
         {/* Reviews */}
-        <div className="flex items-center justify-between space-x-2">
-          <div className="flex items-center space-x-1">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <svg
                 key={i}
-                className={`w-4 h-4 ${i < Math.floor(tour.rating)
-                  ? "text-yellow-400"
-                  : "text-gray-200"
-                  } fill-current`}
+                className={`w-4 h-4 ${
+                  i < Math.floor(tour.rating)
+                    ? "text-yellow-500"
+                    : "text-gray-200"
+                } fill-current`}
                 viewBox="0 0 20 20"
               >
                 <path d="M9.049 2.927c.3-.921 1.612-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
             ))}
           </div>
-          <span className="text-sm text-[var(--color-dark)]/70">
-            ({tour.reviews})
+          <span className="text-sm text-gray-500 font-medium">
+            {tour.reviews}
           </span>
         </div>
 
         {/* Price */}
-        <div className="flex items-baseline justify-between">
-          <div>
-            <span className="text-3xl font-bold text-[#b89f9e]">
+        <div className="pt-2 border-t border-gray-100">
+          <div className="flex items-baseline gap-1">
+            <span className="text-3xl font-bold text-gray-900">
               ${tour.price.toLocaleString()}
             </span>
-            <span className="text-sm text-black ml-1">
-              / per person
-            </span>
+            <span className="text-sm text-gray-500">/ person</span>
           </div>
         </div>
 
         {/* CTA Button */}
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="w-full bg-gradient-to-r from-[#D0B4B3] to-black hover:from-black hover:to-[#D0B4B3] text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden group"
+        <Link
+          href={`/tour/${tour.id}`}
+          className="block w-full bg-gray-900 hover:bg-[#D0B4B3] text-white text-center font-semibold py-3 rounded-xl transition-colors duration-300"
         >
-          <Link href={`/tour/${tour.id}`} className="relative  py-3.5 block z-10 w-full cursor-pointer uppercase">Book Now</Link>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-        </motion.button>
+          Book Now
+        </Link>
       </div>
-
-      {/* Hover Glow Effect */}
-      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[var(--color-brown)]/10 via-[var(--color-semilight)]/5 to-[var(--color-brown)]/10"></div>
-      </div>
-    </motion.div>
+    </div>
   );
 };
 

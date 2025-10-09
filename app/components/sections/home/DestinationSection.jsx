@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image"; // Assuming you might use Next.js Image component, though divs are used here for full-bleed backgrounds
+import Image from "next/image";
 
 const DestinationsSection = () => {
   const destinations = [
@@ -22,27 +22,27 @@ const DestinationsSection = () => {
     {
       name: "Portugal",
       packages: "14 Trips Packages",
-      image: "/11.jpg", // Using a unique image
+      image: "/11.jpg",
     },
     {
       name: "Japan",
       packages: "10 Trips Packages",
-      image: "/10.jpg", // Using a unique image
+      image: "/10.jpg",
     },
     {
       name: "Peru",
       packages: "15 Trips Packages",
-      image: "/7.jpg", // Using a unique image
+      image: "/7.jpg",
     },
     {
       name: "South Africa",
       packages: "14 Trips Packages",
-      image: "/10.jpg", // Using a unique image
+      image: "/10.jpg",
     },
     {
       name: "Europe",
       packages: "104 Trips Packages",
-      image: "/8.jpg", // Using a unique image
+      image: "/8.jpg",
     },
   ];
 

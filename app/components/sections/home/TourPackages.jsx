@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-const  TourCard = dynamic(() => import("../ui/TourCard"));
+const TourCard = dynamic(() => import("../../ui/TourCard"));
 import { BASE_URL } from "@/app/utils/ApiBaseUrl";
 import { motion } from "framer-motion";
 
@@ -78,7 +78,10 @@ const TourPackages = () => {
   // --- END: Loading and Error states ---
 
   return (
-    <div id="tour" className="relative z-40 w-full min-h-screen py-24 bg-gradient-to-b from-white to-fourth overflow-hidden">
+    <div
+      id="tour"
+      className="relative z-40 w-full min-h-screen py-24 bg-gradient-to-b from-white to-fourth overflow-hidden"
+    >
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[#D0B4B3] blur-3xl"></div>

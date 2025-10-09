@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" width="160" height="260">
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrow-end" viewBox="0 0 10 10" refX="5" refY="5"
+            markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="brown"/>
+    </marker>
+  </defs>
+
+  <!-- Zig-zag dashed path ending on LEFT side -->
+  <path d="M80 10 
+           L120 60 
+           L40 110 
+           L120 160 
+           L40 210"
+        fill="none"
+        stroke="brown"
+        stroke-width="2"
+        stroke-dasharray="6 6"
+        stroke-linecap="round"
+        marker-end="url(#arrow-end)" />
+
+  <!-- Label on left side near arrow -->
+  <text x="20" y="215"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="14"
+        fill="brown"
+        alignment-baseline="middle"
+        text-anchor="end">
+    Try Locations
+  </text>
+</svg>
+
