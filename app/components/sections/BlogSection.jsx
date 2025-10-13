@@ -42,8 +42,8 @@ const blogPosts = [
   },
   {
     image:
-      "/newBlog7.jpg", // Replace with your actual image URL
-    title: "Croatia - A Country Worth Every Mile",
+      "/newBlog8.webp", // Replace with your actual image URL
+    title: "How To Make Friends? - Without Staying In Hostels",
   },
 ];
 
