@@ -7,28 +7,43 @@ import Image from "next/image";
 const blogPosts = [
   {
     image:
-      "/blog1.png", // Replace with your actual image URL
-    title: "collection update: Our efforts in 2024",
+      "/newBlog1.jpg", // Replace with your actual image URL
+    title: "Why Solo Travel - Can Be the Most Empowering Experience of Your Life",
   },
   {
     image:
-      "/blog2.jpg", // Replace with your actual image URL
-    title: "10 places to visit on Tanzania",
+      "/newBlog2.jpg", // Replace with your actual image URL
+    title: "How To Plan The Ultimate Solo Trip - Without Getting Overwhelmed",
   },
   {
     image:
-      "/blog3.jpg", // Replace with your actual image URL
-    title: "Where is Tanzania located?",
+      "/newBlog3.jpg", // Replace with your actual image URL
+    title: "10 Destinations - Perfect For Solo Travelers",
   },
   {
     image:
-      "/blog4.jpg", // Replace with your actual image URL
-    title: "Emilia in Tanzania – a traveler's view",
+      "/newBlog4.jpg", // Replace with your actual image URL
+    title: "Barcelona - 3 Day Itinerary",
   },
   {
     image:
-      "/blog5.jpg", // Replace with your actual image URL
-    title: "Tanzania Dragon Blood Tree Forest & Nursery",
+      "/newBlog5.jpg", // Replace with your actual image URL
+    title: "London and the Countryside - A 6-Day Itinerary",
+  },
+  {
+    image:
+      "/newBlog6.jpg", // Replace with your actual image URL
+    title: "Split - Where History, Food, And Coastal Charm Meet",
+  },
+  {
+    image:
+      "/newBlog7.jpg", // Replace with your actual image URL
+    title: "Croatia - A Country Worth Every Mile",
+  },
+  {
+    image:
+      "/newBlog7.jpg", // Replace with your actual image URL
+    title: "Croatia - A Country Worth Every Mile",
   },
 ];
 
