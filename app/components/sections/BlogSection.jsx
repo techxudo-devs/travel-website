@@ -1,48 +1,47 @@
+"use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
-// Note: Replace these image URLs with the actual images from your project.
-// I have used placeholders that resemble the images in the screenshot.
 const blogPosts = [
   {
-    image:
-      "/newBlog1.jpg", // Replace with your actual image URL
+    id: "solo-travel",
+    image: "/newBlog1.jpg",
     title: "Why Solo Travel - Can Be the Most Empowering Experience of Your Life",
   },
   {
-    image:
-      "/newBlog2.jpg", // Replace with your actual image URL
+    id: "solo-trip",
+    image: "/newBlog2.jpg",
     title: "How To Plan The Ultimate Solo Trip - Without Getting Overwhelmed",
   },
   {
-    image:
-      "/newBlog3.jpg", // Replace with your actual image URL
+    id: "solo-destinations",
+    image: "/newBlog3.jpg",
     title: "10 Destinations - Perfect For Solo Travelers",
   },
   {
-    image:
-      "/newBlog4.jpg", // Replace with your actual image URL
+    id: "solo-barcelona",
+    image: "/newBlog4.jpg",
     title: "Barcelona - 3 Day Itinerary",
   },
   {
-    image:
-      "/newBlog5.jpg", // Replace with your actual image URL
+    id: "solo-london",
+    image: "/newBlog5.jpg",
     title: "London and the Countryside - A 6-Day Itinerary",
   },
   {
-    image:
-      "/newBlog6.jpg", // Replace with your actual image URL
+    id: "solo-split",
+    image: "/newBlog6.jpg",
     title: "Split - Where History, Food, And Coastal Charm Meet",
   },
   {
-    image:
-      "/newBlog7.jpg", // Replace with your actual image URL
+    id: "solo-croatia",
+    image: "/newBlog7.jpg",
     title: "Croatia - A Country Worth Every Mile",
   },
   {
-    image:
-      "/newBlog8.webp", // Replace with your actual image URL
+    id: "solo-friends",
+    image: "/newBlog8.webp",
     title: "How To Make Friends? - Without Staying In Hostels",
   },
 ];
@@ -73,17 +72,17 @@ const BlogSection = () => {
           </div>
         </div>
 
-        {/* Blog Cards Carousel */}
+        {/* Blog Cards */}
         <div className="flex items-center justify-center">
           <div className="flex space-x-6 overflow-x-auto py-4">
             {blogPosts.map((post, index) => (
-              <div
+              <Link
+                href={`/blog/${post.id}`}
                 key={index}
-                className={`flex-shrink-0 w-90 h-[480px] rounded-2xl overflow-hidden relative shadow-lg group
-                    ${index === 2 ? "shadow-2xl transform scale-105" : ""}
-                  `}
+                className={`flex-shrink-0 w-90 h-[480px] rounded-2xl overflow-hidden relative shadow-lg group transition-transform hover:scale-[1.03]`}
               >
-                <img loading="lazy"
+                <img
+                  loading="lazy"
                   src={post.image}
                   alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -98,23 +97,23 @@ const BlogSection = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
 
         {/* Visit the blog button */}
         <div className="text-center mt-12">
-          <button className="cursor-pointer border bg-[#D0B4B3]  text-black border-[#b49a99] uppercase font-bold py-3 px-8 rounded-full hover:bg-[#b49a99] hover:text-black hover:scale-95 transition-all duration-300 group flex items-center justify-center mx-auto">
-            Visit the blog
-            <ArrowRight
-              size={20}
-              className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </button>
+          <Link href="/blog">
+            <button className="cursor-pointer border bg-[#D0B4B3] text-black border-[#b49a99] uppercase font-bold py-3 px-8 rounded-full hover:bg-[#b49a99] hover:text-black hover:scale-95 transition-all duration-300 group flex items-center justify-center mx-auto">
+              Visit the blog
+              <ArrowRight
+                size={20}
+                className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </button>
+          </Link>
         </div>
-
-        {/* Pagination and Navigation */}
       </div>
     </div>
   );
