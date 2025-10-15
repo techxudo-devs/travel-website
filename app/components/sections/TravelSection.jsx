@@ -45,14 +45,25 @@ const TravelInfoSection = () => {
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="text-base sm:text-lg">
-                Hi, I’m Val, the heart behind Travel Girls Club. A dreamer, traveler, and proud dog mom based in Barcelona
+                Hi, I’m Val, the heart behind Travel Girls Club. A dreamer,
+                traveler, and proud dog mom based in Barcelona
               </p>
 
               <p className="text-base sm:text-lg">
-                Travel completely changed my life. I used to be very introverted, but traveling gave me confidence, freedom, and allowed me to truly be myself. After years of being a digital nomad and traveling solo, I began craving connection. I wanted to share these experiences with other women who shared my love for travel.
+                Travel completely changed my life. I used to be very
+                introverted, but traveling gave me confidence, freedom, and
+                allowed me to truly be myself. After years of being a digital
+                nomad and traveling solo, I began craving connection. I wanted
+                to share these experiences with other women who shared my love
+                for travel.
               </p>
 
-              <p className="text-base sm:text-lg">What started as my search for one travel girlfriend to go to Thailand with, became the Travel Girls Club. And now I’m here to remind you that you’re never truly alone on this journey. You have me, and you have us</p>
+              <p className="text-base sm:text-lg">
+                What started as my search for one travel girlfriend to go to
+                Thailand with, became the Travel Girls Club. And now I’m here to
+                remind you that you’re never truly alone on this journey. You
+                have me, and you have us
+              </p>
             </div>
 
             <button className="group text-sm sm:tetx-base inline-flex items-center bg-[#D0B4B3] cursor-pointer text-white font-semibold py-4 px-8 rounded-full hover:bg-[#a08180] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-95">
@@ -68,7 +79,8 @@ const TravelInfoSection = () => {
           <div className="relative">
             {/* Main large image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img loading="lazy"
+              <Image
+                loading="lazy"
                 src="/travel1.jpg" // Replace with your actual image URL"
                 alt="Aerial view of Socotra landscape with winding river and dragon blood trees"
                 width={888}
@@ -80,7 +92,8 @@ const TravelInfoSection = () => {
 
             {/* Floating passport image */}
             <div className="absolute -bottom-8 -right-8 w-48 h-32 rounded-2xl overflow-hidden shadow-xl rotate-12 hover:rotate-6 transition-transform duration-300">
-              <img loading="lazy"
+              <Image
+                loading="lazy"
                 src="/travel.jpg"
                 alt="Passport with travel stamps"
                 width={192}

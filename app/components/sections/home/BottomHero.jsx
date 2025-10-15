@@ -59,11 +59,13 @@ const Hero = () => {
   return (
     <div ref={heroRef} className="relative w-full text-white overflow-hidden">
       {/* Background with scaling */}
-      <img
+      <Image
         loading="lazy"
         ref={bgRef}
         src="/hero-main.jpg"
         alt="Travel destination"
+        layout="fill"
+        objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
       <div className="absolute inset-0 bg-black/50 z-10" />
@@ -121,7 +123,7 @@ const Hero = () => {
       {/* Girl + Bottom Section */}
       <div className="relative z-30 flex flex-col items-center justify-end -mt-0">
         {" "}
-        <img
+        <Image
           loading="lazy"
           src="/hero-girl.png"
           alt="Travel girl"
@@ -145,7 +147,7 @@ const Hero = () => {
             </span>{" "}
           </Marquee>{" "}
         </div>{" "}
-        <img
+        <Image
           loading="lazy"
           src="/hero-bottom.png"
           alt="Bottom decoration"

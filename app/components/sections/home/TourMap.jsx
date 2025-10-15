@@ -154,7 +154,7 @@ const TourMap = () => {
                 >
                   <div className="relative">
                     <span className="absolute inline-flex h-full w-full rounded-full bg-[#D0B4B3] opacity-30 animate-ping"></span>
-                    <img
+                    <Image
                       loading="lazy"
                       className="rounded-full border-4 border-[#D0B4B3] shadow-md group-hover:shadow-xl group-hover:border-white transition-all duration-200"
                       src={loc.image}
@@ -218,10 +218,11 @@ const TourMap = () => {
                 {/* Pulsing Animation */}
                 {/* Image Container */}
                 <div className="relative w-full h-full rounded-full border-4 border-white shadow-lg group-hover:border-[#D0B4B3] group-hover:shadow-2xl overflow-hidden transition-all duration-300 transform group-hover:scale-110">
-                  <img
+                  <Image
                     loading="lazy"
                     src={location.image}
                     alt={location.name}
+                    layout="fill"
                     objectFit="cover"
                     className="w-full h-full object-cover"
                   />

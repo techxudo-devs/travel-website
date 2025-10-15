@@ -161,10 +161,12 @@ const TripSection = () => {
                 <div className="relative h-full  overflow-hidden shadow-2xl">
                   {/* Card Image with Overlay */}
                   <div className="absolute inset-0">
-                    <img
+                    <Image
                     loading="lazy"
                       src={imgSrc}
                       alt={alt}
+                      layout="fill"
+                      objectFit="cover"
                       className="w-full h-full object-cover transition-transform duration-700"
                       // style={{
                       //   transform: isHovered ? "scale(1.1)" : "scale(1)",

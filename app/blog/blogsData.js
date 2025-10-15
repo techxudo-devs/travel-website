@@ -1,8 +1,8 @@
 export const blogs = {
-    "solo-travel": {
-        title: "Why Solo Travel Can Be the Most Empowering Experience of Your Life",
-        images: ["/newBlog1.jpg", "/soloBlog1.jpg", "/soloBlog2.jpg"],
-        content: `
+  "solo-travel": {
+    title: "Why Solo Travel Can Be the Most Empowering Experience of Your Life",
+    images: ["/newBlog1.jpg", "/soloBlog1.jpg", "/soloBlog2.jpg"],
+    content: `
 If you’re here, it’s probably because deep down, you’re ready to take that leap. You’ve been dreaming of that solo adventure, craving new experiences, freedom, and growth, but maybe you're still looking for that little push or someone to reassure you that you’ve got this.
 
 Ready? Let's do this together! 🌍✨
@@ -43,11 +43,11 @@ Take the leap.
 Because on the other side of that fear… is the strongest, most alive version of you.
 And I promise, she’s worth meeting. 💖
         `,
-    },
-    "solo-trip": {
-        title: "How To Plan The Ultimate Solo Trip - Without Getting Overwhelmed",
-        images: ["/newBlog2.jpg", "/soloBlog3.jpg", "/soloBlog4.jpg"],
-        content: `
+  },
+  "solo-trip": {
+    title: "How To Plan The Ultimate Solo Trip - Without Getting Overwhelmed",
+    images: ["/newBlog2.jpg", "/soloBlog3.jpg", "/soloBlog4.jpg"],
+    content: `
 Don’t overthink it. Sometimes the best way to start is to book the ticket and trust that you’ll figure out the rest!
 
 Chapter 1: Choosing Your Destination
@@ -83,11 +83,21 @@ Chapter 5: Preparing for the Unexpected
 Conclusion: You’ve Got This!
 Solo travel might feel overwhelming at first, but once you take the leap, it can change your life in the most amazing ways. I’ll never forget how scared I was before my first trip, but the friendships I made and the confidence I gained have stayed with me ever since. ✨
         `,
-    },
-    "solo-destinations": {
-        title: "10 Destinations - Perfect For Solo Travelers",
-        images: ["/newBlog3.jpg", "/soloBlog6.jpg", "/soloBlog7.jpg", "/soloBlog8.jpg", "/soloBlog9.jpg", "/soloBlog10.jpg", "/soloBlog11.jpg", "/soloBlog12.jpg", "/soloBlog13.jpg"],
-        content: `
+  },
+  "solo-destinations": {
+    title: "10 Destinations - Perfect For Solo Travelers",
+    images: [
+      "/newBlog3.jpg",
+      "/soloBlog6.jpg",
+      "/soloBlog7.jpg",
+      "/soloBlog8.jpg",
+      "/soloBlog9.jpg",
+      "/soloBlog10.jpg",
+      "/soloBlog11.jpg",
+      "/soloBlog12.jpg",
+      "/soloBlog13.jpg",
+    ],
+    content: `
 Your first solo trip is a leap into independence and adventure. Choosing the right destination can make all the difference in ensuring it’s smooth, exciting, and stress-free. Here are ten amazing places that are perfect for solo travel, complete with why they’re ideal, what you can do there, and honest pros and cons to help you decide.
 
 1) Iceland: Nature’s Serenity
@@ -170,11 +180,11 @@ Things to Do:
 • Explore Montreal’s artsy neighborhoods, filled with galleries, murals, and cozy cafes.
 • Hike in Banff and Jasper National Parks for awe-inspiring mountain views and turquoise lakes.
         `,
-    },
-    "solo-barcelona": {
-        title: "Barcelona - 3 Day Itinerary",
-        images: ["/newBlog4.jpg", "/newBlog9.jpg", "/newBlog10.jpg"],
-        content: `
+  },
+  "solo-barcelona": {
+    title: "Barcelona - 3 Day Itinerary",
+    images: ["/newBlog4.jpg", "/newBlog9.jpg", "/newBlog10.jpg"],
+    content: `
 Is 3 Days Really Enough Time?
 For a solid introduction to Barcelona, 3 days is actually an ideal amount of time. It allows you to explore beyond the main sights without cutting too much into your plans for other Spanish destinations (assuming Barcelona isn’t your only stop). Whether you’re heading to Madrid, venturing south to Andalusia, or exploring the hidden gems of northern Spain, 3
 days in Barcelona offers the perfect balance.
@@ -208,11 +218,11 @@ So, for this 3-day itinerary, I’ve planned everything by area to make explorin
 
 I hope you enjoyed this 3-day Barcelona itinerary and found my recommendations helpful! 🌟 If you discover any amazing spots or experiences, share them in the community!We’d love to hear about your adventures! 🌊
 `,
-    },
-    "solo-london": {
-        title: "London and the Countryside - A 6-Day Itinerary",
-        images: ["/newBlog5.jpg", "/newBlog11.jpg", "/newBlog12.jpg"],
-        content: `
+  },
+  "solo-london": {
+    title: "London and the Countryside - A 6-Day Itinerary",
+    images: ["/newBlog5.jpg", "/newBlog11.jpg", "/newBlog12.jpg"],
+    content: `
 Hey lovely travelers! 💖 If you’re reading this, it’s because you’re probably planning a trip to London and the English
 countryside, and I have to tell you, you are going to absolutely LOVE IT! London is pure magic, with so many things to do, incredible places to explore, and let’s not forget, it’s a dream for foodies like me! 😋 But the countryside? Oh, it’s straight out of a fairytale.
 
@@ -254,11 +264,11 @@ Final Thoughts:
 This itinerary has a little bit of everything. London’s iconic neighborhoods, dreamy countryside escapes, and the most charming little towns that are absolutely worth the visit. I can promise you, you’ll create unforgettable memories on this trip!
 
         `,
-    },
-    "solo-split": {
-        title: "Split - Where History, Food, And Coastal Charm Meet",
-        images: ["/newBlog6.jpg", "/newBlog15.jpg", "/newBlog14.jpg"],
-        content: `
+  },
+  "solo-split": {
+    title: "Split - Where History, Food, And Coastal Charm Meet",
+    images: ["/newBlog6.jpg", "/newBlog15.jpg", "/newBlog14.jpg"],
+    content: `
 The perfect 3 day itinerary:
 If you’re traveling from the USA, you’ll most likely connect through a major European hub like London, Dublin, Frankfurt, or Amsterdam before landing in Split. Direct flights are rare, but seasonal routes sometimes pop up during peak travel times. For those already in Europe, Split is a breeze to reach. Airlines like Croatia Airlines, Ryanair, Vueling and EasyJet offer direct flights from cities like Paris, Rome, Berlin, Barcelona and London.
 
@@ -320,11 +330,11 @@ I hope these tips help you make the most of your time in Split! 🌟
 
 If you come across any must-visit spots or unforgettable experiences, I’d love for you to share them with our community. We’re always looking for fresh ideas! 🌊💬
         `,
-    },
-    "solo-croatia": {
-        title: "Croatia - A Country Worth Every Mile",
-        images: ["/newBlog7.jpg", "/newBlog16.jpg", "/newBlog1.jpg"],
-        content: `
+  },
+  "solo-croatia": {
+    title: "Croatia - A Country Worth Every Mile",
+    images: ["/newBlog7.jpg", "/newBlog16.jpg", "/newBlog1.jpg"],
+    content: `
 Croatia is a paradise for travelers who crave nature, beaches, and ancient architecture. From Dubrovnik to Split, every stop offers something breathtaking.
 
 1) From south to north:
@@ -370,11 +380,11 @@ I hope you found my recommendations helpful! 🌟
 
 If you discover any spots or experiences you’d like to share, feel free to share them in the community. We’d love to hear about your adventures in this beautiful place! 🌊💬
         `,
-    },
-    "solo-friends": {
-        title: "How To Make Friends? - Without Staying In Hostels",
-        images: ["/newBlog8.webp", "/newBlog3.jpg", "/newBlog6.jpg"],
-        content: `
+  },
+  "solo-friends": {
+    title: "How To Make Friends? - Without Staying In Hostels",
+    images: ["/newBlog8.webp", "/newBlog3.jpg", "/newBlog6.jpg"],
+    content: `
 Making friends while traveling solo is easier than you think. Tips and tricks for socializing, joining activities, and meeting like-minded travelers.
 
 • Start Before You Leave:
@@ -423,5 +433,5 @@ If you’re feeling a little nervous, that’s completely okay. I felt the same 
 
 So go for it. Book the trip. Say yes to the group tour. Smile at the girl sitting next to you. Start the conversation.
         `,
-    },
+  },
 };

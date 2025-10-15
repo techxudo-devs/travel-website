@@ -3,6 +3,7 @@ import { MapPin, Share2, Edit } from "lucide-react";
 import Image from "next/image";
 
 const TourHero = ({ title, location, coverImage, basePrice, currency }) => {
+  console.log(currency);
   return (
     <section className="relative h-[60vh] md:h-[97vh] w-full text-white ">
       {/* Background Image */}
@@ -35,12 +36,7 @@ const TourHero = ({ title, location, coverImage, basePrice, currency }) => {
           </div>
           <div className="text-right p-4 rounded">
             <p className="text-lg opacity-80">From</p>
-            <p className="text-6xl font-bold">
-              {new Intl.NumberFormat("de-DE", {
-                style: "currency",
-                currency: currency,
-              }).format(basePrice)}
-            </p>
+            <p className="text-6xl font-bold">${basePrice.toLocaleString()}</p>
             <p className="text-md opacity-80 mb-3">Price Per Person</p>
             {/* <button className="w-full bg-five text-first font-bold px-6 py-3 rounded hover:bg-opacity-90 transition">
                             Customize it!

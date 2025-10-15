@@ -6,48 +6,57 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const AboutAno = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    // disable body scroll when sidebar open
-    useEffect(() => {
-        if (menuOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
-    }, [menuOpen]);
+  // disable body scroll when sidebar open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuOpen]);
 
-    return (
-        <div className="relative h-screen w-full text-white overflow-hidden">
-            {/* Background */}
-            <img
-                loading="lazy"
-                src="/about-main.jpg"
-                alt="About background"
-                className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
-            />
-            <div className="absolute inset-0 bg-black/70 z-10" />
+  return (
+    <div className="relative h-screen w-full text-white overflow-hidden">
+      {/* Background */}
+      <Image
+        loading="lazy"
+        src="/about-main.jpg"
+        alt="About background"
+        className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
+        width={400}
+        height={400}
+      />
+      <div className="absolute inset-0 bg-black/70 z-10" />
 
-            {/* Navbar */}
+      {/* Navbar */}
 
-            {/* About Content */}
-            <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
-                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold pb-4">About Us</h1>
-                <p className="text-xl">Travel Girls Club began with one simple wish: "to find a travel girlfriend for a trip to Thailand."</p>
-                <p className="">This journey wouldn’t be the same without you.</p>
-            </div>
+      {/* About Content */}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold pb-4">
+          About Us
+        </h1>
+        <p className="text-xl">
+          Travel Girls Club began with one simple wish: "to find a travel
+          girlfriend for a trip to Thailand."
+        </p>
+        <p className="">This journey wouldn’t be the same without you.</p>
+      </div>
 
-            {/* Bottom Decoration (fixed to bottom inside h-screen) */}
-            <div className="absolute bottom-0 left-0 right-0 z-30">
-                <img
-                    loading="lazy"
-                    src="/about-bottom.png"
-                    alt="Bottom decoration"
-                    className="w-full object-contain" // use contain instead of cover
-                />
-            </div>
-        </div>
-    );
+      {/* Bottom Decoration (fixed to bottom inside h-screen) */}
+      <div className="absolute bottom-0 left-0 right-0 z-30">
+        <Image
+          loading="lazy"
+          src="/about-bottom.png"
+          alt="Bottom decoration"
+          className="w-full object-contain"
+          width={300}
+          height={300} // use contain instead of cover
+        />
+      </div>
+    </div>
+  );
 };
 
 export default AboutAno;

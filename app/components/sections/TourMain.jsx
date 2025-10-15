@@ -20,10 +20,12 @@ const TourMain = () => {
   return (
     <div className="relative h-screen w-full text-white overflow-hidden">
       {/* Background */}
-      <img
+      <Image
         loading="lazy"
         src="/tour.webp"
         alt="About background"
+        width={800}
+        height={400}
         objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
@@ -38,7 +40,7 @@ const TourMain = () => {
 
       {/* Bottom Decoration (fixed to bottom inside h-screen) */}
       <div className="absolute bottom-0 left-0 right-0 z-30">
-        <img
+        <Image
           loading="lazy"
           src="/about-bottom.png"
           alt="Bottom decoration"

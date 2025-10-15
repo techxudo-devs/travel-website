@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, ArrowRight, Menu, X } from "lucide-react";
@@ -61,21 +62,25 @@ const Hero = () => {
       className="relative w-full text-white overflow-hidden"
     >
       {/* Background with scaling */}
-      <img
+      <Image
         loading="lazy"
         ref={bgRef}
         src="/hero-main.jpg"
         alt="Travel destination"
+        layout="fill"
+        objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-6 md:px-10 pt-6 md:pt-8">
-        <img
+        <Image
           loading="lazy"
           src="/logo23.svg"
           alt="Logo"
+          width={240}
+          height={60}
           className="object-contain w-40 md:w-60"
         />
 
@@ -152,7 +157,7 @@ const Hero = () => {
                 className="fixed top-0 right-0 w-3/4 h-full bg-black z-50 flex flex-col p-6"
               >
                 <div className="flex items-center justify-between mb-12">
-                  <img src="/logo23.svg" className="object-contain w-40" alt="Logo" />
+                  <Image src="/logo23.svg" width={160} height={40} className="object-contain w-40" alt="Logo" />
                   <button
                     className="text-white cursor-pointer"
                     onClick={() => setMenuOpen(false)}
@@ -254,7 +259,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Girl + Bottom Section */}
-      <div className="relative z-30 flex flex-col items-center justify-end -mt-0"> <img loading="lazy" src="/hero-girl.png" alt="Travel girl" className="object-contain relative z-30" /> {/* Marquee Background Behind Last Image */} <div className="absolute bottom-20 w-full z-20"> <Marquee speed={100} gradient={false} direction="right" className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider" > We Are &nbsp;{" "} <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span> </Marquee> </div> <img loading="lazy" src="/hero-bottom.png" alt="Bottom decoration" className="w-full object-cover relative z-40 sm:-mt-20 -mt-2" /> </div> </div>
+      <div className="relative z-30 flex flex-col items-center justify-end -mt-0"> <Image loading="lazy" src="/hero-girl.png" alt="Travel girl" width={500} height={500} className="object-contain relative z-30" /> {/* Marquee Background Behind Last Image */} <div className="absolute bottom-20 w-full z-20"> <Marquee speed={100} gradient={false} direction="right" className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider" > We Are &nbsp;{" "} <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span> </Marquee> </div> <Image loading="lazy" src="/hero-bottom.png" alt="Bottom decoration" width={1920} height={100} className="w-full object-cover relative z-40 sm:-mt-20 -mt-2" /> </div> </div>
   );
 };
 

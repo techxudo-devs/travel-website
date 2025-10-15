@@ -20,10 +20,12 @@ const BlogMain = () => {
   return (
     <div className="relative h-screen w-full text-white overflow-hidden">
       {/* Background */}
-      <img
+      <Image
         loading="lazy"
         src="/blog5.jpg"
         alt="About background"
+        layout="fill"
+        objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
       <div className="absolute inset-0 bg-black/70 z-10" />
@@ -35,10 +37,12 @@ const BlogMain = () => {
 
       {/* Bottom Decoration (fixed to bottom inside h-screen) */}
       <div className="absolute bottom-0 left-0 right-0 z-30">
-        <img
+        <Image
           loading="lazy"
           src="/about-bottom.png"
           alt="Bottom decoration"
+          width={1920}
+          height={100}
           className="w-full object-contain" // use contain instead of cover
         />
       </div>

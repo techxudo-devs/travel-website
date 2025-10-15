@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Calendar, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const ItinerarySection = ({ days, visitingLocations }) => {
   const [activeDayIndex, setActiveDayIndex] = useState(0);
@@ -31,7 +32,7 @@ const ItinerarySection = ({ days, visitingLocations }) => {
             {/* <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#a37b64]/20 to-[#c4c8ba]/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
               <div className="relative h-72 bg-[#f8efe3] rounded-3xl overflow-hidden shadow-lg border border-[#c4c8ba]/20">
-                <img
+                <Image
                   src="/map_placeholder.png"
                   alt="Map of Tuscany"
                   className="w-full h-full object-cover opacity-60"
@@ -145,10 +146,13 @@ const ItinerarySection = ({ days, visitingLocations }) => {
                   className="absolute inset-0"
                 >
                   {/* Image */}
-                  <img
+                  <Image
                     src={days[activeDayIndex].image}
                     alt={days[activeDayIndex].heading}
-                    className="w-full h-full object-cover"
+                    layout="fill"
+                    objectFit="cover"
+                    loading="lazy"
+                    className="w-full h-full object-contain"
                   />
 
                   {/* Gradient overlays */}

@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const blogPosts = [
   {
@@ -81,11 +82,13 @@ const BlogSection = () => {
                 key={index}
                 className={`flex-shrink-0 w-90 h-[480px] rounded-2xl overflow-hidden relative shadow-lg group transition-transform hover:scale-[1.03]`}
               >
-                <img
+                <Image
                   loading="lazy"
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/80 to-transparent">
                   <div className="flex justify-between items-end">
