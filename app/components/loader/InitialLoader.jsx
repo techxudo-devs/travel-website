@@ -14,7 +14,7 @@ const InitialLoader = () => {
   return (
     <AnimatePresence>
       <motion.div
-        className={`fixed inset-0 z-[999] bg-first flex items-center justify-center flex-col gap-1
+        className={`fixed inset-0 z-[999] bg-radial from-third via-[#D0B4B3]  to-[#D0B4B3] flex items-center justify-center flex-col gap-1
                      ${
                        isVisible ? "h-screen" : "h-0"
                      } transition-all duration-1000 ease-in-out overflow-hidden`}

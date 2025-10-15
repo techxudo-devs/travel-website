@@ -23,7 +23,7 @@ const LandingPage = () => {
       <TripSection />
       <TourPackagesClient limit />
       <TourMap />
-      <DestinationsSection />
+      {/* <DestinationsSection />  */}
       <TravelInfoSection />
       <BlogSection />
       <ContactForm />

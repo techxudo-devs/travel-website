@@ -100,31 +100,31 @@ const leftLocations = [
 const rightLocations = [
   {
     id: 1,
-    name: "Spain",
+    name: "India",
     image: "/map1.webp",
-    mapPosition: { top: "60%", left: "53%" },
+    mapPosition: { top: "45%", left: "65%" },
   },
   {
     id: 2,
-    name: "Australia",
+    name: "Europe",
     image: "/map5.webp",
-    mapPosition: { top: "30%", left: "70%" },
+    mapPosition: { top: "30%", left: "50%" },
   },
   {
     id: 7,
-    name: "India",
+    name: "USA",
     image: "/map2.webp",
     mapPosition: { top: "30%", left: "20%" },
   },
   {
     id: 8,
-    name: "Peru",
+    name: "Australia",
     image: "/map3.webp",
     mapPosition: { top: "68%", left: "80%" },
   },
   {
     id: 9,
-    name: "Serbia",
+    name: "Peru",
     image: "/map4.webp",
     mapPosition: { top: "68%", left: "32%" },
   },
@@ -227,7 +227,7 @@ const TourMap = () => {
         </div>
 
         {/* Map Section */}
-        <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center min-h-[600px] w-full overflow-hidden mt-10 sm:mt-0">
+        <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center min-h-[800px] w-full overflow-hidden mt-10 sm:mt-0">
           <div className="absolute inset-0 bg-white opacity-20"></div>
 
           {rightLocations.map((location) => (
