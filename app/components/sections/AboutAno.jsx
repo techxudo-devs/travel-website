@@ -22,11 +22,11 @@ const AboutAno = () => {
       {/* Background */}
       <Image
         loading="lazy"
-        src="/swiper1.webp"
+        src="/swiper3.webp"
         alt="About background"
+        layout="fill"
+        objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
-        width={2500}
-        height={400}
       />
       <div className="absolute inset-0 bg-black/50 z-10" />
 
@@ -50,9 +50,9 @@ const AboutAno = () => {
           loading="lazy"
           src="/about-bottom.png"
           alt="Bottom decoration"
+          width={1920}
+          height={100}
           className="w-full object-contain"
-          width={1500}
-          height={300} // use contain instead of cover
         />
       </div>
     </div>

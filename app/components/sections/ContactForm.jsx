@@ -52,7 +52,6 @@ const ContactForm = () => {
             <div className="absolute -bottom-8 sm:-bottom-10 -right-4 sm:-right-8 w-64 sm:w-72 md:w-80 bg-[#a37b64] text-[#f8efe3] p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg">
               <h2 className="text-2xl sm:text-3xl uppercase font-extrabold mb-1">
                 Travel Girls<span className="text-[#c4c8ba]">.</span>
-                <span className="block w-6 sm:w-8 h-1 bg-[#c4c8ba] rounded-full -mt-2 ml-10 sm:ml-12"></span>
               </h2>
               <p className="text-sm sm:text-base font-semibold mt-3 sm:mt-4 leading-tight text-[#f8efe3]/80">
                 Keep travelling all year round!

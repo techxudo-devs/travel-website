@@ -35,6 +35,8 @@ const AboutPicsSec = () => {
                 <img
                   src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/About-Postcard.jpg"
                   alt="View of Cape Town from a mountain with a woman"
+                  width={500}
+                  height={300}
                   className="w-full h-auto"
                 />
                 <p
@@ -81,6 +83,8 @@ const AboutPicsSec = () => {
             <img
               src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/2016-06-28-17.15.04-2-1.jpg"
               alt="Woman in a hot air balloon"
+              width={500}
+              height={700}
               className="w-[150%] h-auto shadow-lg -translate-y-24"
             />
             {/* Decorative circular stamp */}
@@ -90,6 +94,8 @@ const AboutPicsSec = () => {
                 className="w-40"
                 src="https://www.theblondeabroad.com/wp-content/themes/tba/images/About-Kiersten-Stamp.png"
                 alt=""
+                width={160}
+                height={160}
               />
             </div>
           </div>

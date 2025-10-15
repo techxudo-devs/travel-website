@@ -28,7 +28,7 @@ const TourCard = ({ tour }) => {
         </div>
 
         {/* Rating Badge */}
-        <div className="absolute bottom-4 right-4">
+        {/* <div className="absolute bottom-4 right-4">
           <div className="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm">
             <svg
               className="w-4 h-4 text-yellow-500 fill-current"
@@ -40,7 +40,7 @@ const TourCard = ({ tour }) => {
               {tour.rating}
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Content */}
