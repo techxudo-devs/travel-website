@@ -3,12 +3,12 @@
 import React from "react";
 
 import TripSection from "./components/sections/home/TripSection";
-import BlogSection from "./components/sections/BlogSection";
+import BlogSection from "./components/sections/home/BlogSection";
 import TravelInfoSection from "./components/sections/TravelSection";
 import WhatToExpectSection from "./components/sections/WhatToExpect";
-import PictureSwiper from "./components/sections/PictueSwiper";
+import PictureSwiper from "./components/sections/home/PictueSwiper";
 import DestinationsSection from "./components/sections/home/DestinationSection";
-import ContactForm from "./components/sections/ContactForm";
+import ContactForm from "./components/sections/home/ContactForm";
 import TourPackages from "./components/sections/home/TourPackages";
 import HeroAndTripSection from "./components/sections/Hero";
 import BottomHero from "./components/sections/home/BottomHero";
@@ -19,9 +19,6 @@ import InitialLoader from "./components/loader/InitialLoader";
 const LandingPage = () => {
   return (
     <div>
-      {/* <Hero /> */}
-      {/* <TripSection /> */}
-
       <BottomHero />
       {/* <HeroAndTripSection backgroundImageUrl={"/hero.webp"} /> */}
       <TripSection />

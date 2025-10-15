@@ -46,7 +46,6 @@ html {
 }
 
 .backforth {
-
   animation: moveX 2s ease-in-out infinite alternate;
 }
 
@@ -102,11 +101,11 @@ html {
 }
 
 .slick-next {
-  right: -6px !important
+  right: -6px !important;
 }
 
 .slick-prev {
-  left: -6px !important
+  left: -6px !important;
 }
 
 .next-arrow {
