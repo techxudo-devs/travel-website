@@ -7,42 +7,42 @@ const DestinationsSection = () => {
     {
       name: "India",
       packages: "47 Trips Packages",
-      image: "/4.jpg",
+      image: "/blog13.avif",
     },
     {
       name: "Italy",
       packages: "18 Trips Packages",
-      image: "/6.jpg",
+      image: "/blog14.avif",
     },
     {
-      name: "Greece",
+      name: "Iceland",
       packages: "11 Trips Packages",
-      image: "/3.jpg",
+      image: "/blog12.avif",
     },
     {
       name: "Portugal",
       packages: "14 Trips Packages",
-      image: "/11.jpg",
+      image: "/blog8.avif",
     },
     {
-      name: "Japan",
+      name: "Switzerland",
       packages: "10 Trips Packages",
-      image: "/10.jpg",
+      image: "/blog6.avif",
     },
     {
       name: "Peru",
       packages: "15 Trips Packages",
-      image: "/7.jpg",
+      image: "/blog9.avif",
     },
     {
-      name: "South Africa",
+      name: "Germany",
       packages: "14 Trips Packages",
-      image: "/10.jpg",
+      image: "/blog7.avif",
     },
     {
       name: "Europe",
       packages: "104 Trips Packages",
-      image: "/8.jpg",
+      image: "/blog10.avif",
     },
   ];
 
@@ -122,11 +122,11 @@ const DestinationsSection = () => {
                 <h3 className="text-[#D0B4B3] boucher uppercase font-bold text-3xl mb-2 transform transition-all duration-300 group-hover:translate-y-[-4px]">
                   {destination.name}
                 </h3>
-                <div className="inline-flex">
+                {/* <div className="inline-flex">
                   <span className="bg-white/20 backdrop-blur-sm text-white sofia text-sm px-3 py-1 rounded-full border border-black transition-all duration-300 group-hover:bg-white/30 group-hover:border-black">
                     {destination.packages}
                   </span>
-                </div>
+                </div> */}
               </div>
 
               {/* Card Hover Effect Overlay */}
