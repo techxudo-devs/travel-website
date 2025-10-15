@@ -22,9 +22,9 @@ const TourMain = () => {
       {/* Background */}
       <Image
         loading="lazy"
-        src="/tour.webp"
+        src="/swiper3.webp"
         alt="About background"
-        width={800}
+        width={3000}
         height={400}
         objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
@@ -44,7 +44,7 @@ const TourMain = () => {
           loading="lazy"
           src="/about-bottom.png"
           alt="Bottom decoration"
-          width={1000}
+          width={1500}
           height={100}
           className="w-full object-contain" // use contain instead of cover
         />
