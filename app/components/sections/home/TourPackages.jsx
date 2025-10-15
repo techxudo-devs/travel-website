@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 const TourCard = dynamic(() => import("../../ui/TourCard"));
 import { BASE_URL } from "@/app/utils/ApiBaseUrl";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const tourSectionVariants = {
   hidden: { opacity: 0 },
@@ -29,7 +30,7 @@ const tourItemVariants = {
   },
 };
 
-const TourPackages = () => {
+const TourPackages = ({ limit = false }) => {
   // --- START: Data fetching logic ---
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -135,7 +136,7 @@ const TourPackages = () => {
 
         {/* --- START: Dynamic Grid Rendering --- */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-          {tours.map((apiTour) => {
+          {tours.slice(0, limit ? 4 : tours.length).map((apiTour) => {
             const tourForCard = {
               id: apiTour._id,
               title: apiTour.title,
@@ -167,6 +168,17 @@ const TourPackages = () => {
 
       {/* Decorative Bottom Gradient */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[var(--color-semilight)]/20 to-transparent pointer-events-none"></div>
+
+      {limit && (
+        <div className="flex justify-center mt-10 relative z-50">
+          <Link
+            href="/tourpage"
+            className="bg-[#D0B4B3] hover:bg-[#A08180] px-4 py-3 rounded-lg text-black font-semibold transition-all duration-300"
+          >
+            Show More Tours
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

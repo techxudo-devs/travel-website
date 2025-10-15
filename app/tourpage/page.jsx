@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
       <TourMain />
-      <TourPackages />
+      <TourPackages/>
     </div>
   );
 };

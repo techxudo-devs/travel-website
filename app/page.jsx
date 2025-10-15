@@ -25,7 +25,7 @@ const LandingPage = () => {
       <BottomHero />
       {/* <HeroAndTripSection backgroundImageUrl={"/hero.webp"} /> */}
       <TripSection />
-      <TourPackagesClient />
+      <TourPackagesClient limit/>
       <TourMap />
       <DestinationsSection />
       <TravelInfoSection />
