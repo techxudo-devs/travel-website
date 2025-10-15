@@ -6,6 +6,7 @@ const TourCard = dynamic(() => import("../../ui/TourCard"));
 import { BASE_URL } from "@/app/utils/ApiBaseUrl";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import SkeletonCard from "../../ui/SkeletonCard";
 
 const tourSectionVariants = {
   hidden: { opacity: 0 },
@@ -59,10 +60,14 @@ const TourPackages = ({ limit = false }) => {
   // --- START: Loading and Error states ---
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-white">
-        <p className="text-2xl text-[#D0B4B3] font-bold uppercase">
-          Loading Tour Packages...
-        </p>
+      <div className="relative z-40 w-full min-h-screen py-24 bg-gradient-to-b from-white to-fourth overflow-hidden">
+        <div className="container mx-auto text-center px-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+            {[...Array(limit ? 4 : 8)].map((_, index) => (
+              <SkeletonCard key={index} />
+            ))}
+          </div>
+        </div>
       </div>
     );
   }

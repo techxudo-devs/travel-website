@@ -66,6 +66,8 @@ const AbooutAniAno = () => {
             loading="lazy"
             src="/women.jpg" // 👈 Replace with your video thumbnail image
             alt="Woman taking a photo on a mountain"
+            width={1200}
+            height={675}
             className="w-full object-cover"
           />
           {/* Play Button Overlay */}
