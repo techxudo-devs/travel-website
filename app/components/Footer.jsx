@@ -1,10 +1,14 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
-
+import React, { useState } from "react";
+import { FaWhatsapp, FaUser } from "react-icons/fa";
+import FounderModal from "./ui/FounderModal";
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black text-gray-300 py-12 px-6">
       <div
@@ -137,6 +141,15 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <div
+        onClick={openModal}
+        className="fixed bottom-24 right-6 z-[999] cursor-pointer"
+        aria-label="About the Founder"
+      >
+        <div className="w-14 sm:w-16 h-14 sm:h-16 bg-[#b49a99] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300">
+          <FaUser className="text-white text-2xl sm:text-3xl" />
+        </div>
+      </div>
       <a
         href="https://wa.me/yourphonenumber"
         target="_blank"
@@ -152,6 +165,7 @@ const Footer = () => {
           </span>
         </div>
       </a>
+      <FounderModal isOpen={isOpen} onClose={closeModal} />
     </footer>
   );
 };
