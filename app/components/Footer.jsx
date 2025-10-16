@@ -135,12 +135,6 @@ const Footer = () => {
             >
               <Facebook size={16} />
             </a>
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
-            >
-              WS
-            </a>
           </div>
         </div>
         <div
