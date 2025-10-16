@@ -10,8 +10,6 @@ const TravelInfoSection = () => {
         {/* Main background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-stone-100 via-amber-50 to-orange-100"></div>
 
-        {/* Organic shape - bottom left */}
-
         {/* Decorative dotted pattern */}
         {/* <div className="absolute top-20 left-1/4 w-64 h-32 opacity-20">
           <svg className="w-full h-full" viewBox="0 0 200 100">
