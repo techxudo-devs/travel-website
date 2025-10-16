@@ -72,10 +72,9 @@ const FounderModal = ({ isOpen, onClose }) => {
       className="fixed inset-0 bg-[#43555d]/20 backdrop-blur-sm flex items-start justify-center z-[1000] hidden opacity-0 p-4"
       onClick={handleClose}
     >
-      {/* MODAL CARD: Constrained height and flex column layout */}
       <div
         ref={modalContentRef}
-        className="relative bg-gradient-to-br from-[#f8efe3] to-[#f5e6d3] text-[#43555d] rounded-3xl shadow-2xl max-w-5xl w-full mx-auto overflow-hidden flex flex-col max-h-full"
+        className="relative bg-gradient-to-br from-[#f8efe3] to-[#f5e6d3] text-[#43555d] rounded-3xl shadow-2xl max-w-6xl w-full mx-auto overflow-hidden flex flex-col max-h-full"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Decorative SVG Planes */}
@@ -161,7 +160,12 @@ const FounderModal = ({ isOpen, onClose }) => {
                   <div className="flex flex-col items-center">
                     <div className="relative w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 border-[#D0B4B3] shadow-2xl overflow-hidden mb-3 sm:mb-4">
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#D0B4B3] to-[#a37b64] text-4xl sm:text-5xl">
-                        <img loading="lazy" className="scale-150 object-cover" src="/newBlog5.jpg" alt="Founder" />
+                        <img
+                          loading="lazy"
+                          className="scale-150 object-cover"
+                          src="/newBlog5.jpg"
+                          alt="Founder"
+                        />
                       </div>
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#a37b64] to-[#D0B4B3] bg-clip-text text-transparent mb-1">
@@ -228,7 +232,12 @@ const FounderModal = ({ isOpen, onClose }) => {
                       <FaPlane size={12} className="transform rotate-45" />
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center text-2xl sm:text-3xl">
-                      <img loading="lazy" className="object-cover object-top" src="/newBlog14.jpg" alt="Memory 1" />
+                      <img
+                        loading="lazy"
+                        className="object-cover object-top"
+                        src="/newBlog14.jpg"
+                        alt="Memory 1"
+                      />
                     </div>
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
                   </div>
@@ -244,7 +253,12 @@ const FounderModal = ({ isOpen, onClose }) => {
                       </svg>
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center text-2xl sm:text-3xl">
-                      <img loading="lazy" className="object-cover object-top" src="/soloBlog3.jpg" alt="Memory 1" />
+                      <img
+                        loading="lazy"
+                        className="object-cover object-top"
+                        src="/soloBlog3.jpg"
+                        alt="Memory 1"
+                      />
                     </div>
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
                   </div>
@@ -253,7 +267,12 @@ const FounderModal = ({ isOpen, onClose }) => {
                       <FaPlane size={12} className="transform -rotate-12" />
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center text-2xl sm:text-3xl">
-                      <img loading="lazy" className="object-cover object-top" src="/newBlog15.jpg" alt="Memory 1" />
+                      <img
+                        loading="lazy"
+                        className="object-cover object-top"
+                        src="/newBlog15.jpg"
+                        alt="Memory 1"
+                      />
                     </div>
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
                   </div>
