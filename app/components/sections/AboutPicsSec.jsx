@@ -35,7 +35,9 @@ const AboutPicsSec = () => {
                 <img
                   src="/soloBlog4.jpg"
                   alt="View of Cape Town from a mountain with a woman"
-                  className="w-full h-96 object-cover object-bottom"
+                  width={500}
+                  height={300}
+                  className="w-full h-auto"
                 />
                 {/* Decorative stamp on the image */}
                 {/* Tasveer par सजावटी stamp */}
@@ -72,6 +74,8 @@ const AboutPicsSec = () => {
             <img
               src="/newBlog5.jpg"
               alt="Woman in a hot air balloon"
+              width={500}
+              height={700}
               className="w-[150%] h-auto shadow-lg -translate-y-24"
             />
             {/* Decorative circular stamp */}
@@ -81,6 +85,8 @@ const AboutPicsSec = () => {
                 className="w-40"
                 src="/newBlog14.jpg"
                 alt=""
+                width={160}
+                height={160}
               />
             </div>
           </div>

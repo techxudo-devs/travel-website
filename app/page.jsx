@@ -20,11 +20,10 @@ const LandingPage = () => {
   return (
     <div>
       <BottomHero />
-      {/* <HeroAndTripSection backgroundImageUrl={"/hero.webp"} /> */}
       <TripSection />
       <TourPackagesClient limit />
       <TourMap />
-      <DestinationsSection />
+      {/* <DestinationsSection />  */}
       <TravelInfoSection />
       <BlogSection />
       <ContactForm />

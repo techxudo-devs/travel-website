@@ -93,7 +93,7 @@ const TourPackages = ({ limit = false }) => {
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-[#D0B4B3] blur-3xl"></div>
         <div className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-[var(--color-semilight)] blur-3xl"></div>
       </div>
-      <div className="absolute top-20 right-32 w-64 h-64">
+      <div className="absolute md:flex hidden top-20 right-32 w-64 h-64">
         <svg className="w-full h-full opacity-30" viewBox="0 0 200 200">
           <path
             d="M20,100 Q100,20 180,100"
@@ -120,7 +120,7 @@ const TourPackages = ({ limit = false }) => {
         className="container mx-auto text-center px-4 relative z-10"
         variants={tourSectionVariants}
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
         {/* Section Header */}

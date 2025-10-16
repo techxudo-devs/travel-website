@@ -3,34 +3,35 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const tourTypes = [
   {
-    tagline: "DISCOVER AT YOUR OWN PACE",
-    title: "Private Tours",
+    tagline: "EXPLORE EUROPE AT YOUR OWN PACE",
+    title: "Private European Tours",
     imgSrc: "/13.jpg",
-    alt: "A woman in a tent in a desert landscape with Dragon's Blood Trees in Socotra.",
+    alt: "A woman in a tent in a scenic European landscape.",
     gradient: "",
   },
   {
-    tagline: "LIFELONG MEMORIES",
-    title: "Group Tours",
+    tagline: "SHARED EXPERIENCES DOWN UNDER",
+    title: "Australian Group Tours",
     imgSrc: "/11.jpg",
-    alt: "Three men sitting on a colorful rug in the desert.",
+    alt: "Three travelers relaxing on a colorful rug in the Australian outback.",
     gradient: "",
   },
   {
-    tagline: "ANYTHING BUT USUAL",
-    title: "Specialized Tours",
+    tagline: "HIDDEN GEMS & LOCAL CULTURE",
+    title: "Specialized Europe & Australia Tours",
     imgSrc: "/5.jpg",
-    alt: "An aerial view of blue tents in a lush green mountain valley.",
+    alt: "An aerial view of tents in a lush green valley in Europe.",
     gradient: "",
   },
   {
-    tagline: "THRILL & ADVENTURE",
-    title: "Adventure Tours",
+    tagline: "THRILL & ADVENTURE AWAIT",
+    title: "Adventure Tours in Australia",
     imgSrc: "/6.jpg",
-    alt: "A person on a swing on a pristine beach with turquoise water.",
+    alt: "A person on a swing on a pristine Australian beach with turquoise water.",
     gradient: "",
   },
 ];
@@ -162,7 +163,7 @@ const TripSection = () => {
                   {/* Card Image with Overlay */}
                   <div className="absolute inset-0">
                     <Image
-                    loading="lazy"
+                      loading="lazy"
                       src={imgSrc}
                       alt={alt}
                       layout="fill"
@@ -212,7 +213,10 @@ const TripSection = () => {
                     )}
 
                     {/* CTA Button */}
-                    <button className="group relative w-full cursor-pointer  bg-white  hover:bg-brown hover:text-white text-slate-900 py-4 px-6 rounded-2xl flex items-center justify-center transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl overflow-hidden">
+                    <Link
+                      href={"/tourpage"}
+                      className="group relative w-full cursor-pointer  bg-white  hover:bg-brown hover:text-white text-slate-900 py-4 px-6 rounded-2xl flex items-center justify-center transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl overflow-hidden"
+                    >
                       <span className="relative z-10 flex items-center gap-3">
                         Book {title.split(" ")[0]}
                         <ArrowRight
@@ -220,7 +224,7 @@ const TripSection = () => {
                           className="transition-transform duration-300 group-hover:translate-x-2"
                         />
                       </span>
-                    </button>
+                    </Link>
                   </div>
 
                   {/* Hover Glow Effect */}

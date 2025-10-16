@@ -15,6 +15,8 @@ const AboutPics = () => {
                 <img
                   src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/The-Blog.jpg"
                   alt="Woman walking on a path surrounded by large palm trees"
+                  width={256}
+                  height={384}
                   className="w-64"
                 />
                 {/* Optional overlay behind image */}
@@ -30,6 +32,8 @@ const AboutPics = () => {
                 <img
                   src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/IMG_4206.jpg"
                   alt="Bike tire overlooking a winding mountain road"
+                  width={384}
+                  height={512}
                   className="w-96"
                 />
                 {/* Overlay behind image */}
@@ -51,6 +55,8 @@ const AboutPics = () => {
                 <img
                   src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/IMG_0193.jpg"
                   alt="Colorful underwater coral reef with fish"
+                  width={384}
+                  height={512}
                   className="w-96"
                 />
                 <div className="absolute inset-0 bg-black/10 -z-10 rounded"></div>
