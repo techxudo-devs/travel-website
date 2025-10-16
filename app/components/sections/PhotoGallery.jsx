@@ -3,7 +3,7 @@
 "use client";
 
 import { useState } from "react";
-import { Camera, ChevronLeft, ChevronRight } from "lucide-react";
+import { Camera } from "lucide-react";
 import Image from "next/image";
 
 // React Slick component aur zaroori CSS files
@@ -14,19 +14,17 @@ import "slick-carousel/slick/slick-theme.css";
 // Lightbox components
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import { Autoplay } from "swiper/modules";
 
 // --- Custom Arrow Components for React Slick ---
-// Yeh arrows slider ko left/right move karne ke liye hain
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} custom-arrow next-arrow `}
-      style={{ ...style, display: "block" }}
+      className={`${className} custom-arrow next-arrow`}
+      style={{ ...style }}
       onClick={onClick}
-    >
-      {/* <ChevronRight className="text-dark" /> */}
-    </div>
+    />
   );
 };
 
@@ -35,11 +33,9 @@ const PrevArrow = (props) => {
   return (
     <div
       className={`${className} custom-arrow prev-arrow`}
-      style={{ ...style, display: "block" }}
+      style={{ ...style }}
       onClick={onClick}
-    >
-      {/* <ChevronLeft className="text-dark" /> */}
-    </div>
+    />
   );
 };
 
@@ -56,21 +52,39 @@ export default function PhotoGallery({ images = [] }) {
     return null;
   }
 
-  // React Slick ke liye settings object
+  // --- BADLAV YAHAN KIYA GAYA HAI ---
+  // React Slick ke liye updated settings
   const settings = {
-    dots: true,
-    infinite: images.length > 2, // Loop tabhi karega jab 2 se zyada images ho
+    dots: false,
+    infinite: images.length > 4, // Loop tabhi karega jab 4 se zyada images ho
     speed: 500,
-    slidesToShow: 2, // Badi screen par 2 slides
+    slidesToShow: 4, // Badi screen par 4 slides dikhayenge
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 768, // md screens se neeche
+        breakpoint: 1024, // Tablet screen (lg)
         settings: {
-          slidesToShow: 1, // Choti screen par 1 slide
+          slidesToShow: 3, // Tablet par 3 slides
           slidesToScroll: 1,
+          infinite: images.length > 3,
+        },
+      },
+      {
+        breakpoint: 768, // Mobile screen (md)
+        settings: {
+          slidesToShow: 2, // Choti screen par 2 slides
+          slidesToScroll: 1,
+          infinite: images.length > 2,
+        },
+      },
+      {
+        breakpoint: 480, // Extra small screens
+        settings: {
+          slidesToShow: 1, // Bahut choti screen par 1 slide
+          slidesToScroll: 1,
+          infinite: images.length > 1,
         },
       },
     ],
@@ -93,20 +107,22 @@ export default function PhotoGallery({ images = [] }) {
           <div className="photo-gallery-slider">
             <Slider {...settings}>
               {images.map((url, idx) => (
-                <div key={idx} className="px-3">
+                // --- BADLAV YAHAN KIYA GAYA HAI ---
+                <div key={idx} className="px-2">
                   {" "}
-                  {/* Gutter/spacing ke liye padding */}
+                  {/* Gutter/spacing ke liye padding kam kiya */}
                   <div
-                    className="relative w-full aspect-[4/3] rounded overflow-hidden cursor-pointer group shadow-md"
+                    // Height ko fixed kar diya hai (h-56) aur aspect ratio hata diya hai
+                    className="relative w-full h-56 rounded-lg overflow-hidden cursor-pointer group shadow-lg"
                     onClick={() => handleImageClick(idx)}
                   >
                     <Image
                       loading="lazy"
                       src={url}
                       alt={`Gallery image ${idx + 1}`}
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      fill // 'fill' poore container ko cover karega
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Performance ke liye
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
@@ -117,7 +133,6 @@ export default function PhotoGallery({ images = [] }) {
         </div>
       </section>
 
-      {/* Lightbox Component (waisa hi rahega) */}
       <Lightbox
         open={open}
         close={() => setOpen(false)}
