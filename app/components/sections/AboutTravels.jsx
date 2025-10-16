@@ -49,13 +49,9 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Water
+                    Once in a lifetime experience?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>SOUTH AFRICA, BOLIVIA, ICELAND</li>
-                    <li>NAMIBIA, VIETNAM, NEW</li>
-                    <li>ZEALAND, HAWAII</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Tanzania, seeing the animals in their natural habitat gives you goosebumps. It is emotional, powerful, and almost surreal to watch them roaming free where they truly belong.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -63,13 +59,9 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Wildlife
+                    Favorite destination?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>THE GALAPAGOS, KENYA, SRI</li>
-                    <li>LANKA, COSTA RICA, UGANDA,</li>
-                    <li>BOTSWANA</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Thailand, exploring it island by island, from jungle waterfalls to incredible beaches. The nature, the people, the food, one month is not even enough to see all of its beauty.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -77,14 +69,9 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Beaches
+                    Most stunning beach?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>SEYCHELLES, BRITISH VIRGIN</li>
-                    <li>ISLANDS, CALIFORNIA, GREECE</li>
-                    <li>COSTA RICA, FRENCH POLYNESIA</li>
-                    <li>MALDIVES, HAWAII, INDONESIA</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Whitsunday Islands, Australia, the light there feels different, like the sun shines just for that place.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -92,14 +79,9 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Sailing & Cruising
+                    Place that felt like home?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>CROATIA, ITALY, GREECE, THE</li>
-                    <li>CARIBBEAN, SEYCHELLES</li>
-                    <li>SARDINIA, CORSICA, EUROPEAN</li>
-                    <li>RIVER CRUISE</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Croatia, I lived there for five months, exploring its islands and falling in love with its sea, its sunsets, and its calm rhythm of life.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -107,13 +89,9 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Photography
+                    Most surprising destination?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>ICELAND, BOLIVIA, MOROCCO,</li>
-                    <li>INDONESIA, JORDAN, SOUTH</li>
-                    <li>AFRICA, FRANCE, CANADA, ITALY</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Russia, I never planned to visit, but it completely took me by surprise. It was a trip unlike anything I expected.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -121,12 +99,9 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Scuba Diving
+                    Destination that changed me?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>INDONESIA, MEXICO, MALDIVES,</li>
-                    <li>BELIZE, PANAMA, JORDAN</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Aruba, it was my first solo trip and the experience that changed everything. The moment I realized I was not scared to be alone anymore.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -134,14 +109,9 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Luxury
+                    Favorite travel memory?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>SEYCHELLES, MALDIVES,</li>
-                    <li>SINGAPORE, GREECE, AFRICAN</li>
-                    <li>SAFARI, FRENCH RIVIERA, AMALFI</li>
-                    <li>COAST, MOROCCO</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Any moment spent traveling with my family. Those are the memories that always stay closest to my heart.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -149,35 +119,18 @@ const AboutTravels = () => {
                     className="text-2xl text-[#bca084] text-center mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Skiing / Snowboarding
+                    Most peaceful destination?
                   </h3>
-                  <ul className="list-none space-y-1 leading-relaxed uppercase text-center tracking-wider">
-                    <li>WHISTLER, MONT TREMBLANT,</li>
-                    <li>AUSTRIA, PARK CITY, UTAH,</li>
-                    <li>SWITZERLAND</li>
-                  </ul>
+                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Europe, especially Switzerland. Surrounded by greenry, temples, and the gentle sound of nature — it’s the kind of place where your mind finally slows down.</p>
                 </div>
               </div>
-
-              {/* Decorative "RB" stamp - Positioned relative to the parent box */}
-              {/* Sajawati "RB" stamp - Isay parent box ke hisab se position kiya gaya hai */}
-              <img
-                src="https://www.theblondeabroad.com/wp-content/themes/tba/images/Favorite-Destinations.png"
-                alt="Decorative RB stamp"
-                width={144}
-                height={144}
-                className="absolute -bottom-16 right-4 w-36 h-36 opacity-70 z-30 transform"
-              />
             </div>
 
-            {/* === RIGHT COLUMN IMAGES === */}
-            {/* On large screens, this is a container for the two absolutely positioned images. On mobile, it's a simple flex column */}
-            {/* Barri screens par, yeh 2 tasveeron ke liye container hai. Mobile par, yeh ek saada flex column hai. */}
-            <div className="w-full lg:w-[35%] lg:absolute lg:top-[-4rem] lg:right-20 flex flex-col items-center lg:items-end gap-8 mt-12 lg:mt-0">
+            <div className="w-full lg:w-[35%] lg:absolute lg:top-[-4rem] lg:right-16 flex flex-col items-center lg:items-end gap-8 mt-12 lg:mt-0">
               {/* Safari Image */}
               <div className="relative w-full max-w-sm transform shadow-2xl transition-transform duration-300 z-20">
                 <img
-                  src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/Adventure-Awaits-About.jpg"
+                  src="/newBlog3.jpg"
                   alt="Woman on safari"
                   width={384}
                   height={500}
@@ -193,9 +146,8 @@ const AboutTravels = () => {
 
               {/* Travel Outfits Section */}
               <div className="relative w-full max-w-[280px] sm:max-w-xs bg-white p-2 shadow-xl transform transition-transform duration-300 z-20 translate-x-14">
-                Image
                 <img
-                  src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/Travel-Style.jpg"
+                  src="/soloBlog2.jpg"
                   alt="Travel outfits"
                   width={320}
                   height={400}
@@ -211,12 +163,12 @@ const AboutTravels = () => {
           <div className="absolute -bottom-24 left-0 sm:left-12 lg:left-20 w-96 h-auto shadow-xl transform -rotate-6 z-20 transition-transform duration-300 mt-8 lg:mt-0 translate-y-40">
             <div className="relative bg-white p-2 pb-3">
               <img
-                src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/DSCF7203.jpg"
+                src="/soloBlog3.jpg"
                 alt="The Most Remote Place I've Been"
-                className="w-full h-auto"
+                className="w-full h-72 object-cover"
               />
               <p className="absolute bottom-4 left-0 right-0 text-center text-black bg-[#D6BFA8] text-sm w-fit mx-auto px-4 py-1 font-semibold uppercase tracking-wide">
-                THE MOST REMOTE PLACE I'VE BEEN
+                THE MOST PLACE I'VE BEEN
               </p>
             </div>
           </div>
