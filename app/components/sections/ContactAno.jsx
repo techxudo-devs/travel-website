@@ -24,6 +24,7 @@ const ContactAno = () => {
         src="/contact-main.jpg"
         alt="About background"
         width={1500}
+        height={500}
         
         objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"

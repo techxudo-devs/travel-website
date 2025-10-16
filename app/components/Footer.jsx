@@ -146,8 +146,13 @@ const Footer = () => {
         className="fixed bottom-24 right-6 z-[999] cursor-pointer"
         aria-label="About the Founder"
       >
-        <div className="w-14 sm:w-16 h-14 sm:h-16 bg-[#b49a99] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300">
-          <FaUser className="text-white text-2xl sm:text-3xl" />
+        <div className="w-14 sm:w-18 h-14 sm:h-18 bg-[#b49a99] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 overflow-hidden">
+          <img
+            loading="lazy"
+            className="w-full h-full object-cover rounded-full scale-150"
+            src="/newBlog5.jpg"
+            alt="Founder"
+          />
         </div>
       </div>
       <a
