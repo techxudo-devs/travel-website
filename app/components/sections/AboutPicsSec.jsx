@@ -33,6 +33,7 @@ const AboutPicsSec = () => {
             <div className="absolute bottom-0 left-0 w-[80%] sm:w-[120%] transform -rotate-6 transition-transform duration-300 translate-y-60">
               <div className="bg-white p-2 pb-6 shadow-2xl">
                 <img
+                loading="lazy"
                   src="/soloBlog4.jpg"
                   alt="View of Cape Town from a mountain with a woman"
                   width={500}
@@ -54,6 +55,7 @@ const AboutPicsSec = () => {
             <div className="absolute top-0 right-0 w-[60%] sm:w-[100%] transition-transform duration-300 -translate-x-20">
               <div className="bg-white p-2 shadow-xl">
                 <img
+                loading="lazy"
                   src="/newBlog6.jpg"
                   alt="Turquoise water beach from above"
                   className="w-full h-auto"
@@ -72,6 +74,7 @@ const AboutPicsSec = () => {
           {/* --- Main Image with Stamp --- */}
           <div className="relative w-full max-w-sm">
             <img
+            loading="lazy"
               src="/newBlog5.jpg"
               alt="Woman in a hot air balloon"
               width={500}
@@ -82,6 +85,7 @@ const AboutPicsSec = () => {
             {/* Gol (circular) सजावटी stamp */}
             <div className="absolute -top-36 -right-6 flex items-center justify-center p-2 transform -rotate-12">
               <img
+              loading="lazy"
                 className="w-40"
                 src="/newBlog14.jpg"
                 alt=""

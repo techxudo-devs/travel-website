@@ -130,6 +130,7 @@ const AboutTravels = () => {
               {/* Safari Image */}
               <div className="relative w-full max-w-sm transform shadow-2xl transition-transform duration-300 z-20">
                 <img
+                loading="lazy"
                   src="/newBlog3.jpg"
                   alt="Woman on safari"
                   width={384}
@@ -147,6 +148,7 @@ const AboutTravels = () => {
               {/* Travel Outfits Section */}
               <div className="relative w-full max-w-[280px] sm:max-w-xs bg-white p-2 shadow-xl transform transition-transform duration-300 z-20 translate-x-14">
                 <img
+                loading="lazy"
                   src="/soloBlog2.jpg"
                   alt="Travel outfits"
                   width={320}
@@ -163,6 +165,7 @@ const AboutTravels = () => {
           <div className="absolute -bottom-24 left-0 sm:left-12 lg:left-20 w-96 h-auto shadow-xl transform -rotate-6 z-20 transition-transform duration-300 mt-8 lg:mt-0 translate-y-40">
             <div className="relative bg-white p-2 pb-3">
               <img
+              loading="lazy"
                 src="/soloBlog3.jpg"
                 alt="The Most Remote Place I've Been"
                 className="w-full h-72 object-cover"

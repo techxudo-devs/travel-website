@@ -14,6 +14,7 @@ const AboutPics = () => {
             <div className="transform transition-transform duration-300">
               <div className="relativ p-2 shadow-xl hover:scale-95 transition-all duration-300 cursor-pointer">
                 <img
+                loading="lazy"
                   src="/newBlog15.jpg"
                   alt="Woman walking on a path surrounded by large palm trees"
                   width={256}
@@ -36,6 +37,7 @@ const AboutPics = () => {
             <div className="transform transition-transform duration-300">
               <div className="relative bg-white p-3 shadow-2xl">
                 <img
+                loading="lazy"
                   src="/newBlog13.jpg"
                   alt="Bike tire overlooking a winding mountain road"
                   width={384}
@@ -59,6 +61,7 @@ const AboutPics = () => {
             <div className="transform lg:rotate-4 transition-transform duration-300">
               <div className="relative bg-white p-3 shadow-xl">
                 <img
+                loading="lazy"
                   src="/newBlog16.jpg"
                   alt="Colorful underwater coral reef with fish"
                   width={384}
