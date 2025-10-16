@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaWhatsapp, FaUser } from "react-icons/fa";
+import { Instagram, Twitter, Facebook } from 'lucide-react';
 import FounderModal from "./ui/FounderModal";
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -120,19 +121,19 @@ const Footer = () => {
               href="#"
               className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
             >
-              IG
+              <Instagram size={16} />
             </a>
             <a
               href="#"
               className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
             >
-              TW
+              <Twitter size={16} />
             </a>
             <a
               href="#"
               className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
             >
-              FB
+              <Facebook size={16} />
             </a>
             <a
               href="#"
