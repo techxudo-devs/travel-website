@@ -23,7 +23,8 @@ const ContactAno = () => {
         loading="lazy"
         src="/contact-main.jpg"
         alt="About background"
-        layout="fill"
+        width={1500}
+        
         objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
