@@ -102,7 +102,7 @@ const AboutAboutAno = () => {
               className="rounded-xl shadow-lg object-cover w-full h-auto"
               src="/about6.jpg"
               alt="Couple looking at a map on a trip"
-              width={300}
+              width={1000}
               height={300}
             />
           </div>

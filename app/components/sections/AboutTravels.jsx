@@ -6,7 +6,7 @@ const AboutTravels = () => {
     // Main Section Container
     // Section ka main container
     <section
-      className="bg-[#FFFFFF] pt-16 pb-80 px-4"
+      className="bg-[#FFFFFF] pt-40 pb-80 px-4"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       <div className="container mx-auto max-w-6xl flex flex-col items-center">

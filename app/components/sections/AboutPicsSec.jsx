@@ -30,29 +30,20 @@ const AboutPicsSec = () => {
           <div className="relative w-full max-w-lg h-96 sm:h-[500px] mt-8">
             {/* Bottom/Background Image (Cape Town) */}
             {/* Neeche wali tasveer (Cape Town), jo thori ghumi hui hai */}
-            <div className="absolute bottom-0 left-0 w-[80%] sm:w-[120%] transform -rotate-6 transition-transform duration-300 translate-y-30 -translate-x-10">
+            <div className="absolute bottom-0 left-0 w-[80%] sm:w-[120%] transform -rotate-6 transition-transform duration-300 translate-y-60">
               <div className="bg-white p-2 pb-6 shadow-2xl">
                 <img
-                  src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/About-Postcard.jpg"
+                  src="/soloBlog4.jpg"
                   alt="View of Cape Town from a mountain with a woman"
-                  className="w-full h-auto"
+                  className="w-full h-96 object-cover object-bottom"
                 />
-                <p
-                  className="absolute bottom-8 left-6 text-white text-5xl font-extrabold italic"
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
-                  }}
-                >
-                  Cape Town
-                </p>
                 {/* Decorative stamp on the image */}
                 {/* Tasveer par सजावटी stamp */}
-                <img
+                {/* <img
                   src="https://i.imgur.com/Q9p4K9g.png"
                   alt="Postage stamp"
                   className="absolute top-2 right-2 w-16 h-16 opacity-80"
-                />
+                /> */}
               </div>
             </div>
 
@@ -61,12 +52,12 @@ const AboutPicsSec = () => {
             <div className="absolute top-0 right-0 w-[60%] sm:w-[100%] transition-transform duration-300 -translate-x-20">
               <div className="bg-white p-2 shadow-xl">
                 <img
-                  src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/DJI_0230.jpg"
+                  src="/newBlog6.jpg"
                   alt="Turquoise water beach from above"
                   className="w-full h-auto"
                 />
                 <p className="text-center text-xs text-gray-500 mt-1 tracking-widest">
-                  MY FAVORITE BEACH
+                  MY FAVORITE MOMENT
                 </p>
               </div>
             </div>
@@ -79,7 +70,7 @@ const AboutPicsSec = () => {
           {/* --- Main Image with Stamp --- */}
           <div className="relative w-full max-w-sm">
             <img
-              src="https://www.theblondeabroad.com/wp-content/uploads/2018/07/2016-06-28-17.15.04-2-1.jpg"
+              src="/newBlog5.jpg"
               alt="Woman in a hot air balloon"
               className="w-[150%] h-auto shadow-lg -translate-y-24"
             />
@@ -88,7 +79,7 @@ const AboutPicsSec = () => {
             <div className="absolute -top-36 -right-6 flex items-center justify-center p-2 transform -rotate-12">
               <img
                 className="w-40"
-                src="https://www.theblondeabroad.com/wp-content/themes/tba/images/About-Kiersten-Stamp.png"
+                src="/newBlog14.jpg"
                 alt=""
               />
             </div>

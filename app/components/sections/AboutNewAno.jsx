@@ -45,9 +45,9 @@ const AboutNewAno = () => {
                 {/* --- Replace with your image path --- */}
                 <Image
                   loading="lazy"
-                  src="/about1.webp"
+                  src="/newBlog8.webp"
                   alt="Couple taking a selfie while hiking"
-                  className="w-full h-full object-cover"
+                  className="w-full h-60 object-cover"
                   width={300}
                   height={300}
                 />
