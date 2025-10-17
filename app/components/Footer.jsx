@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaWhatsapp, FaUser } from "react-icons/fa";
-import { Instagram, Twitter, Facebook } from 'lucide-react';
+import { Instagram, Twitter, Facebook } from "lucide-react";
 import FounderModal from "./ui/FounderModal";
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -147,7 +147,7 @@ const Footer = () => {
             className="fixed bottom-24 right-6 z-[999] cursor-pointer"
             aria-label="About the Founder"
           >
-            <div className="w-14 sm:w-18 h-14 sm:h-18 border-2 border-[#b49a99]  bg-[#b49a99] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 overflow-hidden">
+            <div className="w-14 md:w-17 h-12 md:h-17 border-2 border-[#b49a99]  bg-[#b49a99] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 overflow-hidden">
               <img
                 loading="lazy"
                 className="w-full h-full object-cover rounded-full scale-150"
@@ -167,9 +167,6 @@ const Footer = () => {
             <div className="w-14 sm:w-16 h-14 sm:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 cursor-pointer">
               <FaWhatsapp className="text-white text-2xl sm:text-4xl" />
             </div>
-            <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-white">
-              1
-            </span>
           </div>
         </a>
         <FounderModal isOpen={isOpen} onClose={closeModal} />
