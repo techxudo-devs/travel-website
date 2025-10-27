@@ -26,9 +26,9 @@ const AboutAno = () => {
         alt="About background"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
+        className="absolute inset-0 w-full h-full object-cover  z-0 will-change-transform"
       />
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-black/30  z-10" />
 
       {/* Navbar */}
 

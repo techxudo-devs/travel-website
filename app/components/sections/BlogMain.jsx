@@ -28,7 +28,7 @@ const BlogMain = () => {
         objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
-      <div className="absolute inset-0 bg-black/70 z-10" />
+      <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* About Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
