@@ -40,14 +40,14 @@ const TourMain = () => {
 
       {/* Bottom Decoration (fixed to bottom inside h-screen) */}
       <div className="absolute bottom-0 left-0 right-0 z-30">
-        <Image
+        {/* <Image
           loading="lazy"
           src="/about-bottom.png"
           alt="Bottom decoration"
           width={1500}
           height={100}
           className="w-full object-contain" // use contain instead of cover
-        />
+        /> */}
       </div>
     </div>
   );

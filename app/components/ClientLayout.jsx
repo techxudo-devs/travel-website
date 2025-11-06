@@ -4,13 +4,13 @@ import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
 
 export default function ClientLayout({ children }) {
-    const pathname = usePathname();
-    const hideNavbar = pathname === "/contact";
+  const pathname = usePathname();
+  const hideNavbar = pathname === "/contact";
 
-    return (
-        <>
-            {!hideNavbar && <Navbar />}
-            {children}
-        </>
-    );
+  return (
+    <>
+      {!hideNavbar && <Navbar />}
+      {children}
+    </>
+  );
 }

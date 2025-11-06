@@ -36,7 +36,7 @@ const BlogMain = () => {
       </div>
 
       {/* Bottom Decoration (fixed to bottom inside h-screen) */}
-      <div className="absolute bottom-0 left-0 right-0 z-30">
+      {/* <div className="absolute bottom-0 left-0 right-0 z-30">
         <Image
           loading="lazy"
           src="/about-bottom.png"
@@ -45,7 +45,7 @@ const BlogMain = () => {
           height={100}
           className="w-full object-contain" // use contain instead of cover
         />
-      </div>
+      </div> */}
     </div>
   );
 };
