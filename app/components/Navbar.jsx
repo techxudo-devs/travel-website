@@ -51,7 +51,7 @@ const Navbar = () => {
               : "bg-slate-900/50 backdrop-blur-lg"
           }`}
         >
-          <div className="flex items-center justify-between px-8 py-4">
+          <div className="flex items-center justify-between px-8 py-2">
             {/* Logo with glow effect */}
             <Link
               href="/"
@@ -70,7 +70,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation - Pill Container */}
-            <nav className="hidden lg:flex items-center gap-1 bg-slate-800/50 px-2 py-2 rounded-full border border-[#a37b64]/60 shadow-lg shadow-slate-900/50">
+            <nav className="hidden lg:flex items-center gap-1 bg-slate-800/50 px-2 py-1 rounded-full border border-[#a37b64]/60 shadow-lg shadow-slate-900/50">
               {navItems.map((item, index) => (
                 <Link
                   key={item.href}
