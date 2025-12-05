@@ -22,7 +22,6 @@ const LandingPage = () => {
       <TripSection />
       <TourPackagesClient limit />
       <TourMap />
-      {/* <TravelInfoSection /> */}
       <BlogSection />
       <ContactForm />
       <PictureSwiper />
