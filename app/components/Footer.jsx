@@ -88,7 +88,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">
-              Contact Us
+              Contact
             </h3>
             <ul className="space-y-2">
               <li>
