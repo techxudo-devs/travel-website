@@ -33,10 +33,10 @@ const AboutTravels = () => {
             <div className="w-full lg:w-[65%] relative bg-[#f2eadf] p-8 sm:p-12 lg:p-14 shadow-md z-10">
               {/* "Favorite Destinations For" Title */}
               <h2
-                className="text-center text-4xl text-[#b9987b] mb-12"
+                className="text-center text-4xl uppercase text-[#b9987b] mb-12"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                FAVORITE DESTINATIONS FOR:
+                Frequently Asked Questions
               </h2>
 
               {/* Grid for categories */}
@@ -51,7 +51,14 @@ const AboutTravels = () => {
                   >
                     Once in a lifetime experience?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Tanzania, seeing the animals in their natural habitat gives you goosebumps. It is emotional, powerful, and almost surreal to watch them roaming free where they truly belong.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Tanzania, seeing the animals in their natural habitat gives
+                    you goosebumps. It is emotional, powerful, and almost
+                    surreal to watch them roaming free where they truly belong.
+                  </p>
                 </div>
 
                 <div className="space-y-1">
@@ -61,7 +68,15 @@ const AboutTravels = () => {
                   >
                     Favorite destination?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Thailand, exploring it island by island, from jungle waterfalls to incredible beaches. The nature, the people, the food, one month is not even enough to see all of its beauty.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Thailand, exploring it island by island, from jungle
+                    waterfalls to incredible beaches. The nature, the people,
+                    the food, one month is not even enough to see all of its
+                    beauty.
+                  </p>
                 </div>
 
                 <div className="space-y-1">
@@ -71,7 +86,13 @@ const AboutTravels = () => {
                   >
                     Most stunning beach?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Whitsunday Islands, Australia, the light there feels different, like the sun shines just for that place.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Whitsunday Islands, Australia, the light there feels
+                    different, like the sun shines just for that place.
+                  </p>
                 </div>
 
                 <div className="space-y-1">
@@ -81,7 +102,14 @@ const AboutTravels = () => {
                   >
                     Place that felt like home?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Croatia, I lived there for five months, exploring its islands and falling in love with its sea, its sunsets, and its calm rhythm of life.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Croatia, I lived there for five months, exploring its
+                    islands and falling in love with its sea, its sunsets, and
+                    its calm rhythm of life.
+                  </p>
                 </div>
 
                 <div className="space-y-1">
@@ -91,7 +119,13 @@ const AboutTravels = () => {
                   >
                     Most surprising destination?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Russia, I never planned to visit, but it completely took me by surprise. It was a trip unlike anything I expected.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Russia, I never planned to visit, but it completely took me
+                    by surprise. It was a trip unlike anything I expected.
+                  </p>
                 </div>
 
                 <div className="space-y-1">
@@ -101,7 +135,14 @@ const AboutTravels = () => {
                   >
                     Destination that changed me?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Aruba, it was my first solo trip and the experience that changed everything. The moment I realized I was not scared to be alone anymore.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Aruba, it was my first solo trip and the experience that
+                    changed everything. The moment I realized I was not scared
+                    to be alone anymore.
+                  </p>
                 </div>
 
                 <div className="space-y-1">
@@ -111,7 +152,13 @@ const AboutTravels = () => {
                   >
                     Favorite travel memory?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Any moment spent traveling with my family. Those are the memories that always stay closest to my heart.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Any moment spent traveling with my family. Those are the
+                    memories that always stay closest to my heart.
+                  </p>
                 </div>
 
                 <div className="space-y-1">
@@ -121,7 +168,14 @@ const AboutTravels = () => {
                   >
                     Most peaceful destination?
                   </h3>
-                  <p style={{ fontFamily: "'Playfair Display', serif" }} className="text-center sm:text-base text-sm">Europe, especially Switzerland. Surrounded by greenry, temples, and the gentle sound of nature — it’s the kind of place where your mind finally slows down.</p>
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-center sm:text-base text-sm"
+                  >
+                    Europe, especially Switzerland. Surrounded by greenry,
+                    temples, and the gentle sound of nature — it’s the kind of
+                    place where your mind finally slows down.
+                  </p>
                 </div>
               </div>
             </div>
@@ -130,7 +184,7 @@ const AboutTravels = () => {
               {/* Safari Image */}
               <div className="relative w-full max-w-sm transform shadow-2xl transition-transform duration-300 z-20">
                 <img
-                loading="lazy"
+                  loading="lazy"
                   src="/newBlog3.jpg"
                   alt="Woman on safari"
                   width={384}
@@ -148,7 +202,7 @@ const AboutTravels = () => {
               {/* Travel Outfits Section */}
               <div className="relative w-full max-w-[280px] sm:max-w-xs bg-white p-2 shadow-xl transform transition-transform duration-300 z-20 translate-x-14">
                 <img
-                loading="lazy"
+                  loading="lazy"
                   src="/soloBlog2.jpg"
                   alt="Travel outfits"
                   width={320}
@@ -165,7 +219,7 @@ const AboutTravels = () => {
           <div className="absolute -bottom-24 left-0 sm:left-12 lg:left-20 w-96 h-auto shadow-xl transform -rotate-6 z-20 transition-transform duration-300 mt-8 lg:mt-0 translate-y-40">
             <div className="relative bg-white p-2 pb-3">
               <img
-              loading="lazy"
+                loading="lazy"
                 src="/soloBlog3.jpg"
                 alt="The Most Remote Place I've Been"
                 className="w-full h-72 object-cover"

@@ -29,7 +29,7 @@ const TourMain = () => {
         objectFit="cover"
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
-      <div className="absolute inset-0 bg-black/70 z-10" />
+      <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* Navbar */}
 
@@ -40,14 +40,14 @@ const TourMain = () => {
 
       {/* Bottom Decoration (fixed to bottom inside h-screen) */}
       <div className="absolute bottom-0 left-0 right-0 z-30">
-        <Image
+        {/* <Image
           loading="lazy"
           src="/about-bottom.png"
           alt="Bottom decoration"
           width={1500}
           height={100}
           className="w-full object-contain" // use contain instead of cover
-        />
+        /> */}
       </div>
     </div>
   );

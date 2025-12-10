@@ -86,7 +86,9 @@ const Hero = () => {
           variants={itemVariants}
           className="max-w-xl text-base sm:text-lg md:text-xl text-white/90 mt-4"
         >
-          Welcome to Travel Girls Club, a global community created by women, for women who love to explore the world and connect through meaningful travel.
+          Welcome to Travel Girls Club, a global community created by women, for
+          women who love to explore the world and connect through meaningful
+          travel.
         </motion.p>
 
         <motion.div
@@ -147,14 +149,14 @@ const Hero = () => {
             </span>{" "}
           </Marquee>{" "}
         </div>{" "}
-        <Image
+        {/* <Image
           loading="lazy"
           src="/hero-bottom.png"
           alt="Bottom decoration"
           width={1000}
           height={100}
           className="w-full object-cover relative z-40 sm:-mt-20 -mt-2"
-        />{" "}
+        />{" "} */}
       </div>{" "}
     </div>
   );

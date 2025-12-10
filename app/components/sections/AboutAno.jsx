@@ -26,9 +26,9 @@ const AboutAno = () => {
         alt="About background"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
+        className="absolute inset-0 w-full h-full object-cover  z-0 will-change-transform"
       />
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-black/30  z-10" />
 
       {/* Navbar */}
 
@@ -45,7 +45,7 @@ const AboutAno = () => {
       </div>
 
       {/* Bottom Decoration (fixed to bottom inside h-screen) */}
-      <div className="absolute bottom-0 left-0 right-0 z-30">
+      {/* <div className="absolute bottom-0 left-0 right-0 z-30">
         <Image
           loading="lazy"
           src="/about-bottom.png"
@@ -54,7 +54,7 @@ const AboutAno = () => {
           height={100}
           className="w-full object-contain"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const About = () => {
       <AboutTravels />
       <AboutPics />
       {/* <AboutPicAno /> */}
-      <AboutAccAno />
+      {/* <AboutAccAno /> */}
     </div>
   );
 };

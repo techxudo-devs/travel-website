@@ -227,7 +227,7 @@ const TourMap = () => {
         </div>
 
         {/* Map Section */}
-        <div className="flex-1 relative bg-[url('/map.jpg')] bg-cover bg-center min-h-[800px] w-full overflow-hidden mt-10 sm:mt-0">
+        <div className="flex-1 relative bg-[url('/map-light.svg')] bg-cover bg-center min-h-[800px] w-full overflow-hidden mt-10 sm:mt-0">
           <div className="absolute inset-0 bg-white opacity-20"></div>
 
           {rightLocations.map((location) => (
@@ -239,7 +239,7 @@ const TourMap = () => {
               <div className="relative w-14 h-14 md:w-20 md:h-20 flex items-center justify-center">
                 {/* Pulsing Animation */}
                 {/* Image Container */}
-                <div className="relative w-full h-full rounded-full border-4 border-white shadow-lg group-hover:border-[#D0B4B3] group-hover:shadow-2xl overflow-hidden transition-all duration-300 transform group-hover:scale-110">
+                <div className="relative w-full h-full rounded-full border-4 border-second shadow-lg group-hover:border-second group-hover:shadow-2xl overflow-hidden transition-all duration-300 transform group-hover:scale-110">
                   <Image
                     loading="lazy"
                     src={location.image}
@@ -251,9 +251,9 @@ const TourMap = () => {
                 </div>
               </div>
               {/* Arrow Pointer */}
-              <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-[#D0B4B3] -mt-1 transition-all duration-300 transform group-hover:scale-110"></div>
+              <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-second -mt-1 transition-all duration-300 transform group-hover:scale-110"></div>
               {/* Label */}
-              <p className="text-[10px] md:text-xs font-semibold text-white bg-[#D0B4B3] px-2 py-1 rounded-full mt-1 shadow-md transition-all duration-300 transform group-hover:scale-110">
+              <p className="text-[10px] md:text-xs font-semibold text-white bg-first px-2 py-1 rounded-full mt-1 shadow-md transition-all duration-300 transform group-hover:scale-110">
                 {location.name}
               </p>
             </div>
