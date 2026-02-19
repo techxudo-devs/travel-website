@@ -15,6 +15,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import ActivitiesExtrasSection from "@/app/components/sections/ActivitiesExtras";
 import TabNavigation from "@/app/components/ui/TabNavigation";
+import TourPaymentSection from "@/app/components/sections/TourPaymentSection";
 
 // Data fetch karne ke liye function
 async function getTourData(id) {
@@ -29,7 +30,7 @@ async function getTourData(id) {
 
 // Main Page Component (Server Component)
 export default async function TourDetailPage({ params }) {
-  const { id } = params;
+  const { id } = await params;
   const tour = await getTourData(id);
 
   if (!tour) {
@@ -53,6 +54,8 @@ export default async function TourDetailPage({ params }) {
         basePrice={tour.basePrice}
         currency={tour.currency}
       />
+
+      <TourPaymentSection tour={tour} />
 
       {/* 2. Overview Bar */}
       <TabNavigation sections={sections} />
