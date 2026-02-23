@@ -43,7 +43,7 @@ export default function PictureSwiper() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative w-full py-10 flex items-center justify-center bg-light">
+    <div className="relative w-full  py-10 flex items-center justify-center bg-gradient-to-b from-light to-white">
       {/* Swiper Container */}
       <Swiper
         modules={[Navigation]}

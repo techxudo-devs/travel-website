@@ -18,7 +18,7 @@ const Hero = () => {
   useEffect(() => {
     if (bgRef.current) {
       gsap.to(bgRef.current, {
-        scale: 1.7,
+        scale: 1,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
@@ -62,13 +62,13 @@ const Hero = () => {
       <Image
         loading="lazy"
         ref={bgRef}
-        src="/hero-main.jpg"
+        src="/hero-main1.webp"
         alt="Travel destination"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
+        className="absolute  inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      {/* <div className="absolute inset-0 bg-fourth/30 z-10" /> */}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -97,16 +97,15 @@ const Hero = () => {
         >
           <a
             href="mailto:info@travio.com"
-            className="group flex items-center gap-4 rounded-full bg-[#57809A]/90 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-[#b89f9e] text-black"
+            className="group flex items-center gap-4 rounded-full border border-zinc-100 backdrop-blur-sm px-6 py-3 transition-all duration-300 hover:bg-[#b89f9e] text-black"
           >
-            <div className="bg-[#D0B4B3] transition-all duration-300 rounded-full p-2">
-              <Mail size={16} className="text-black" />
+            <div className="bg-white transition-all duration-300 rounded-full p-2">
+              <Mail size={16} className="text-third" />
             </div>
             <div>
-              <p className="text-base sm:text-lg leading-4 text-black">
+              <p className="text-base sm:text-lg font-romie leading-4 text-eight">
                 Send your query
               </p>
-              <p className="text-xs sm:text-sm text-black">user@example.com</p>
             </div>
           </a>
 
@@ -140,13 +139,11 @@ const Hero = () => {
             speed={100}
             gradient={false}
             direction="right"
-            className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider"
+            className=" font-romie  text-[60px] md:text-[100px] tracking-wider"
           >
             {" "}
             We Are &nbsp;{" "}
-            <span className="text-[#D0B4B3]">
-              Travel Girls Club &nbsp;
-            </span>{" "}
+            <span className="text-fourth">Travel Girls Club &nbsp;</span>{" "}
           </Marquee>{" "}
         </div>{" "}
         {/* <Image

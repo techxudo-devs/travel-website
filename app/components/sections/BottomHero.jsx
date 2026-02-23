@@ -80,7 +80,6 @@ const Hero = () => {
           className="object-contain w-40 md:w-60"
         />
 
-        {/* Desktop Nav */}
         <div className="hidden lg:flex flex-row items-center gap-6 bg-[#16171A]/70 px-5 py-3 rounded-full text-lg">
           <Link
             href={"/"}
@@ -111,7 +110,6 @@ const Hero = () => {
           </Link>
         </div>
 
-        {/* Desktop Contact Btn */}
         <Link
           href={"/contact"}
           className="hidden lg:flex bg-white px-8 py-4 rounded-full cursor-pointer hover:scale-95 transition-all duration-300 text-black text-lg hover:bg-[#D0B4B3] items-center gap-2"
@@ -120,7 +118,6 @@ const Hero = () => {
           <ArrowRight />
         </Link>
 
-        {/* Mobile Menu Icon */}
         <button
           className="lg:hidden text-white cursor-pointer"
           onClick={() => setMenuOpen(true)}
@@ -128,12 +125,10 @@ const Hero = () => {
           <Menu size={24} />
         </button>
       </div>
-      {/* Mobile Sidebar */}
       <motion.div>
         <AnimatePresence>
           {menuOpen && (
             <>
-              {/* Blur Overlay */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

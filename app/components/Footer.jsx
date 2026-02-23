@@ -1,176 +1,169 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { FaWhatsapp, FaUser } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { Instagram, Twitter, Facebook } from "lucide-react";
 import FounderModal from "./ui/FounderModal";
+
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
   return (
     <>
-      <footer className="relative bg-gradient-to-b from-gray-900 to-black text-gray-300 py-12 px-6">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('/footer-main.jpg')` }}
-        ></div>
+      {/* The Outer Wrapper: 
+        Provides the padding to make the footer look like a floating card 
+      */}
+      <div className="px-4 pb-4 pt-12 sm:px-6 lg:px-8">
+        {/* The Card Footer:
+          Rounded corners, soft shadow, and border to define the shape
+        */}
+        <footer className="relative bg-gradient-to-tr from-[#F8EFE3] to-[#D0B4B3] rounded-[2.5rem] md:rounded-[3rem] border border-[#e8dccb] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] px-8 py-12 md:px-16 md:py-16 overflow-hidden">
+          {/* Subtle Background Accent (Optional luxury touch) */}
+          <div className="absolute -top-32 -right-32 w-96 h-96 bg-white/40 blur-3xl rounded-full pointer-events-none" />
 
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
-          <div className="flex flex-col items-start">
-            <div className="flex items-center mb-4">
-              <Image
-                loading="lazy"
-                src="/logo23.svg"
-                alt="Logo"
-                width={240}
-                height={60}
-                className="object-contain w-60"
-              />
+          {/* Top Section: Grid Layout */}
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-[#e8dccb] pb-12 mb-8">
+            {/* Brand Column */}
+            <div className="md:col-span-12 lg:col-span-4 flex flex-col items-start">
+              <Link
+                href="/"
+                className="mb-6 block transition-transform hover:scale-105"
+              >
+                <Image
+                  loading="lazy"
+                  src="/logo23.svg"
+                  alt="Logo"
+                  width={200}
+                  height={50}
+                  className="object-contain w-48"
+                />
+              </Link>
+              <div className="space-y-1 text-zinc-600 font-medium">
+                <p>123 Main Street</p>
+                <p>New York, NY 10001</p>
+              </div>
             </div>
-            <p className="text-base">123 Main Street</p>
-            <p className="text-base">New York, NY 10001</p>
+
+            {/* Quick Links Column */}
+            <div className="md:col-span-6 lg:col-span-4">
+              <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#b49a99] mb-6">
+                Quick Links
+              </h3>
+              <ul className="space-y-3">
+                {["Home", "About Us", "Tours", "Blog", "Contact"].map(
+                  (item) => (
+                    <li key={item}>
+                      <Link
+                        href={
+                          item === "Home"
+                            ? "/"
+                            : `/${item.toLowerCase().replace(" ", "")}`
+                        }
+                        className="text-zinc-700 font-medium hover:text-[#b49a99] hover:translate-x-1 transition-all duration-300 inline-block"
+                      >
+                        {item}
+                      </Link>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </div>
+
+            {/* Contact Column */}
+            <div className="md:col-span-6 lg:col-span-4">
+              <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#b49a99] mb-6">
+                Contact
+              </h3>
+              <ul className="space-y-4">
+                <li>
+                  <a
+                    href="mailto:travelgirls@gmail.com"
+                    className="text-zinc-700 font-medium hover:text-[#b49a99] transition-colors duration-300 block"
+                  >
+                    travelgirls@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+1500321852789"
+                    className="text-zinc-700 font-medium hover:text-[#b49a99] transition-colors duration-300 block"
+                  >
+                    +1 500 321 852 789
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">
-              Quick Links
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tourpage"
-                  className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-                >
-                  Tours
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Bottom Section: Socials & Copyright */}
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-sm font-medium text-zinc-500">
+            <p className="text-center md:text-left">
+              Website Powered by:{" "}
+              <a
+                href="https://techxudo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-800 font-bold hover:text-[#b49a99] transition-colors"
+              >
+                Techxudo
+              </a>
+            </p>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-2xl font-semibold text-[#b49a99] mb-4">
-              Contact
-            </h3>
-            <ul className="space-y-2">
-              <li>
+            <div className="flex items-center space-x-3">
+              {[
+                { Icon: Instagram, href: "#" },
+                { Icon: Twitter, href: "#" },
+                { Icon: Facebook, href: "#" },
+              ].map((social, idx) => (
                 <a
-                  href="mailto:website@gmail.com"
-                  className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
+                  key={idx}
+                  href={social.href}
+                  className="w-10 h-10 rounded-full bg-white border border-[#e8dccb] flex items-center justify-center text-zinc-600 hover:bg-[#b49a99] hover:text-white hover:border-[#b49a99] hover:-translate-y-1 transition-all duration-300 shadow-sm"
                 >
-                  travelgirls@gmail.com
+                  <social.Icon size={18} />
                 </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+1500321852789"
-                  className="hover:text-[#D0B4B3] transition-all duration-300 text-base"
-                >
-                  +1 500 321 852 789
-                </a>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
-        </div>
+        </footer>
+      </div>
 
-        {/* Social Media and Copyright */}
-        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-white">
-          <p className="mb-4 md:mb-0 text-center md:text-left">
-            Website Powered by: <a href="https://techxudo.com/">Techxudo</a>
-          </p>
-          <div className="flex space-x-4">
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
-            >
-              <Instagram size={16} />
-            </a>
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
-            >
-              <Twitter size={16} />
-            </a>
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full border border-gray-500 flex items-center justify-center hover:bg-[#D0B4B3] hover:text-gray-900 transition-colors duration-300"
-            >
-              <Facebook size={16} />
-            </a>
-          </div>
-        </div>
-        <div
+      {/* --- FLOATING ACTION BUTTONS ---
+        Moved outside the footer card to ensure they float cleanly over the whole page.
+      */}
+      <div className="fixed bottom-6 right-6 z-[999] flex flex-col gap-4 items-center">
+        {/* Founder Modal Trigger */}
+        <button
           onClick={openModal}
-          className="fixed bottom-24 right-6 z-[999] cursor-pointer"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white bg-[#b49a99] shadow-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 overflow-hidden group focus:outline-none focus:ring-4 focus:ring-[#b49a99]/30"
           aria-label="About the Founder"
         >
-          <div
-            onClick={openModal}
-            className="fixed bottom-24 right-6 z-[999] cursor-pointer"
-            aria-label="About the Founder"
-          >
-            <div className="w-14 md:w-17 h-12 md:h-17 border-2 border-[#b49a99]  bg-[#b49a99] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 overflow-hidden">
-              <img
-                loading="lazy"
-                className="w-full h-full object-cover rounded-full scale-150"
-                src="/newBlog5.jpg"
-                alt="Founder"
-              />
-            </div>
-          </div>
-        </div>
+          <img
+            loading="lazy"
+            className="w-full h-full object-cover scale-[1.15] group-hover:scale-[1.25] transition-transform duration-500"
+            src="/newBlog5.jpg"
+            alt="Founder"
+          />
+        </button>
+
+        {/* WhatsApp Button */}
         <a
           href="https://wa.me/yourphonenumber"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 z-[999]"
+          className="w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+          aria-label="Chat on WhatsApp"
         >
-          <div className="relative">
-            <div className="w-14 sm:w-16 h-14 sm:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl transform hover:scale-105 transition-transform duration-300 cursor-pointer">
-              <FaWhatsapp className="text-white text-2xl sm:text-4xl" />
-            </div>
-          </div>
+          <FaWhatsapp className="text-white text-3xl" />
         </a>
-        <FounderModal isOpen={isOpen} onClose={closeModal} />
-      </footer>
+      </div>
+
+      <FounderModal isOpen={isOpen} onClose={closeModal} />
     </>
   );
 };
