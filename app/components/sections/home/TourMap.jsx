@@ -155,7 +155,7 @@ const TourMap = () => {
   return (
     <div className="bg-[#FFFFFF] py-16 min-h-screen">
       {/* Heading */}
-      <h1 className="text-center text-3xl md:text-5xl font-bold text-[#D0B4B3] pb-4 uppercase">
+      <h1 className="text-center font-romie text-3xl md:text-6xl  text-[#a08180] pb-4 ">
         Choose Your Destination
       </h1>
       <div className="w-20 md:w-24 h-1 bg-[#D0B4B3] mx-auto mb-8 rounded-full"></div>

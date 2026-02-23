@@ -77,7 +77,7 @@ const Hero = () => {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight sm:-mt-20"
+          className="text-3xl font-romie sm:text-4xl md:text-6xl lg:text-6xl 2xl:text-7xl  leading-tight sm:-mt-20"
         >
           Adventure Awaits – Book <br /> Your Journey Today
         </motion.h1>
@@ -112,7 +112,7 @@ const Hero = () => {
 
           <Link
             href={"/tourpage"}
-            className="group flex items-center gap-2 text-black bg-[#D0B4B3] font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-lg hover:scale-95 text-base sm:text-lg cursor-pointer"
+            className="group font-romie flex items-center gap-2 text-black bg-[#D0B4B3] font- py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-lg hover:scale-95 text-base sm:text-lg cursor-pointer"
           >
             <span>Book A Trip</span>
             <ArrowRight

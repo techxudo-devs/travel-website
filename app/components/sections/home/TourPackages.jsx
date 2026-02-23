@@ -125,9 +125,8 @@ const TourPackages = ({ limit = false }) => {
       >
         {/* Section Header */}
         <motion.div variants={tourItemVariants} className="mb-16">
-          <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 tracking-wide">
-            All inclusive
-            <span className="block font-bold text-5xl sm:text-6xl text-[#D0B4B3] mt-2 uppercase">
+          <motion.h2 className="text-3xl sm:text-4xl md:text-5xl  text-black mb-6 tracking-wide">
+            <span className="block font-romie text-5xl sm:text-6xl text-[#a08180] mt-2 ">
               Tour Packages
             </span>
           </motion.h2>

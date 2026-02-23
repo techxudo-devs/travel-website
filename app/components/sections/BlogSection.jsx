@@ -8,7 +8,8 @@ const blogPosts = [
   {
     id: "solo-travel",
     image: "/newBlog1.jpg",
-    title: "Why Solo Travel - Can Be the Most Empowering Experience of Your Life",
+    title:
+      "Why Solo Travel - Can Be the Most Empowering Experience of Your Life",
   },
   {
     id: "solo-trip",
@@ -53,7 +54,7 @@ const BlogSection = () => {
       <div className="mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#a08180] uppercase mb-4">
+          <h2 className="text-4xl md:text-6xl font-romie  text-[#a08180]  mb-4">
             Read more on our blog
           </h2>
           <p className="text-gray-700 font-medium text-base">
@@ -108,7 +109,7 @@ const BlogSection = () => {
         {/* Visit the blog button */}
         <div className="text-center mt-12">
           <Link href="/blog">
-            <button className="cursor-pointer border bg-[#D0B4B3] text-black border-[#b49a99] uppercase font-bold py-3 px-8 rounded-full hover:bg-[#b49a99] hover:text-black hover:scale-95 transition-all duration-300 group flex items-center justify-center mx-auto">
+            <button className="cursor-pointer border bg-[#D0B4B3] text-black border-[#b49a99] font-romie font-bold py-3 px-8 rounded-full hover:bg-[#b49a99] hover:text-black hover:scale-95 transition-all duration-300 group flex items-center justify-center mx-auto">
               Visit the blog
               <ArrowRight
                 size={20}

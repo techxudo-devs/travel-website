@@ -63,7 +63,7 @@ const TripSection = () => {
       setCurrentIndex(index);
       setTimeout(() => setIsTransitioning(false), transitionDuration);
     },
-    [isTransitioning, currentIndex]
+    [isTransitioning, currentIndex],
   );
 
   useEffect(() => {
@@ -103,8 +103,8 @@ const TripSection = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 py-16">
         {/* Header Section */}
         <div className="flex flex-col justify-center text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl text-center md:text-5xl font-bold text-black mb-6 tracking-wide">
-            <span className="block font-bold text-5xl sm:text-6xl text-[#D0B4B3] mt-2 uppercase">
+          <h2 className=" font-romie  text-3xl sm:text-4xl text-center md:text-5xl  text-black mb-6 tracking-wide">
+            <span className="block text-5xl sm:text-6xl text-[#a08180] mt-2 ">
               Trip with us Now
             </span>
           </h2>

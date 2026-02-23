@@ -31,7 +31,7 @@ const ContactAno = () => {
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Navbar */}
-      <div className="relative z-50 flex flex-row items-center justify-between px-6 md:px-10 pt-6 md:pt-8">
+      <div className="fixed top-0 left-0 w-full z-50 flex flex-row items-center justify-between px-6 md:px-10 py-6 md:py-8">
         <Image
           loading="lazy"
           src="/logo23.svg"

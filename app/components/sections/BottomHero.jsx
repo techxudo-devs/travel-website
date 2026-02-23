@@ -57,10 +57,7 @@ const Hero = () => {
   };
 
   return (
-    <div
-      ref={heroRef}
-      className="relative w-full text-white overflow-hidden"
-    >
+    <div ref={heroRef} className="relative w-full text-white overflow-hidden">
       {/* Background with scaling */}
       <Image
         loading="lazy"
@@ -72,7 +69,6 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
       />
       <div className="absolute inset-0 bg-black/50 z-10" />
-
       {/* Navbar */}
       <div className="relative z-20 flex flex-row items-center justify-between px-6 md:px-10 pt-6 md:pt-8">
         <Image
@@ -132,7 +128,6 @@ const Hero = () => {
           <Menu size={24} />
         </button>
       </div>
-
       {/* Mobile Sidebar */}
       <motion.div>
         <AnimatePresence>
@@ -157,7 +152,13 @@ const Hero = () => {
                 className="fixed top-0 right-0 w-3/4 h-full bg-black z-50 flex flex-col p-6"
               >
                 <div className="flex items-center justify-between mb-12">
-                  <Image src="/logo23.svg" width={160} height={40} className="object-contain w-40" alt="Logo" />
+                  <Image
+                    src="/logo23.svg"
+                    width={160}
+                    height={40}
+                    className="object-contain w-40"
+                    alt="Logo"
+                  />
                   <button
                     className="text-white cursor-pointer"
                     onClick={() => setMenuOpen(false)}
@@ -207,7 +208,6 @@ const Hero = () => {
           )}
         </AnimatePresence>
       </motion.div>
-
       {/* Hero Content */}
       <motion.div
         initial="hidden"
@@ -226,7 +226,9 @@ const Hero = () => {
           variants={itemVariants}
           className="max-w-xl text-base sm:text-lg md:text-xl text-white/90 mt-4"
         >
-          Welcome to Travel Girls Club, a global community created by women, for women who love to explore the world and connect through meaningful travel.
+          Welcome to Travel Girls Club, a global community created by women, for
+          women who love to explore the world and connect through meaningful
+          travel.
         </motion.p>
 
         <motion.div
@@ -257,9 +259,43 @@ const Hero = () => {
           </button>
         </motion.div>
       </motion.div>
-
       {/* Girl + Bottom Section */}
-      <div className="relative z-30 flex flex-col items-center justify-end -mt-0"> <Image loading="lazy" src="/hero-girl.png" alt="Travel girl" width={500} height={500} className="object-contain relative z-30" /> {/* Marquee Background Behind Last Image */} <div className="absolute bottom-20 w-full z-20"> <Marquee speed={100} gradient={false} direction="right" className="uppercase font-extrabold text-[60px] md:text-[100px] tracking-wider" > We Are &nbsp;{" "} <span className="text-[#D0B4B3]">Travel Girls Club &nbsp;</span> </Marquee> </div> <Image loading="lazy" src="/hero-bottom.png" alt="Bottom decoration" width={1920} height={100} className="w-full object-cover relative z-40 sm:-mt-20 -mt-2" /> </div> </div>
+      <div className="relative z-30 flex flex-col items-center justify-end -mt-0">
+        {" "}
+        <Image
+          loading="lazy"
+          src="/hero-girl.png"
+          alt="Travel girl"
+          width={500}
+          height={500}
+          className="object-contain relative z-30"
+        />{" "}
+        {/* Marquee Background Behind Last Image */}{" "}
+        <div className="absolute font-romie bottom-20 w-full z-20">
+          {" "}
+          <Marquee
+            speed={100}
+            gradient={false}
+            direction="right"
+            className="uppercase font-romie font-extrabold text-[60px] md:text-[100px] tracking-wider"
+          >
+            {" "}
+            We Are &nbsp;{" "}
+            <span className="text-[#D0B4B3]">
+              Travel Girls Club &nbsp;
+            </span>{" "}
+          </Marquee>{" "}
+        </div>{" "}
+        <Image
+          loading="lazy"
+          src="/hero-bottom.png"
+          alt="Bottom decoration"
+          width={1920}
+          height={100}
+          className="w-full object-cover relative z-40 sm:-mt-20 -mt-2"
+        />{" "}
+      </div>{" "}
+    </div>
   );
 };
 

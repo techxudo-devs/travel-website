@@ -57,7 +57,8 @@ export default function PictureSwiper() {
         {travelSpots.map((spot, idx) => (
           <SwiperSlide key={idx}>
             <div className="w-full h-[620px] relative overflow-hidden rounded-2xl shadow-lg">
-              <Image loading="lazy"
+              <Image
+                loading="lazy"
                 src={spot.src}
                 alt={spot.alt}
                 layout="fill"
@@ -70,7 +71,7 @@ export default function PictureSwiper() {
               {/* Centered Content */}
               <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-white text-center p-8">
                 <h2
-                  className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+                  className="text-3xl sm:text-4xl lg:text-6xl font-romie"
                   style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.7)" }}
                 >
                   {spot.title}

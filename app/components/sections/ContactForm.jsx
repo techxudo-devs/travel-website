@@ -50,7 +50,7 @@ const ContactForm = () => {
             </div>
             {/* Floating Card */}
             <div className="absolute -bottom-8 sm:-bottom-10 -right-4 sm:-right-8 w-64 sm:w-72 md:w-80 bg-[#a37b64] text-[#f8efe3] p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg">
-              <h2 className="text-2xl sm:text-3xl uppercase font-extrabold mb-1">
+              <h2 className="text-2xl md:text-4xl uppercase font-romie mb-1">
                 Travel Girls<span className="text-[#c4c8ba]">.</span>
               </h2>
               <p className="text-sm sm:text-base font-semibold mt-3 sm:mt-4 leading-tight text-[#f8efe3]/80">
@@ -88,7 +88,7 @@ const ContactForm = () => {
 
         {/* Right Side */}
         <div className="w-full md:w-1/2">
-          <h1 className="text-3xl sm:text-4xl font-extrabold uppercase text-[#a37b64] mb-3">
+          <h1 className="text-3xl md:text-6xl font-romie  text-[#a37b64] mb-3">
             Let's work together
           </h1>
           <p className="text-[#a37b64]/70 font-medium mb-8 sm:mb-10 text-sm sm:text-base">

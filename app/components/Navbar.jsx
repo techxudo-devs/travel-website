@@ -38,7 +38,7 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`relative transition-all duration-500 ${
           scrolled
-            ? "bg-slate-900/80 backdrop-blur-xl shadow-lg shadow-brown/30"
+            ? "bg-third/50 backdrop-blur-xl shadow-lg shadow-brown/30"
             : "bg-slate-900/10 backdrop-blur-md"
         }`}
       >
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="relative px-6 py-2.5 text-slate-200 font-medium text-sm tracking-wide group overflow-hidden "
+                  className="relative  px-6 py-2.5 text-slate-200 font-medium text-sm tracking-wide group overflow-hidden "
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-[var(--color-light)]/10 to-[var(--color-brown)]/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-500 ease-out" />
                   <span className="absolute inset-0 bg-[var(--color-light)]/5 rounded-lg  opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -78,7 +78,7 @@ const Navbar = () => {
 
             <Link
               href="/contact"
-              className="hidden lg:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[var(--color-light)] to-[var(--color-brown)] text-slate-900 font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-[var(--color-brown)]/50 transition-all duration-300 hover:scale-105 group overflow-hidden relative"
+              className="hidden lg:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[var(--color-light)] to-[var(--color-brown)] font-romie text-slate-900 font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-[var(--color-brown)]/50 transition-all duration-300 hover:scale-105 group overflow-hidden relative"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-[var(--color-light)] to-[var(--color-brown)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10">Contact Us</span>
